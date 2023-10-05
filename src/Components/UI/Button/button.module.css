@@ -1,0 +1,40 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+    color: var(--white);
+
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.default {
+    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
+}
+
+.inline {
+    font-weight: 400;
+}
+
+.outlined {
+    background: transparent;
+    border: 1px solid var(--gray-border);
+}
+
+.sm {
+    height: 37px;
+    padding: 0 16px;
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: max-content;
+}

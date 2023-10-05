@@ -1,0 +1,53 @@
+.par {
+    color: var(--white);
+    text-align: left;
+}
+
+.par a {
+    color: var(--white);
+    font-weight: 700;
+    position: relative;
+}
+
+.par a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.5px;
+    background:#fff;
+    transition: all ease .3s;
+}
+
+.par a:hover::after {
+   transform:  translateX(-50%);
+   width: 100%;
+}
+
+.xs {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sm {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.light, .light a {
+    color: var(--light);
+}
+
+.light a::after {
+    background:var(--light);
+}
+
+.center {
+    text-align: center;
+}

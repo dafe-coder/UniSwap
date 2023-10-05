@@ -1,0 +1,40 @@
+.input {
+    height: 33px;
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid var(--dark-border);
+    padding: 8px 45px 8px 16px;
+    resize: none;
+    
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.input::placeholder {
+    color: var(--light);
+}
+
+.input:focus, .input:active {
+    outline: none;
+}
+
+.inputWrap {
+    position: relative;
+}
+
+.svgleft {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.svgright {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
