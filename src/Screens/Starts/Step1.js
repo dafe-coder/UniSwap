@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIcon } from '../../Components/Svgs';
+import { SvgIcon } from '../../Svgs';
 import { Button, Title } from '../../Components/UI';
 
 export const Step1 = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Par, Button, Modal, Input } from '../../Components/UI';
-import { SvgIcon } from '../../Components/Svgs';
+import { SvgIcon } from '../../Svgs';
 import { useNavigate } from 'react-router-dom';
 import { PhraseBox } from '../../Components/PhraseBox/PhraseBox';
 

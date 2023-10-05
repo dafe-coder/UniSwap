@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './button.module.css';
 import { Par } from '../UI';
-import { SvgIcon } from '../Svgs/';
+import { SvgIcon } from '../../Svgs';
 import { useNavigate } from 'react-router-dom';
 
 export const ButtonBig = ({

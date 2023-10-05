@@ -5,6 +5,9 @@ import {
 	Start,
 	ImportData,
 	MangeDefault,
+	Success,
+	Settings,
+	AccountWallets,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -17,6 +20,9 @@ export const Navigation = () => {
 			<Route path='/start' element={<Start />} />
 			<Route path='/import-data' element={<ImportData />} />
 			<Route path='/manage-default' element={<MangeDefault />} />
+			<Route path='/success' element={<Success />} />
+			<Route path='/settings' element={<Settings />} />
+			<Route path='/wallets' element={<AccountWallets />} />
 		</Routes>
 	);
 };

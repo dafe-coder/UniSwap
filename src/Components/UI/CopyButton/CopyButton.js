@@ -1,7 +1,6 @@
 import React from 'react';
-import cn from 'classnames';
 import styles from './copy.module.css';
-import { SvgIcon } from '../../Svgs';
+import { SvgIcon } from '../../../Svgs';
 
 let timerID = null;
 export const CopyButton = ({ copy = false, textCopied = '', setPhrase }) => {

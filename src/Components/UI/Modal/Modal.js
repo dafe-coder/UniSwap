@@ -1,6 +1,6 @@
 import ReactModal from 'react-modal';
 import React from 'react';
-import { SvgIcon } from '../../Svgs';
+import { SvgIcon } from '../../../Svgs';
 import styles from './modal.module.css';
 import { Title } from '../Title/Title';
 import { Par } from '../Par/Par';

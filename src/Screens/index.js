@@ -4,3 +4,6 @@ export * from './Starts/Step3';
 export * from './Starts/Start';
 export * from './Import/ImportData';
 export * from './Manage/MangeDefault';
+export * from './Success/Success';
+export * from './Settings/Settings';
+export * from './Account/Account';

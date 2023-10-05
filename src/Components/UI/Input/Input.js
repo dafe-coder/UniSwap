@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './input.module.css';
-import { SvgIcon } from '../../Svgs';
+import { SvgIcon } from '../../../Svgs';
 
 export const Input = ({
 	placeholder,

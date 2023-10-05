@@ -104,14 +104,11 @@ legend {
 html {
   background-color: var(--bg-main);
   color: var(--white);
-  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -142,6 +139,26 @@ body {
   top: 0;
   left: 0;
   background: url(./assets/images/ellipseTop.png) top center / cover no-repeat;
+  background-size: 100%;
+  z-index: -1;
+}
+.bottom-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(./assets/images/ellipseBottom.png) bottom center / cover no-repeat;
+  background-size: 100%;
+  z-index: -1;
+}
+.bottom-bg-light {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(./assets/images/ellipseBottomLight.png) bottom center / cover no-repeat;
   background-size: 100%;
   z-index: -1;
 }
