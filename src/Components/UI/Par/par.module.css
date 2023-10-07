@@ -48,6 +48,10 @@
     background:var(--light);
 }
 
+.red {
+    color: var(--error);
+}
+
 .center {
     text-align: center;
 }

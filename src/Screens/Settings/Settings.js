@@ -47,7 +47,8 @@ export const Settings = () => {
 	];
 	return (
 		<div className='screen'>
-			<div className='bottom-bg'></div>
+			<div className='bottom-bg' />
+			<div className='center-bg' />
 			<div className='body' style={{ margin: 0 }}>
 				<MenuSettings list={list} />
 			</div>

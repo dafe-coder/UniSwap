@@ -10,6 +10,8 @@
     align-items: flex-start;
     gap: 16px;
     position: relative;
+    overflow: hidden;
+    text-align: left;
 }
 
 .btn:hover::after {

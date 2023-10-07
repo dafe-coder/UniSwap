@@ -1,0 +1,17 @@
+.imageIconWrap {
+    display: flex;
+    gap: 8px;
+}
+
+.imgIcon {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.imgIcon img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}

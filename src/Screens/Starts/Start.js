@@ -13,7 +13,7 @@ export const Start = () => {
 				<ButtonBig mb={16} title='Get a new wallet'>
 					I am new to crypto, or I want a shiny new wallet!
 				</ButtonBig>
-				<ButtonBig to='/import-data' title='Get a new wallet'>
+				<ButtonBig to='/import-data' title='Import an existing wallet'>
 					I am new to crypto, or I want a shiny new wallet!
 				</ButtonBig>
 			</div>

@@ -83,7 +83,7 @@ export const AccountWallets = () => {
 							key={i}
 							item={item}
 							title={
-								item.name == currentWallet
+								item.name === currentWallet
 									? `$ ${fixNum(portfolioBalanceUsd)}`
 									: ''
 							}

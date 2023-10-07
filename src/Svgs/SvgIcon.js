@@ -134,6 +134,25 @@ function SvgIcon(props) {
 					/>
 				</svg>
 			);
+		case 'success':
+			return (
+				<svg
+					width='86'
+					height='86'
+					viewBox='0 0 86 86'
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<circle cx='43' cy='43' r='43' fill='#00FFA3' fill-opacity='0.24' />
+					<circle cx='43' cy='43' r='33' fill='#00FFA3' />
+					<path
+						d='M29 41.2045L37.963 51.1994C38.3508 51.6318 39.0243 51.644 39.4274 51.2258L57 33'
+						stroke='white'
+						stroke-width='4'
+						stroke-linecap='round'
+					/>
+				</svg>
+			);
 		default:
 			return (
 				<svg

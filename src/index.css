@@ -7,6 +7,8 @@
   --dark-border: #1D2C52;
   --accent: #4D82FB;
   --gray-border: #2F3343;
+  --error: #E51C05;
+  --bg-dark: #121A2A;
 
   --app-width: 400px;
   --app-height: 612px;
@@ -200,4 +202,11 @@ body {
 
 .btns button {
   border-radius: 24px;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

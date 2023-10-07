@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 export const ButtonBig = ({
 	to = '',
 	mb = 0,
+	mt = 0,
 	children,
 	title,
 	disabled = false,
@@ -15,18 +16,16 @@ export const ButtonBig = ({
 	const navigate = useNavigate();
 
 	return (
-		<div style={{ overflow: 'hidden' }}>
-			<div
-				onClick={() => navigate(to)}
-				style={{ marginBottom: mb }}
-				className={cn(styles.btn, {
-					[styles['disabled']]: disabled,
-				})}
-			>
-				<span className={styles.title}>{title}</span>
-				<Par center={false}>{children}</Par>
-				<SvgIcon className={styles.arrow} type='arrow-right' />
-			</div>
+		<div
+			onClick={() => navigate(to)}
+			style={{ marginBottom: mb, marginTop: mt }}
+			className={cn(styles.btn, {
+				[styles['disabled']]: disabled,
+			})}
+		>
+			<span className={styles.title}>{title}</span>
+			<Par center={false}>{children}</Par>
+			<SvgIcon className={styles.arrow} type='arrow-right' />
 		</div>
 	);
 };
