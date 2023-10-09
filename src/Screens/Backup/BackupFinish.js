@@ -10,7 +10,7 @@ export const BackupFinish = () => {
 			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Finish backup' />
-				<Par color='light' center={false}>
+				<Par color='light'>
 					Check you have made a correct backup by <br /> entering the
 					corresponding words from your <br /> recovery phrase below.
 				</Par>

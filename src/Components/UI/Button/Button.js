@@ -9,6 +9,7 @@ export const Button = ({
 	to = '',
 	onClick = () => console.log('coming soon!'),
 	size = 'm',
+	mt = 0,
 }) => {
 	const navigate = useNavigate();
 
@@ -24,6 +25,7 @@ export const Button = ({
 
 	return (
 		<button
+			style={{ marginTop: mt }}
 			onClick={(e) => handleClick(e)}
 			className={cn(styles.btn, styles[variant], {
 				[styles.sm]: size === 'sm',

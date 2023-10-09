@@ -24,7 +24,7 @@ export const ButtonBig = ({
 			})}
 		>
 			<span className={styles.title}>{title}</span>
-			<Par center={false}>{children}</Par>
+			<Par>{children}</Par>
 			<SvgIcon className={styles.arrow} type='arrow-right' />
 		</div>
 	);

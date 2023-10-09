@@ -38,7 +38,7 @@ export const ImportData = () => {
 					value={name}
 					icon='pencil'
 				/>
-				<Par mt={16} color='light' center={false}>
+				<Par mt={16} color='light'>
 					Your public address will be
 				</Par>
 				<Input

@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+}
+
+.body {
+    position: absolute;
+    top: calc(100% + 10px);
+    border-radius: 20px;
+    border: 1px solid var(--gray);
+    background: var(--bg-main);
+    padding: 16px;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: top center;
+    transition: all ease .3s;
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1);
+}

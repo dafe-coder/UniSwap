@@ -24,10 +24,10 @@ export const BackupPhrase = () => {
 			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Save your phrase' />
-				<Par center={false} color='light'>
+				<Par color='light'>
 					Write this 12 words carefully, or save them to a password manager.
 				</Par>
-				<Par mt={8} center={false} color='red'>
+				<Par mt={8} color='red'>
 					Never share recovery phrase with anyone, store it securely!
 				</Par>
 				<PhraseBoxColumns phrase='danger whisper educate own honey dizzy alone number surface lift ten theory' />

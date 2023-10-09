@@ -10,6 +10,7 @@ export const Input = ({
 	icon = '',
 	iconPos = 'right',
 	disabled = false,
+	height = 33,
 }) => {
 	return (
 		<div
@@ -17,6 +18,7 @@ export const Input = ({
 			style={{ marginTop: mt, pointerEvents: disabled ? 'none' : 'auto' }}
 		>
 			<input
+				style={{ height: height }}
 				value={value}
 				onInput={(e) => setValue(e.target.value)}
 				placeholder={placeholder}

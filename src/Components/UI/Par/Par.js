@@ -9,12 +9,21 @@ export const Par = ({
 	mt = 0,
 	mb = 0,
 	fw = 400,
-	center = true,
+	center = false,
+	tt = '',
+	className = '',
+	style,
 }) => {
 	return (
 		<div
-			style={{ marginBottom: mb, marginTop: mt, fontWeight: fw }}
-			className={cn(styles.par, [styles[size]], {
+			style={{
+				marginBottom: mb,
+				marginTop: mt,
+				fontWeight: fw,
+				textTransform: tt,
+				...style,
+			}}
+			className={cn(styles.par, className, [styles[size]], {
 				[styles[color]]: color !== 'white',
 				[styles.center]: center,
 			})}

@@ -19,6 +19,12 @@
     background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
 }
 
+.disabled {
+    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
 .inline {
     font-weight: 400;
 }

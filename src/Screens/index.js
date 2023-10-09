@@ -18,3 +18,4 @@ export * from './Notifications/Notifications';
 export * from './dApps/dApps';
 export * from './dApps/dAppsQr';
 export * from './About/About';
+export * from './Rpc/Rpc';

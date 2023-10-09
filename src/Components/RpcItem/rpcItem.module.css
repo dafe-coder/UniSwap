@@ -1,0 +1,57 @@
+.title {
+    width: 210px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item {
+    margin-bottom: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemBottom {
+    display: flex;
+    gap: 16px;
+}
+
+.dotsPar {
+    position: relative;
+    padding-left: 14px;
+}
+
+.dotsPar::before {
+    content: '';
+    display: flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: var(--success);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.red::before {
+    background: var(--error);
+}
+
+.yellow::before {
+    background: var(--yellow);
+}
+
+.circle {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: all ease .5s;
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -5,3 +5,5 @@ export * from './ItemList/ItemList';
 export * from './MenuSettings/MenuSettings';
 export * from './ItemSelectAccounts/ItemSelectAccounts';
 export * from './PhraseBoxColumns/PhraseBoxColumns';
+export * from './RpcItem/RpcItem';
+export * from './ItemExpand/ItemExpand';

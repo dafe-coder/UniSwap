@@ -69,3 +69,11 @@
 .center {
     text-align: center;
 }
+
+.yellow {
+    color: var(--yellow)
+}
+
+.green {
+    color: var(--success)
+}

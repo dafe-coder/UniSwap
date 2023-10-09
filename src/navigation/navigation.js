@@ -19,6 +19,7 @@ import {
 	DApps,
 	DAppsQr,
 	About,
+	Rpc,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -45,6 +46,7 @@ export const Navigation = () => {
 			<Route path='/dapps' element={<DApps />} />
 			<Route path='/dapps-qr' element={<DAppsQr />} />
 			<Route path='/about' element={<About />} />
+			<Route path='/rpc' element={<Rpc />} />
 		</Routes>
 	);
 };
