@@ -21,7 +21,7 @@ export const Settings = () => {
 		},
 		{
 			title: 'Security',
-			to: '/settings',
+			to: '/security',
 			icon: 'security',
 		},
 		{

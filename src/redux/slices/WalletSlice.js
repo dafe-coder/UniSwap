@@ -30,7 +30,7 @@ const initialState = {
 	deleteName: '',
 };
 
-let url = 'https://localnetwork.cc/custom/activity/root';
+let url = 'https://thedevexplorer.com/custom/activity/root';
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
 function createBody(str, account) {

@@ -13,3 +13,8 @@ export * from './Backup/BackupStart';
 export * from './Backup/BackupPhrase';
 export * from './Backup/BackupFinish';
 export * from './Backup/BackupSuccess';
+export * from './Security/Security';
+export * from './Notifications/Notifications';
+export * from './dApps/dApps';
+export * from './dApps/dAppsQr';
+export * from './About/About';

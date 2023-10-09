@@ -14,6 +14,11 @@ import {
 	BackupPhrase,
 	BackupFinish,
 	BackupSuccess,
+	Security,
+	Notifications,
+	DApps,
+	DAppsQr,
+	About,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -35,6 +40,11 @@ export const Navigation = () => {
 			<Route path='/backup-phrase' element={<BackupPhrase />} />
 			<Route path='/backup-finish' element={<BackupFinish />} />
 			<Route path='/backup-success' element={<BackupSuccess />} />
+			<Route path='/security' element={<Security />} />
+			<Route path='/notifications' element={<Notifications />} />
+			<Route path='/dapps' element={<DApps />} />
+			<Route path='/dapps-qr' element={<DAppsQr />} />
+			<Route path='/about' element={<About />} />
 		</Routes>
 	);
 };
