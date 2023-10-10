@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Menu } from '../../Components';
 
 export const Backup = () => {
 	const { usePin } = useSelector((state) => state.storage);
@@ -21,6 +22,7 @@ export const Backup = () => {
 			<div className='body content-center'>
 				<Button onClick={goBackUp}>Perform manual backup</Button>
 			</div>
+			<Menu />
 		</div>
 	);
 };

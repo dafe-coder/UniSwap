@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import fixNum from '../../func.wallet/fixNum';
-import { ItemSelectAccounts, Header } from '../../Components';
+import { ItemSelectAccounts, Header, Menu } from '../../Components';
 import { setDeleteWallet, resetWallet } from '../../redux/slices/StorageSlice';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { setDataWallet, setDeleteName } from '../../redux/slices/WalletSlice';
@@ -73,7 +73,7 @@ export const AccountWallets = () => {
 
 	return (
 		<div className='screen'>
-			<div className='page'>
+			<div className='body'>
 				<Header title='Wallet' />
 				{dataUser.length ? (
 					dataUser.map((item, i) => (
@@ -155,6 +155,7 @@ export const AccountWallets = () => {
 					Cancel
 				</Button>
 			</Popup> */}
+			<Menu />
 		</div>
 	);
 };

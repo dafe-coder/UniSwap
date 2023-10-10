@@ -19,3 +19,6 @@ export * from './dApps/dApps';
 export * from './dApps/dAppsQr';
 export * from './About/About';
 export * from './Rpc/Rpc';
+export * from './Pin/PinCreate';
+export * from './Pin/PinConfirm';
+export * from './Wallet/Wallet';

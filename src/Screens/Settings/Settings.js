@@ -1,47 +1,47 @@
 import React from 'react';
-import { MenuSettings } from '../../Components';
+import { MenuSettings, Menu } from '../../Components';
 
 export const Settings = () => {
 	const list = [
 		{
 			title: 'Wallets',
-			to: '/wallets',
+			to: 'wallets',
 			icon: 'wallet',
 		},
 		{
 			title: 'Import existing wallet',
-			to: '/import-start',
+			to: 'import-start',
 			icon: 'import',
 		},
 		{
 			title: 'Backup',
-			to: '/backup',
+			to: 'backup',
 			icon: 'backup',
 			status: true,
 		},
 		{
 			title: 'Security',
-			to: '/security',
+			to: 'security',
 			icon: 'security',
 		},
 		{
 			title: 'Notifications',
-			to: '/notifications',
+			to: 'notifications',
 			icon: 'bell',
 		},
 		{
 			title: 'RPC Node ',
-			to: '/rpc',
+			to: 'rpc',
 			icon: 'rpc',
 		},
 		{
 			title: 'Wallet Connect',
-			to: '/dapps',
+			to: 'dapps',
 			icon: 'connect',
 		},
 		{
 			title: 'About',
-			to: '/about',
+			to: 'about',
 			icon: 'about',
 		},
 	];
@@ -52,6 +52,7 @@ export const Settings = () => {
 			<div className='body' style={{ margin: 0 }}>
 				<MenuSettings list={list} />
 			</div>
+			<Menu />
 		</div>
 	);
 };

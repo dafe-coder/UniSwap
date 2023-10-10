@@ -25,6 +25,7 @@
   --gray-border: #2F3343;
   --gray: #2C303E;
   --error: #E51C05;
+  --error-light: #f1412e;
   --bg-dark: #121A2A;
   --success: #00FFA3;
   --yellow: #ffd900;
@@ -198,6 +199,18 @@ body {
 .grid-bg {
   background: url('./assets/images/grid.png') center center / cover repeat;
   background-size: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .header-back {

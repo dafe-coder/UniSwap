@@ -10,6 +10,8 @@ export const Item = ({
 	amount = '',
 	size = 'xs',
 	toggle = true,
+	onChange,
+	id,
 }) => {
 	return (
 		<div className={styles.item}>
@@ -35,7 +37,7 @@ export const Item = ({
 					)}
 				</div>
 			</div>
-			{toggle && <Toggle />}
+			{toggle && <Toggle id={id} onToggle={onChange} />}
 		</div>
 	);
 };

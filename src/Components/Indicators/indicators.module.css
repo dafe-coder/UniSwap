@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    position: absolute;
+}
+
+.green {
+    color: var(--success);
+}
+
+.red {
+    color: var(--error-light);
+}
+
+.block {
+    padding: 0 7px;
+    line-height: 25px;
+    border-radius: 6px;
+    font-size: 10px;
+}
+
+.green .block {
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.red .block {
+    background: rgba(255, 255, 255, 0.20);
+}

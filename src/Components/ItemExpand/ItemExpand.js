@@ -4,7 +4,7 @@ import styles from './itemExpand.module.css';
 import { Par } from '../UI';
 import { SvgIcon } from '../../Svgs';
 
-export const ItemExpand = ({ title, children }) => {
+export const ItemExpand = ({ title, children, caretFill }) => {
 	const [showBody, setShowBody] = React.useState(false);
 
 	return (
@@ -13,7 +13,7 @@ export const ItemExpand = ({ title, children }) => {
 				<Par size='m' fw={600}>
 					{title}
 				</Par>
-				<SvgIcon type='caret' />
+				<SvgIcon fill={caretFill} type='caret' />
 			</div>
 			<div
 				className={cn(styles.body, {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Item } from '../../Components/Item/Item';
 import { Header } from '../../Components/Header/Header';
+import { Menu } from '../../Components';
 
 const styleWrap = {
 	display: 'flex',
@@ -19,6 +20,7 @@ export const About = () => {
 					<Item toggle={false} size='sm' name='Privacy policy' />
 				</div>
 			</div>
+			<Menu />
 		</div>
 	);
 };

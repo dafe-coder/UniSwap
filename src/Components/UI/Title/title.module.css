@@ -1,5 +1,5 @@
 .title {
-    color: #FFF;
+    color: var(--white);
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -13,6 +13,13 @@
 
 .m {
     font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.xl {
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

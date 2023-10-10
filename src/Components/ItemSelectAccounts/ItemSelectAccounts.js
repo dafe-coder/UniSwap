@@ -60,7 +60,7 @@ export const ItemSelectAccounts = ({
 		<div
 			onClick={(e) => chooseAccount(e)}
 			className={classNames(accountType ? styles.box_any : '', {
-				[styles.activeBox]: item.name == currentWallet,
+				[styles.activeBox]: item.name === currentWallet,
 			})}
 		>
 			<div className={classNames(styles.trigger)}>

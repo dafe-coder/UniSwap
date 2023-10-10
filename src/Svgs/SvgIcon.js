@@ -146,10 +146,42 @@ function SvgIcon(props) {
 					viewBox='0 0 16 16'
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
+					{...props}
 				>
 					<path
 						d='M3.06252 5.9393L7.43065 11.0368C7.50106 11.1189 7.5884 11.1848 7.68668 11.23C7.78496 11.2752 7.89185 11.2986 8.00002 11.2986C8.10819 11.2986 8.21509 11.2752 8.31337 11.23C8.41165 11.1848 8.49899 11.1189 8.5694 11.0368L12.9375 5.9393C13.3544 5.45273 13.0088 4.70117 12.3681 4.70117H3.63065C2.99002 4.70117 2.6444 5.45273 3.06252 5.9393Z'
-						fill='white'
+						fill={fill ? fill : 'white'}
+					/>
+				</svg>
+			);
+		case 'user':
+			return (
+				<svg
+					width={24}
+					height={24}
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+					{...props}
+				>
+					<circle cx={12} cy={6} r={4} fill='#2A334C' />
+					<ellipse cx={12} cy={17} rx={7} ry={4} fill='#2A334C' />
+				</svg>
+			);
+		case 'activity':
+			return (
+				<svg
+					width={24}
+					height={24}
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+					{...props}
+				>
+					<circle cx={12.5} cy={12.5} r={8.5} fill='#fff' />
+					<path
+						fillRule='evenodd'
+						clipRule='evenodd'
+						d='M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zM8 13a1 1 0 100-2 1 1 0 000 2zm4 0a1 1 0 100-2 1 1 0 000 2zm4 0a1 1 0 100-2 1 1 0 000 2z'
+						fill='#2A334C'
 					/>
 				</svg>
 			);
@@ -179,13 +211,13 @@ function SvgIcon(props) {
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
 				>
-					<circle cx='43' cy='43' r='43' fill='#00FFA3' fill-opacity='0.24' />
+					<circle cx='43' cy='43' r='43' fill='#00FFA3' fillOpacity='0.24' />
 					<circle cx='43' cy='43' r='33' fill='#00FFA3' />
 					<path
 						d='M29 41.2045L37.963 51.1994C38.3508 51.6318 39.0243 51.644 39.4274 51.2258L57 33'
 						stroke='white'
-						stroke-width='4'
-						stroke-linecap='round'
+						strokeWidth='4'
+						strokeLinecap='round'
 					/>
 				</svg>
 			);

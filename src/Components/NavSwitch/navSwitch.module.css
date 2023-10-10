@@ -1,0 +1,23 @@
+.wrap {
+    border-radius: 8px;
+    border: 1px solid var(--gray-border);
+    background: transparent;
+    display: flex;
+    padding: 3px;
+    width: max-content;
+}
+
+.item {
+    color: var(--light);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 2px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.active {
+    background: var(--gray-border);
+}
