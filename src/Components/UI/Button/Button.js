@@ -10,13 +10,18 @@ export const Button = ({
 	onClick = () => console.log('coming soon!'),
 	size = 'm',
 	mt = 0,
+	mb = 0,
+	state = null,
+	style,
 }) => {
 	const navigate = useNavigate();
 
 	const handleClick = (e) => {
 		e.preventDefault();
 
-		if (to !== '') {
+		if (to !== '' && state != null) {
+			navigate(to, { state: state });
+		} else if (to !== '') {
 			navigate(to);
 		} else {
 			onClick();
@@ -25,7 +30,7 @@ export const Button = ({
 
 	return (
 		<button
-			style={{ marginTop: mt }}
+			style={{ marginTop: mt, marginBottom: mb, ...style }}
 			onClick={(e) => handleClick(e)}
 			className={cn(styles.btn, styles[variant], {
 				[styles.sm]: size === 'sm',

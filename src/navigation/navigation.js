@@ -26,6 +26,13 @@ import {
 	PinLogin,
 	CopyPhrase,
 	CopyKey,
+	Swap,
+	SwapCoins,
+	Buy,
+	SendAmount,
+	SendAddress,
+	SendPreview,
+	Activity,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -50,7 +57,7 @@ export const Navigation = () => {
 			<Route path='/settings/security' element={<Security />} />
 			<Route path='/settings/notifications' element={<Notifications />} />
 			<Route path='/settings/dapps' element={<DApps />} />
-			<Route path='/settings/dapps-qr' element={<DAppsQr />} />
+			<Route path='/dapps-qr' element={<DAppsQr />} />
 			<Route path='/settings/about' element={<About />} />
 			<Route path='/settings/rpc' element={<Rpc />} />
 			<Route path='/create-pin' element={<PinCreate />} />
@@ -59,6 +66,13 @@ export const Navigation = () => {
 			<Route path='/home' element={<Wallet />} />
 			<Route path='/copy-phrase' element={<CopyPhrase />} />
 			<Route path='/copy-key' element={<CopyKey />} />
+			<Route path='/swap' element={<Swap />} />
+			<Route path='/swap-coins' element={<SwapCoins />} />
+			<Route path='/buy' element={<Buy />} />
+			<Route path='/send-amount' element={<SendAmount />} />
+			<Route path='/send-address' element={<SendAddress />} />
+			<Route path='/send-preview' element={<SendPreview />} />
+			<Route path='/activity' element={<Activity />} />
 		</Routes>
 	);
 };

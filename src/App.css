@@ -3,7 +3,7 @@
   width: var(--app-width);
   height: var(--app-height);
   display: flex;
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 .App-logo {

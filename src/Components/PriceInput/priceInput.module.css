@@ -1,0 +1,101 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  gap: 10px;  
+}
+.left {
+  flex-grow: 0;
+  align-self: flex-start;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  height: 114px;
+  border-radius: 24px;
+  transition: all .2s;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+}
+
+.box:first-child {
+  margin-bottom: 10px !important;
+}
+
+.box_focused {
+  background-color: var(--primary);
+}
+
+.line {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+}
+
+.subLine {
+  margin-left: 5px;
+  font-weight: 700;
+  color: var(--placeholder);
+}
+
+.input {
+  display: inline-block;
+  border: none;
+  width: 25px;
+  outline: none;
+  background: var(--primary-light);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--light-blue);
+  font-size: 24px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  max-width: 160px;
+  transition: all ease .2s;
+}
+
+.input:active,
+.input:focus {
+  background-color: var(--primary);
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+.max {
+  cursor: pointer;
+  color: var(--placeholder);
+  font-weight: 700;
+}
+
+.inputWrap {
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box {
+  border-radius: 20px;
+  background: var(--bg-dark);
+}

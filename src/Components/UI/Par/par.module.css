@@ -77,3 +77,7 @@
 .green {
     color: var(--success)
 }
+
+.dark {
+    color: #5D6785;
+}

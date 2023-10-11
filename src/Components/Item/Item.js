@@ -12,9 +12,15 @@ export const Item = ({
 	toggle = true,
 	onChange,
 	id,
+	onClick = null,
 }) => {
+	const onClickItem = () => {
+		if (onClick !== null) {
+			onClick();
+		}
+	};
 	return (
-		<div className={styles.item}>
+		<div className={styles.item} onClick={onClickItem}>
 			<div className={styles.infoWrap}>
 				{img !== '' ? (
 					<div className={styles.logo}>

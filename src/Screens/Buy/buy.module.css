@@ -1,0 +1,31 @@
+.wrapInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.wrapInput input {
+    text-align: center;
+    color: #FFF;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    min-width: 40px;
+    margin-bottom: 14px;
+    display: block;
+    max-width: 220px;
+}
+.wrapInp {
+    display: flex;
+}
+.wrapInp {
+    text-align: center;
+    color: #FFF;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

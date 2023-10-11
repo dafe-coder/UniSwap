@@ -242,3 +242,36 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.choose-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
+  width: max-content;
+  border-radius: 24px;
+  background: #293249;
+  padding: 4px 8px 4px 4px;
+  gap: 8px;
+}
+
+.choose-item img {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+
+.choose-item span {
+  color: var(--light-blue);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 16px 0 8px;
+}
+
+.items-loader > *:not(:last-child) {
+    margin-bottom: 18px;
+}

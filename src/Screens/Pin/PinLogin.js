@@ -15,7 +15,9 @@ export const PinLogin = () => {
 	const [validInp, setValidInp] = React.useState(false);
 	const [disabledBtnPass, setDisabledBtnPass] = React.useState(true);
 	const [clearInputs, setClearInputs] = React.useState(false);
-
+	React.useEffect(() => {
+		console.log(state);
+	}, [state]);
 	React.useEffect(() => {
 		if (passwordInit !== '' && password !== '') {
 			if (
@@ -39,10 +41,11 @@ export const PinLogin = () => {
 	const createPass = () => {
 		if (validInp) {
 			dispatch(setPasswordInit(''));
-			if (state.to === '/settings') {
+			if (state !== null && state.to === '/settings') {
 				dispatch(setUsePin(!usePin));
-			}
-			if (state.to.includes('/wallets')) {
+			} else if (state !== null && state.to === '/change-pass') {
+				navigate('/create-pin');
+			} else if (state.to.includes('/wallets')) {
 				navigate(state.to, { state: 'openModal' });
 			} else {
 				navigate(state.to);
