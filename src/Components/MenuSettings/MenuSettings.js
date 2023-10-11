@@ -12,7 +12,11 @@ export const MenuSettings = ({ list }) => {
 	return (
 		<div className={styles.list}>
 			{list.map((item) => (
-				<div className={styles.item} onClick={() => navigate(item.to)}>
+				<div
+					key={item.to}
+					className={styles.item}
+					onClick={() => navigate(item.to)}
+				>
 					<div className={styles.itemInfo}>
 						<SvgMenu type={item.icon} />
 						<Par size='m'>{item.title}</Par>

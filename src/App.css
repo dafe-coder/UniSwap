@@ -73,3 +73,13 @@
   align-items: center;
   gap: 6px;
 }
+
+.alert {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}

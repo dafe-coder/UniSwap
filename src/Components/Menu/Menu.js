@@ -27,11 +27,14 @@ export const Menu = () => {
 		},
 	];
 
-	console.log(location.pathname);
 	return (
 		<div className={styles.menu}>
 			{menus.map((item) => (
-				<div className={cn(styles.item)} onClick={() => navigate(item.to)}>
+				<div
+					key={item.icon}
+					className={cn(styles.item)}
+					onClick={() => navigate(item.to)}
+				>
 					<SvgMenu
 						type={item.icon}
 						fill={

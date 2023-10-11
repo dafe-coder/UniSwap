@@ -23,3 +23,5 @@ export * from './Pin/PinCreate';
 export * from './Pin/PinConfirm';
 export * from './Wallet/Wallet';
 export * from './Pin/PinLogin';
+export * from './CopyPhrase/CopyPhrase';
+export * from './CopyKey/CopyKey';

@@ -167,6 +167,28 @@ function SvgIcon(props) {
 					<ellipse cx={12} cy={17} rx={7} ry={4} fill='#2A334C' />
 				</svg>
 			);
+		case 'alert':
+			return (
+				<svg
+					width={24}
+					height={24}
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+					{...props}
+				>
+					<g clipPath='url(#prefix__clip0_21_1008)'>
+						<path
+							d='M17 3.34a10 10 0 11-14.995 8.984L2 12l.005-.324A10 10 0 0117 3.34zM12.01 15l-.127.007a1 1 0 000 1.986L12 17l.127-.007a1 1 0 000-1.986L12.01 15zM12 7a1 1 0 00-.993.883L11 8v4l.007.117a1 1 0 001.986 0L13 12V8l-.007-.117A1 1 0 0012 7z'
+							fill='#E61C05'
+						/>
+					</g>
+					<defs>
+						<clipPath id='prefix__clip0_21_1008'>
+							<path fill='#fff' d='M0 0h24v24H0z' />
+						</clipPath>
+					</defs>
+				</svg>
+			);
 		case 'activity':
 			return (
 				<svg

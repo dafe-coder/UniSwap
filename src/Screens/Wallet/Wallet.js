@@ -21,6 +21,7 @@ import {
 	ItemExpand,
 	NavSwitch,
 	ItemNft,
+	Menu,
 } from '../../Components';
 import fixNum from '../../func.wallet/fixNum';
 import { Par } from '../../Components/UI';
@@ -258,6 +259,7 @@ export const Wallet = () => {
 					</div>
 				)}
 			</div>
+			<Menu />
 		</div>
 	);
 };

@@ -24,6 +24,8 @@ import {
 	PinConfirm,
 	Wallet,
 	PinLogin,
+	CopyPhrase,
+	CopyKey,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -55,6 +57,8 @@ export const Navigation = () => {
 			<Route path='/confirm-pin' element={<PinConfirm />} />
 			<Route path='/login-pin' element={<PinLogin />} />
 			<Route path='/home' element={<Wallet />} />
+			<Route path='/copy-phrase' element={<CopyPhrase />} />
+			<Route path='/copy-key' element={<CopyKey />} />
 		</Routes>
 	);
 };
