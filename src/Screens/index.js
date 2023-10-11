@@ -22,3 +22,4 @@ export * from './Rpc/Rpc';
 export * from './Pin/PinCreate';
 export * from './Pin/PinConfirm';
 export * from './Wallet/Wallet';
+export * from './Pin/PinLogin';

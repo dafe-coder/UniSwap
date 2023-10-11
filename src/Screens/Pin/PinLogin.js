@@ -3,63 +3,58 @@ import { Header, PinCode } from '../../Components';
 import { Button } from '../../Components/UI';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-	setPassword,
-	setUsePin,
-	setIsLogin,
-} from '../../redux/slices/StorageSlice';
-import {
-	setPasswordInit,
-	setPasswordConfirm,
-} from '../../redux/slices/WalletSlice';
+import { setUsePin } from '../../redux/slices/StorageSlice';
+import { setPasswordInit } from '../../redux/slices/WalletSlice';
 
-export const PinConfirm = () => {
+export const PinLogin = () => {
 	const { state } = useLocation();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const { passwordInit, passwordConfirm } = useSelector(
-		(state) => state.wallet
-	);
+	const { password, usePin } = useSelector((state) => state.storage);
+	const { passwordInit } = useSelector((state) => state.wallet);
 	const [validInp, setValidInp] = React.useState(false);
 	const [disabledBtnPass, setDisabledBtnPass] = React.useState(true);
+	const [clearInputs, setClearInputs] = React.useState(false);
 
 	React.useEffect(() => {
-		// alert(passwordConfirm.length)
-		if (passwordInit !== '' && passwordConfirm !== '') {
+		if (passwordInit !== '' && password !== '') {
 			if (
-				passwordInit === passwordConfirm &&
+				passwordInit === password &&
 				passwordInit.length === 6 &&
-				passwordConfirm.length === 6
+				password.length === 6
 			) {
 				setValidInp(true);
 			} else {
 				setValidInp(false);
 			}
 
-			if (passwordInit.length === 6 && passwordConfirm.length === 6) {
+			if (passwordInit.length === 6 && password.length === 6) {
 				setDisabledBtnPass(false);
 			} else {
 				setDisabledBtnPass(true);
 			}
 		}
-	}, [passwordInit, passwordConfirm]);
+	}, [passwordInit, password]);
 
 	const createPass = () => {
 		if (validInp) {
-			dispatch(setPassword(passwordInit));
-			if (state !== null && state.to === '/settings') {
-				dispatch(setUsePin(true));
-				navigate(state.to);
+			dispatch(setPasswordInit(''));
+			if (state.to === '/settings') {
+				dispatch(setUsePin(!usePin));
+			}
+			if (state.to.includes('/wallets')) {
+				navigate(state.to, { state: 'openModal' });
 			} else {
-				dispatch(setUsePin(true));
-				navigate('/home');
+				navigate(state.to);
 			}
 		} else {
 			dispatch(setPasswordInit(''));
-			dispatch(setPasswordConfirm(''));
-			navigate('/create-pin');
+			setClearInputs(true);
+			const timerID = setTimeout(() => {
+				setClearInputs(false);
+				clearTimeout(timerID);
+			}, 100);
 		}
-		dispatch(setIsLogin(true));
 	};
 
 	return (
@@ -67,7 +62,11 @@ export const PinConfirm = () => {
 			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Confirm your PIN code' />
-				<PinCode name='confirm' styleWrap={{ marginTop: 90 }} />
+				<PinCode
+					clear={clearInputs}
+					name='login'
+					styleWrap={{ marginTop: 90 }}
+				/>
 			</div>
 			<div className='body-bottom'>
 				<Button

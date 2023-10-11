@@ -23,6 +23,7 @@ import {
 	PinCreate,
 	PinConfirm,
 	Wallet,
+	PinLogin,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -52,6 +53,7 @@ export const Navigation = () => {
 			<Route path='/settings/rpc' element={<Rpc />} />
 			<Route path='/create-pin' element={<PinCreate />} />
 			<Route path='/confirm-pin' element={<PinConfirm />} />
+			<Route path='/login-pin' element={<PinLogin />} />
 			<Route path='/home' element={<Wallet />} />
 		</Routes>
 	);

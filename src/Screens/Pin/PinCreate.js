@@ -12,7 +12,6 @@ export const PinCreate = () => {
 	const [disabledBtn, setDisabledBtn] = React.useState(true);
 
 	React.useEffect(() => {
-		// alert(passwordInit.length)
 		if (passwordInit.length === 6) {
 			setDisabledBtn(false);
 		} else {

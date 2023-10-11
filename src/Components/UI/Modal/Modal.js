@@ -2,7 +2,6 @@ import ReactModal from 'react-modal';
 import React from 'react';
 import { SvgIcon } from '../../../Svgs';
 import styles from './modal.module.css';
-import { Title } from '../Title/Title';
 import { Par } from '../Par/Par';
 
 export const Modal = ({
@@ -11,7 +10,8 @@ export const Modal = ({
 	setOpen,
 	title = '',
 	par = '',
-	fwTitle,
+	fwTitle = 600,
+	warning = false,
 }) => {
 	return (
 		<ReactModal
@@ -20,9 +20,13 @@ export const Modal = ({
 			isOpen={open}
 			onRequestClose={() => setOpen(false)}
 		>
-			{title !== '' && <Title fw={fwTitle}>{title}</Title>}
+			{title !== '' && (
+				<Par color={warning ? 'red' : ''} fw={fwTitle} size='m' center>
+					{title}
+				</Par>
+			)}
 			{par !== '' && (
-				<Par color='light' mt={6} center={true}>
+				<Par size='sm' color='light' mt={6} center={true}>
 					{par}
 				</Par>
 			)}
