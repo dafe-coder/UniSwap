@@ -9,6 +9,7 @@ export const Success = () => {
 
 	return (
 		<div className='screen'>
+			<div className='top-bg' />
 			<div className='body'></div>
 			<div className='body-bottom'>
 				<div style={{ marginBottom: 114 }}>

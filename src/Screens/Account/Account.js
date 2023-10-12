@@ -22,6 +22,7 @@ export const AccountWallets = () => {
 	const [openDeleteBackup, setOpenDeleteBackup] = React.useState(false);
 	const [openDeleteBackupWarning, setOpenDeleteBackupWarning] =
 		React.useState(false);
+	const [chooseAccount, setChooseAccount] = React.useState(null);
 
 	const onDeleteWallet = (backup, name) => {
 		dispatch(setDeleteName(name));
@@ -72,24 +73,26 @@ export const AccountWallets = () => {
 		}
 	};
 
+	React.useEffect(() => {
+		if (dataUser.length)
+			setChooseAccount(dataUser.find((item) => item.name === currentWallet));
+	}, [dataUser, currentWallet]);
+
 	return (
 		<div className='screen'>
 			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Wallet' />
-				{dataUser.length ? (
-					dataUser.map((item, i) => (
-						<ItemSelectAccounts
-							deleteFunc={onDeleteWallet}
-							key={i}
-							item={item}
-							title={
-								item.name === currentWallet
-									? `$ ${fixNum(portfolioBalanceUsd)}`
-									: ''
-							}
-						/>
-					))
+				{dataUser.length && chooseAccount !== null ? (
+					<ItemSelectAccounts
+						deleteFunc={onDeleteWallet}
+						item={chooseAccount}
+						title={
+							chooseAccount.name === currentWallet
+								? `$ ${fixNum(portfolioBalanceUsd)}`
+								: ''
+						}
+					/>
 				) : (
 					<></>
 				)}

@@ -61,12 +61,12 @@ export const ImportData = () => {
 	React.useEffect(() => {
 		const phraseArr = phrase.trim().split(' ');
 		if (
-			(phraseArr.length == 1 && phraseArr.join(' ').length == 64) ||
-			phraseArr.length == 12 ||
-			phraseArr.length == 15 ||
-			phraseArr.length == 18 ||
-			phraseArr.length == 21 ||
-			phraseArr.length == 24
+			(phraseArr.length === 1 && phraseArr.join(' ').length === 64) ||
+			phraseArr.length === 12 ||
+			phraseArr.length === 15 ||
+			phraseArr.length === 18 ||
+			phraseArr.length === 21 ||
+			phraseArr.length === 24
 		) {
 			setDisabledBtn(false);
 		} else {
@@ -103,7 +103,7 @@ export const ImportData = () => {
 					])
 				);
 				setOpenName(false);
-				navigate('/manage');
+				navigate('/manage-default');
 			}
 		}
 	};
@@ -154,8 +154,8 @@ export const ImportData = () => {
 				<div className='btns' style={{ marginTop: 32 }}>
 					<Button
 						variant={disabledBtnName ? 'disabled' : 'default'}
-						to='/manage-default'
 						size='sm'
+						onClick={addNewAcc}
 					>
 						Import
 					</Button>

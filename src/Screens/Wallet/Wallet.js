@@ -7,6 +7,7 @@ import {
 	fetchDataWallet,
 	setAllCoins,
 	fetchAllCoins,
+	setDataWallet,
 } from '../../redux/slices/WalletSlice';
 import {
 	setChooseCoinOne,
@@ -26,6 +27,7 @@ import {
 import fixNum from '../../func.wallet/fixNum';
 import { Par } from '../../Components/UI';
 import { CircleButton } from '../../Components/UI/';
+import { setCurrentWallet } from '../../redux/slices/StorageSlice';
 
 export const Wallet = () => {
 	const dispatch = useDispatch();
@@ -154,6 +156,13 @@ export const Wallet = () => {
 		},
 	];
 
+	const chooseAccount = (item) => {
+		dispatch(setCurrentWallet(item.name));
+		dispatch(setDataWallet(null));
+		navigate('/home');
+		setPortfolioCoinsFiltered([]);
+	};
+
 	const handleItemClick = (item) => {
 		if (item.to && item.pass) {
 			if (usePin) {
@@ -186,9 +195,11 @@ export const Wallet = () => {
 						>
 							{dataUser.map((item) => (
 								<div
+									key={item.name}
 									className={cn('item-expand', {
 										active: item.name === currentWallet,
 									})}
+									onClick={() => chooseAccount(item)}
 								>
 									{item.name}
 								</div>
@@ -267,7 +278,7 @@ export const Wallet = () => {
 					{!showTab && (
 						<span
 							className='list-title-link'
-							onClick={() => navigate('/manage-cryptos-main')}
+							onClick={() => navigate('/manage')}
 						>
 							<Par color='light'>Manage</Par>
 							<SvgIcon

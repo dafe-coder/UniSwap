@@ -16,6 +16,7 @@ export const ImportStart = () => {
 			<div className='body'>
 				<Title size='m'>Follow these steps to import your wallet</Title>
 				<ButtonBig
+					to='/settings/backup'
 					mt={30}
 					title='Create a backup for you current Ordinals Wallet'
 				>

@@ -67,7 +67,7 @@ export const MangeDefault = () => {
 	const dispatch = useDispatch();
 
 	const handleToggle = (data) => {
-		dispatch(setChooseAssets(data.amount.split(' ')[1].toLowerCase()));
+		dispatch(setChooseAssets(data.toLowerCase()));
 	};
 
 	return (

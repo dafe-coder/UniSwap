@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './item.module.css';
 import { Par } from '../UI/Par/Par';
 import { Toggle } from '../UI';
+import { useSelector } from 'react-redux';
 
 export const Item = ({
 	img = '',
@@ -13,7 +14,10 @@ export const Item = ({
 	onChange,
 	id,
 	onClick = null,
+	toggleCheck,
 }) => {
+	const { chooseAssets } = useSelector((state) => state.storage);
+
 	const onClickItem = () => {
 		if (onClick !== null) {
 			onClick();
@@ -43,7 +47,18 @@ export const Item = ({
 					)}
 				</div>
 			</div>
-			{toggle && <Toggle id={id} onToggle={onChange} />}
+			{toggle && (
+				<Toggle
+					checked={
+						symbol === ''
+							? toggleCheck
+							: chooseAssets.includes(symbol.toLowerCase())
+					}
+					data={symbol}
+					id={id}
+					onToggle={onChange}
+				/>
+			)}
 		</div>
 	);
 };

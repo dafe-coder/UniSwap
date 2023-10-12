@@ -34,3 +34,5 @@ export * from './Send/Send';
 export * from './Activity/Activity';
 export * from './AssetInfo/AssetInfo';
 export * from './Receive/Receive';
+export * from './Manage/Manage';
+export * from './Generate/Generate';

@@ -35,6 +35,7 @@ import {
 	Activity,
 	AssetInfo,
 	Receive,
+	Manage,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -77,6 +78,7 @@ export const Navigation = () => {
 			<Route path='/activity' element={<Activity />} />
 			<Route path='/home/assets-info' element={<AssetInfo />} />
 			<Route path='/home/receive' element={<Receive />} />
+			<Route path='/manage' element={<Manage />} />
 		</Routes>
 	);
 };
