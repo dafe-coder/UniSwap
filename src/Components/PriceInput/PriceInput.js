@@ -3,7 +3,6 @@ import styles from './priceInput.module.css';
 import classNames from 'classnames/bind';
 import { SvgIcon } from '../../Svgs';
 import { useNavigate } from 'react-router-dom';
-import fixNum from '../../func.wallet/fixNum';
 import { Par } from '../UI';
 
 export const PriceInput = ({
@@ -16,7 +15,7 @@ export const PriceInput = ({
 	to,
 }) => {
 	const [isFocused, setIsFocused] = useState(false);
-	const [update, setUpdate] = React.useState({});
+	// const [update, setUpdate] = React.useState({});
 	const navigate = useNavigate();
 	const handleFocus = () => {
 		setIsFocused(true);
@@ -26,10 +25,10 @@ export const PriceInput = ({
 		setIsFocused(false);
 	};
 
-	const onMax = () => {
-		setValue(chooseItem.market_data.balance);
-		setUpdate({});
-	};
+	// const onMax = () => {
+	// 	setValue(chooseItem.market_data.balance);
+	// 	setUpdate({});
+	// };
 
 	return (
 		<div

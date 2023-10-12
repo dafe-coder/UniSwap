@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './activity.module.css';
 import { Menu, NavSwitch } from '../../Components';
 import classNames from 'classnames';
-import { Button, Modal, Par, Title } from '../../Components/UI';
+import { Button, Modal, Title } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import fixNum from '../../func.wallet/fixNum';
 import { SvgIcon } from '../../Svgs';

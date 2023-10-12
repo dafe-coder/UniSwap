@@ -78,7 +78,10 @@ export const ImportData = () => {
 		if (name !== '') {
 			const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 			if (!disabledBtn) {
-				const privateKey = generateAddressesFromSeed(phrase, phrase.length);
+				const privateKey =
+					phrase.length === 64
+						? phrase
+						: generateAddressesFromSeed(phrase, phrase.length);
 				const account = {
 					name: name.trim(),
 					phrase:

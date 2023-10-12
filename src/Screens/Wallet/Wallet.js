@@ -53,7 +53,12 @@ export const Wallet = () => {
 	React.useEffect(() => {
 		const wallet = dataUser.find((item) => item.name === currentWallet);
 		if (wallet !== undefined && dataWallet === null && status !== 'loading') {
-			dispatch(fetchDataWallet([wallet.phrase, walletNew]));
+			dispatch(
+				fetchDataWallet([
+					wallet.phrase !== '' ? wallet.phrase : wallet.privateKey,
+					walletNew,
+				])
+			);
 		}
 	}, [dataUser, dataWallet, dispatch, currentWallet, walletNew, status]);
 

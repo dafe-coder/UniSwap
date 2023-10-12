@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './textRowsBlock.module.css';
-import cn from 'classnames';
 import { NavSwitch } from '../NavSwitch/NavSwitch';
 import { Par } from '../UI';
 
