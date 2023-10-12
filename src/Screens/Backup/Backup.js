@@ -10,9 +10,9 @@ export const Backup = () => {
 
 	const goBackUp = () => {
 		if (usePin) {
-			navigate('/login-pin', { state: { to: '/backup-start' } });
+			navigate('/login-pin', { state: { to: '/settings/backup-start' } });
 		} else {
-			navigate('/backup-start');
+			navigate('/settings/backup-start');
 		}
 	};
 

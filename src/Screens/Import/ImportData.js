@@ -44,7 +44,7 @@ export const ImportData = () => {
 		let i = 1;
 		let name = 'Wallet ' + i;
 		names.forEach((item) => {
-			if (item == name) {
+			if (item === name) {
 				i = i + 1;
 				name = 'Wallet ' + i;
 			}

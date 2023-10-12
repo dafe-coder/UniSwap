@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './send.module.css';
 import { Button, Par } from '../../Components/UI';
-import { Menu, Header } from '../../Components';
+import { Header } from '../../Components';
 import {
 	setChooseCoinOne,
 	setChooseCoinTwo,

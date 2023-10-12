@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './backup.module.css';
 import { Header } from '../../Components/';
 import { Par, Button } from '../../Components/UI';
+import { Checkbox } from '../../Components/UI/';
 
 export const BackupStart = () => {
+	const [submitValue, setSubmitValue] = React.useState(false);
 	return (
 		<div className='screen'>
 			<div className='top-bg' />
@@ -21,7 +22,22 @@ export const BackupStart = () => {
 				</Par>
 			</div>
 			<div className='body-bottom'>
-				<Button to='/backup-phrase'>Continue</Button>
+				<Checkbox
+					item={submitValue}
+					activeItem={true}
+					onChangeBoolean={setSubmitValue}
+					type='checkbox'
+					variant='agreement'
+					id='backup'
+					label='I understand that if I lose my recovery phrase, I will lose my funds.'
+				/>
+
+				<Button
+					variant={!submitValue ? 'disabled' : 'default'}
+					to='/settings/backup-phrase'
+				>
+					Continue
+				</Button>
 			</div>
 		</div>
 	);

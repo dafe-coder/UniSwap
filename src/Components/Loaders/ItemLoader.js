@@ -7,8 +7,8 @@ export const ItemLoader = ({ style, px = 40 }) => {
 			style={style}
 			speed={2}
 			width={window.innerWidth - px}
-			height={68}
-			viewBox={`0 0 ${window.innerWidth - px} 68`}
+			height={130}
+			viewBox={`0 0 ${window.innerWidth - px} 130`}
 			backgroundColor='var(--bg-dark)'
 			foregroundColor='var(--gray-border)'
 		>
@@ -18,7 +18,7 @@ export const ItemLoader = ({ style, px = 40 }) => {
 				rx='6'
 				ry='6'
 				width={window.innerWidth - px}
-				height='68'
+				height='130'
 			/>
 		</ContentLoader>
 	);

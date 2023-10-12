@@ -188,7 +188,7 @@ export default async function transactionsSend(
 	const FROM = from; // address to send from
 	const TO = to; // address to send to
 	const TOKEN = token; // token address
-	const AMOUNT = amount != 0 ? amount : '0'; // amount of token/eth, has to be a String value: "322", "2.88" etc.
+	const AMOUNT = amount !== 0 ? amount : '0'; // amount of token/eth, has to be a String value: "322", "2.88" etc.
 	if (ether) {
 		sendETH(
 			FROM,

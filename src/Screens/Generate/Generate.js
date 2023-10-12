@@ -42,7 +42,7 @@ export const Generate = () => {
 			dispatch(setIsLogin(true));
 		}
 		generateWords();
-	}, []);
+	}, [dispatch]);
 
 	React.useEffect(() => {
 		if (!load1) {
@@ -52,7 +52,7 @@ export const Generate = () => {
 				clearTimeout(timerID);
 			}, 11000);
 		}
-	}, [load1]);
+	}, [load1, navigate]);
 
 	return (
 		<div className='screen'>

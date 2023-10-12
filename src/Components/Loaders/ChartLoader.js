@@ -7,8 +7,8 @@ export const ChartLoader = ({ style, width }) => {
 			style={style}
 			speed={2}
 			width={width ? width : 350}
-			height={208}
-			viewBox={width ? `0 0 ${width} 208` : '0 0 350 208'}
+			height={158}
+			viewBox={width ? `0 0 ${width} 158` : '0 0 350 208'}
 			backgroundColor='var(--bg-dark)'
 			foregroundColor='var(--gray-border)'
 		>
@@ -18,7 +18,7 @@ export const ChartLoader = ({ style, width }) => {
 				rx='20'
 				ry='20'
 				width={width ? width : 350}
-				height='208'
+				height='158'
 			/>
 		</ContentLoader>
 	);

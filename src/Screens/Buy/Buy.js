@@ -1,10 +1,9 @@
 import React from 'react';
 import { Button, Par, Title } from '../../Components/UI';
-import { PriceInput, Menu } from '../../Components/';
+import { Menu } from '../../Components/';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { setChooseCoinOne } from '../../redux/slices/TransactionsSlice';
-import { ItemLoader } from '../../Components/';
 import styles from './buy.module.css';
 
 export const Buy = () => {

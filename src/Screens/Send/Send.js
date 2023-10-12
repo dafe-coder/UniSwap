@@ -3,12 +3,8 @@ import styles from './send.module.css';
 import { Header, TextRowsBlock } from '../../Components';
 import { Button, Par } from '../../Components/UI';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-	setAddressTo,
-	setAmountSend,
-} from '../../redux/slices/TransactionsSlice';
 import { useNavigate } from 'react-router-dom';
-// import transactionsSend from '../../func.wallet/transaction';
+import transactionsSend from '../../func.wallet/transaction';
 import { setDataWallet } from '../../redux/slices/WalletSlice';
 import CryptoJS from 'crypto-js';
 import fixNum from '../../func.wallet/fixNum';
@@ -16,26 +12,6 @@ import { Modal } from '../../Components/UI/Modal/Modal';
 
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
-const texts = [
-	{
-		left: 'Transaction Fee',
-		right: '0.34 USD',
-	},
-	{
-		left: 'Reception time',
-		right: '⚡ Instant (0 to 30 minutes)',
-	},
-];
-const texts2 = [
-	{
-		left: 'Transaction Fee',
-		right: '0.14 USD',
-	},
-	{
-		left: 'Reception time',
-		right: '🌱 2 hours in average',
-	},
-];
 export const SendPreview = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -44,9 +20,7 @@ export const SendPreview = () => {
 		(state) => state.transaction
 	);
 	const { walletAddress } = useSelector((state) => state.wallet);
-	const [textRows, setTextRows] = React.useState(texts);
 	const [disabledBtn, setDisabledBtn] = React.useState(true);
-	const [showText, setShowText] = React.useState(true);
 	const [checkEther, setCheckEther] = React.useState(false);
 	const [hash, setHash] = React.useState('');
 	const [openModalSuccess, setOpenModalSuccess] = React.useState(false);
@@ -55,31 +29,18 @@ export const SendPreview = () => {
 	const [currentAccount, setCurrentAccount] = React.useState(null);
 
 	React.useEffect(() => {
-		setCurrentAccount(dataUser.find((item) => item.name == currentWallet));
+		setCurrentAccount(dataUser.find((item) => item.name === currentWallet));
 	}, [dataUser, currentWallet]);
-
-	const buttonActions = [
-		{
-			title: '20%',
-		},
-		{
-			title: '50%',
-		},
-		{
-			title: '75%',
-		},
-		{
-			title: '100%',
-		},
-	];
-
+	React.useEffect(() => {
+		console.log(hash);
+	}, [hash]);
 	const goHome = () => {
 		dispatch(setDataWallet(null));
 		navigate('/home');
 	};
 
 	React.useEffect(() => {
-		if (chooseCoinOne != null && chooseCoinOne.symbol.toLowerCase() == 'eth') {
+		if (chooseCoinOne != null && chooseCoinOne.symbol.toLowerCase() === 'eth') {
 			setCheckEther(true);
 		} else {
 			setCheckEther(false);
@@ -104,19 +65,19 @@ export const SendPreview = () => {
 				chooseCoinOne != null
 			) {
 				setLoading(true);
-				// transactionsSend(
-				// 	walletAddress,
-				// 	addressTo,
-				// 	chooseCoinOne.contract_address,
-				// 	amountSend.toString(),
-				// 	checkEther,
-				// 	setHash,
-				// 	onOpenModalSuccess,
-				// 	onOpenModalGas,
-				// 	CryptoJS.AES.decrypt(currentAccount.privateKey, kitkat).toString(
-				// 		CryptoJS.enc.Utf8
-				// 	)
-				// );
+				transactionsSend(
+					walletAddress,
+					addressTo,
+					chooseCoinOne.contract_address,
+					amountSend.toString(),
+					checkEther,
+					setHash,
+					onOpenModalSuccess,
+					onOpenModalGas,
+					CryptoJS.AES.decrypt(currentAccount.privateKey, kitkat).toString(
+						CryptoJS.enc.Utf8
+					)
+				);
 			}
 		}
 	};
@@ -129,31 +90,23 @@ export const SendPreview = () => {
 		}
 	}, [amountSend, addressTo]);
 
-	React.useEffect(() => {
-		if (showText) {
-			setTextRows(texts);
-		} else {
-			setTextRows(texts2);
-		}
-	}, [showText]);
+	// const setValue = (value) => {
+	// 	dispatch(setAddressTo(value));
+	// };
 
-	const setValue = (value) => {
-		dispatch(setAddressTo(value));
-	};
+	// const setAmount = (value) => {
+	// 	dispatch(setAmountSend(value));
+	// };
 
-	const setAmount = (value) => {
-		dispatch(setAmountSend(value));
-	};
-
-	const onChoosePercent = (value) => {
-		if (chooseCoinOne != null) {
-			dispatch(
-				setAmountSend(
-					((chooseCoinOne.market_data.balance / 100) * Number(value)).toString()
-				)
-			);
-		}
-	};
+	// const onChoosePercent = (value) => {
+	// 	if (chooseCoinOne != null) {
+	// 		dispatch(
+	// 			setAmountSend(
+	// 				((chooseCoinOne.market_data.balance / 100) * Number(value)).toString()
+	// 			)
+	// 		);
+	// 	}
+	// };
 
 	return (
 		<div className='screen'>
@@ -188,7 +141,7 @@ export const SendPreview = () => {
 						value={addressTo.slice(0, 30) + '...' + addressTo.slice(-7)}
 					/>
 				</div>
-				<TextRowsBlock style={{ marginTop: 30 }} content={textRows} />
+				<TextRowsBlock style={{ marginTop: 30 }} />
 			</div>
 			<div className='body-bottom'>
 				<Par color='light' center mt={60} mb={16}>

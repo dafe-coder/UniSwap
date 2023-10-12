@@ -7,3 +7,4 @@ export * from './CopyButton/CopyButton';
 export * from './Modal/Modal';
 export * from './Toggle/Toggle';
 export * from './CircleButton/CircleButton';
+export * from './Checkbox/Checkbox';

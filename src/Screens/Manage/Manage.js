@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './manage.module.css';
-import { Menu, Header } from '../../Components';
-import { Par, Toggle } from '../../Components/UI';
+import { Header } from '../../Components';
+import { Par } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setChooseAssets } from '../../redux/slices/StorageSlice';
@@ -13,7 +13,6 @@ import { Item } from '../../Components/Item/Item';
 export const Manage = () => {
 	const dispatch = useDispatch();
 	const { allCoins } = useSelector((state) => state.wallet);
-	const { chooseAssets } = useSelector((state) => state.storage);
 	const [filtered, setFiltered] = React.useState([]);
 	const [value, setValue] = React.useState('');
 

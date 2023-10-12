@@ -29,4 +29,13 @@
 .checkInput input {
     padding: 0 10px;
     width: 100%;
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.checkInput input::placeholder {
+    color: var(--white);
 }

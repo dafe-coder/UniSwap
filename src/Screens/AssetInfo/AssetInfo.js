@@ -214,7 +214,10 @@ export const AssetInfo = () => {
 						/>
 					</div>
 				) : (
-					<ChartLoader width={width} />
+					<ChartLoader
+						width={width}
+						style={{ marginBottom: 20, marginTop: 10 }}
+					/>
 				)}
 
 				<div className={styles.list}>
