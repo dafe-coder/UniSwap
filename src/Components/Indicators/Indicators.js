@@ -16,10 +16,12 @@ export const Indicators = ({ percent, usd, style }) => {
 				variants[percent > 0 ? 'green' : 'red']
 			)}
 		>
-			<div className={styles.text}>
-				{percent > 0 ? '+' : ''}
-				{fixNum(usd)} $
-			</div>
+			{usd && (
+				<div className={styles.text}>
+					{percent > 0 ? '+' : ''}
+					{fixNum(usd)} $
+				</div>
+			)}
 			<div className={styles.block}>
 				{percent > 0 ? '+' : ''}
 				{fixNum(percent)}%

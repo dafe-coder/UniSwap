@@ -10,7 +10,7 @@ export const TransactionItem = ({ data }) => {
 	return (
 		<div
 			className={styles.item}
-			onClick={() => navigate('/assets-info', { state: data })}
+			onClick={() => navigate('/home/assets-info', { state: data })}
 		>
 			<div className={styles.itemLeft}>
 				<div className={styles.img}>

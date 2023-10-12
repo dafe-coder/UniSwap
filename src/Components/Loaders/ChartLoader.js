@@ -1,14 +1,14 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
 
-export const ItemLoader = ({ style, px = 40 }) => {
+export const ChartLoader = ({ style, width }) => {
 	return (
 		<ContentLoader
 			style={style}
 			speed={2}
-			width={window.innerWidth - px}
-			height={68}
-			viewBox={`0 0 ${window.innerWidth - px} 68`}
+			width={width ? width : 350}
+			height={208}
+			viewBox={width ? `0 0 ${width} 208` : '0 0 350 208'}
 			backgroundColor='#09202A'
 			foregroundColor='var(--primary-light)'
 		>
@@ -17,8 +17,8 @@ export const ItemLoader = ({ style, px = 40 }) => {
 				y='0'
 				rx='6'
 				ry='6'
-				width={window.innerWidth - px}
-				height='68'
+				width={width ? width : 350}
+				height='208'
 			/>
 		</ContentLoader>
 	);

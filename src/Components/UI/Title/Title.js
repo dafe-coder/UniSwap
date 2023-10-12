@@ -10,11 +10,12 @@ export const Title = ({
 	fw = 600,
 	size = 'sm',
 	color = 'white',
+	className,
 }) => {
 	return (
 		<div
 			style={{ marginTop: mt, marginBottom: mb, fontWeight: fw }}
-			className={cn(styles.title, {
+			className={cn(styles.title, className, {
 				[styles['center']]: center,
 				[styles[size]]: size !== 'sm',
 				[styles[color]]: size !== 'white',

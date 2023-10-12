@@ -55,8 +55,12 @@
   border-radius: 20px !important;
   border: 1px solid var(--gray) !important;
   background: var(--Dark-Bg, #090D15) !important;
+  width: calc(100% - 60px) !important;
   height: max-content;
-  inset: 70px 30px !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%,-50%) !important;
+  position: absolute;
 }
 
 .ReactModal__Overlay--after-open{

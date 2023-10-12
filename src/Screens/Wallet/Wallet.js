@@ -25,7 +25,7 @@ import {
 } from '../../Components';
 import fixNum from '../../func.wallet/fixNum';
 import { Par } from '../../Components/UI';
-import { CircleButton } from '../../Components/UI/CircleButton/CircleButton';
+import { CircleButton } from '../../Components/UI/';
 
 export const Wallet = () => {
 	const dispatch = useDispatch();
@@ -40,7 +40,7 @@ export const Wallet = () => {
 		coins,
 		status,
 	} = useSelector((state) => state.wallet);
-	const { dataUser, currentWallet, chooseAssets } = useSelector(
+	const { dataUser, currentWallet, chooseAssets, usePin } = useSelector(
 		(state) => state.storage
 	);
 	const [portfolioCoinsFiltered, setPortfolioCoinsFiltered] = React.useState(
@@ -53,13 +53,13 @@ export const Wallet = () => {
 		if (wallet !== undefined && dataWallet === null && status !== 'loading') {
 			dispatch(fetchDataWallet([wallet.phrase, walletNew]));
 		}
-	}, [dataUser, dataWallet]);
+	}, [dataUser, dataWallet, dispatch, currentWallet, walletNew, status]);
 
 	React.useEffect(() => {
 		if (coins === null) {
 			dispatch(fetchAllCoins());
 		}
-	}, [coins]);
+	}, [coins, dispatch]);
 
 	React.useEffect(() => {
 		if (portfolioCoins !== null && coins !== null) {
@@ -80,20 +80,16 @@ export const Wallet = () => {
 
 			dispatch(setAllCoins([...portfolioCoins, ...coinsFilterDefault]));
 		}
-	}, [portfolioCoins, coins, chooseAssets]);
+	}, [portfolioCoins, coins, chooseAssets, dispatch]);
 
 	React.useEffect(() => {
 		if (allCoins.length) {
 			dispatch(setChooseCoinOne(allCoins[0]));
 			dispatch(setChooseCoinTwo(allCoins[1]));
 		}
-	}, [allCoins]);
+	}, [allCoins, dispatch]);
 
 	const menuItems = [
-		{
-			title: 'Copy Address',
-			icon: 'copy-inlined',
-		},
 		{
 			title: 'View Recovery Phrase',
 			to: '/copy-phrase',
@@ -157,6 +153,19 @@ export const Wallet = () => {
 			price: '0.01099994',
 		},
 	];
+
+	const handleItemClick = (item) => {
+		if (item.to && item.pass) {
+			if (usePin) {
+				navigate('/login-pin', { state: { to: item.to } });
+			} else {
+				navigate(item.to);
+			}
+		} else if (item.to && !item.pass) {
+			navigate(item.to);
+		}
+	};
+
 	return (
 		<div className='screen'>
 			<div className='bottom-bg' />
@@ -164,31 +173,59 @@ export const Wallet = () => {
 				<div className='header' style={{ marginBottom: 25 }}>
 					<div style={{ cursor: 'pointer' }} className='header-item'>
 						<ItemExpand
+							items
 							caretFill='var(--light)'
 							title={
 								<div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
 									<SvgIcon type='user' fill='var(--primary)' />
 									<Par style={{ marginRight: 2 }} color='light'>
-										Wallet 1
+										{currentWallet}
 									</Par>
 								</div>
 							}
 						>
-							<a href='!#'>Wallet 1</a>
-							<a href='!#'>Wallet 2</a>
+							{dataUser.map((item) => (
+								<div
+									className={cn('item-expand', {
+										active: item.name === currentWallet,
+									})}
+								>
+									{item.name}
+								</div>
+							))}
 						</ItemExpand>
 					</div>
-					<div
-						style={{ cursor: 'pointer' }}
-						className='header-item'
-						onClick={() => navigate('/activity')}
-					>
-						<SvgIcon type='activity' fill='var(--primary)' />
+					<div></div>
+					<div>
+						<ItemExpand
+							posRight
+							ownTitle
+							items
+							title={
+								<div style={{ cursor: 'pointer' }} className='header-item'>
+									<SvgIcon type='activity' />
+								</div>
+							}
+						>
+							{menuItems.map((item) => (
+								<div
+									key={item.title}
+									className='item-expand'
+									onClick={() => handleItemClick(item)}
+								>
+									{item.title}
+								</div>
+							))}
+						</ItemExpand>
 					</div>
-					{/* <MenuActions items={menuItems} /> */}
 				</div>
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<NavSwitch active={true} leftText='Wallet' rightText='Activity' />
+					<NavSwitch
+						setActive={() => navigate('/activity')}
+						active={true}
+						leftText='Wallet'
+						rightText='Activity'
+					/>
 				</div>
 				{portfolioBalanceUsd !== null ? (
 					<CardPrice
@@ -199,9 +236,14 @@ export const Wallet = () => {
 					<PriceLoader style={{ width: '100%' }} />
 				)}
 				<div className={styles.btnsCircle}>
-					<CircleButton title='Send' icon='send' to='send' />
-					<CircleButton title='Receive' icon='receive' to='receive' />
-					<CircleButton title='Buy' icon='buy' to='buy' />
+					<CircleButton
+						to='/swap-coins'
+						state={{ to: '/send-amount', from: 'swapOne' }}
+						title='Send'
+						icon='send'
+					/>
+					<CircleButton title='Receive' icon='receive' to='/home/receive' />
+					<CircleButton title='Buy' icon='buy' to='/buy' />
 				</div>
 				<div className={cn(styles.listTitle)}>
 					<div className={styles.nav}>

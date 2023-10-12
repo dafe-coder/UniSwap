@@ -83,8 +83,9 @@ export const Swap = () => {
 						<ItemExpand items fwTitle={500} titleSize='m' title={network}>
 							{mockList.map((item) => (
 								<div
+									key={item.title}
 									onClick={() => setNetwork(item.title)}
-									className={cn({
+									className={cn('item-expand', {
 										active: item.title === network,
 									})}
 								>

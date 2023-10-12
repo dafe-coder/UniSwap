@@ -32,3 +32,5 @@ export * from './Send/SendAmount';
 export * from './Send/SendAddress';
 export * from './Send/Send';
 export * from './Activity/Activity';
+export * from './AssetInfo/AssetInfo';
+export * from './Receive/Receive';

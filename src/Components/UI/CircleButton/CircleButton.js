@@ -9,7 +9,7 @@ export const CircleButton = ({ title, icon, to, state = null }) => {
 
 	const goTo = () => {
 		if (state !== null) {
-			navigate(to, { state: { state } });
+			navigate(to, { state });
 		} else {
 			navigate(to);
 		}

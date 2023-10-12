@@ -12,6 +12,7 @@
 .body {
     position: absolute;
     top: calc(100% + 10px);
+    left: 0;
     border-radius: 20px;
     border: 1px solid var(--gray);
     background: var(--bg-main);
@@ -21,6 +22,12 @@
     transform-origin: top center;
     transition: all ease .3s;
     z-index: 1000;
+    min-width: 200px;
+}
+
+.right {
+    right: 0;
+    left: auto;
 }
 .overflow {
     display: flex;
@@ -50,19 +57,27 @@
     transform: scale(1);
 }
 
-.body > div {
+.body > :global( .item-expand) {
     cursor: pointer;
     padding: 10px 16px;
     border-radius: 50px;
     display: flex;
     justify-content: flex-start;
+    text-align: left;
     
     color: var(--light);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    min-width: max-content;
+    transition: all ease .3s;
 }
+
+.body > :global( .item-expand):hover {
+    background: var(--bg-dark)
+}
+
 .body :global( .active) {
     background: var(--bg-dark); 
     color: var(--white);

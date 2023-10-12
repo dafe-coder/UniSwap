@@ -2,38 +2,26 @@ import React from 'react';
 import styles from './activity.module.css';
 import { Menu, NavSwitch } from '../../Components';
 import classNames from 'classnames';
-import { Button, Modal } from '../../Components/UI';
+import { Button, Modal, Par, Title } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import fixNum from '../../func.wallet/fixNum';
 import { SvgIcon } from '../../Svgs';
+import EmptyImg from '../../assets/images/empty.png';
+import { useNavigate } from 'react-router-dom';
 
 export const Activity = () => {
+	const navigate = useNavigate();
 	const { dataWallet } = useSelector((state) => state.wallet);
 	const [showModal, setShowModal] = React.useState(false);
-	const menuItems = [
-		{
-			title: 'Copy Address',
-			icon: 'copy',
-		},
-		{
-			title: 'View Recovery Phrase',
-		},
-		{
-			title: 'View Private Key',
-		},
-		{
-			title: 'Lock',
-			icon: 'lock',
-			color: 'var(--red)',
-		},
-	];
 	const [transactionList, setTransactionList] = React.useState([]);
 
 	React.useEffect(() => {
 		if (dataWallet !== null) {
 			let filtered = dataWallet.transactions.filter(
 				(item) =>
-					item.attributes.status !== 'failed' && item.attributes.transfers[0]
+					item.attributes.status !== 'failed' &&
+					item.attributes.transfers[0] &&
+					item.attributes.operation_type !== 'mint'
 			);
 
 			setTransactionList(filtered);
@@ -53,28 +41,29 @@ export const Activity = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bottom-bg' />
 			<div className='body'>
-				<div className='page-header'>
-					<div
-						onClick={() => setShowModal(true)}
-						className={classNames(
-							styles.action,
-							!transactionList.length ? styles.disabled : ''
-						)}
-					>
-						<SvgIcon type='remove' />
+				<div className='header'>
+					<div>
+						<div
+							onClick={() => setShowModal(true)}
+							className={classNames(
+								styles.action,
+								!transactionList.length ? styles.disabled : ''
+							)}
+						>
+							<SvgIcon type='remove' />
+						</div>
 					</div>
-					<NavSwitch leftText='Wallet' rightText='Activity' />
-					{/* <SwipeToggle
-						title1='Wallet'
-						title2='Activity'
-						active={[2, 1]}
-						type='buttons'
+					<NavSwitch
+						setActive={() => navigate('/home')}
+						leftText='Wallet'
+						rightText='Activity'
 					/>
-					<MenuActions items={menuItems} /> */}
+					<div></div>
 				</div>
 				<div
-					style={{ height: '50%' }}
+					style={{ height: '50%', marginTop: 40 }}
 					className={classNames(
 						styles.list,
 						!transactionList.length ? styles.list_empty : ''
@@ -95,7 +84,9 @@ export const Activity = () => {
 								)}
 								key={i}
 							>
-								<SvgIcon type={item.type} />
+								<div className={styles.icon}>
+									<SvgIcon type={item.attributes.operation_type} />
+								</div>
 								<div className={styles.inner}>
 									<span className={styles.item_title}>
 										{item.attributes.operation_type === 'trade'
@@ -124,24 +115,36 @@ export const Activity = () => {
 						))
 					) : (
 						<div className={styles.empty}>
-							<span>
+							<img src={EmptyImg} alt='empty' style={{ width: '100%' }} />
+							<Title
+								fw={500}
+								size='sm'
+								center
+								color='light'
+								className={styles.emptyText}
+							>
 								Your activity will
 								<br /> appear here!
-							</span>
+							</Title>
 						</div>
 					)}
 				</div>
 			</div>
 			<Modal open={showModal} setOpen={setShowModal} title='Clear history'>
-				<div className='btns' style={{ marginTop: 20 }}>
+				<div className='btns' style={{ marginTop: 30 }}>
 					<Button
+						size='sm'
 						style={{ marginBottom: 0 }}
 						variant='default'
 						onClick={onClear}
 					>
 						Clear
 					</Button>
-					<Button variant='outlined' onClick={() => setShowModal(false)}>
+					<Button
+						size='sm'
+						variant='outlined'
+						onClick={() => setShowModal(false)}
+					>
 						Cancel
 					</Button>
 				</div>

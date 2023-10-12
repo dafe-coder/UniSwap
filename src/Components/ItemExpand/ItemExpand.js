@@ -6,11 +6,13 @@ import { SvgIcon } from '../../Svgs';
 
 export const ItemExpand = ({
 	title,
+	ownTitle = false,
 	titleSize = 'sm',
 	children,
 	caretFill,
 	fwTitle = 600,
 	items = false,
+	posRight = false,
 }) => {
 	const [showBody, setShowBody] = React.useState(false);
 
@@ -39,13 +41,16 @@ export const ItemExpand = ({
 							{title}
 						</Title>
 					)}
-					<SvgIcon fill={caretFill} type='caret' />
+					{!ownTitle && (
+						<SvgIcon style={{ marginLeft: 8 }} fill={caretFill} type='caret' />
+					)}
 				</div>
 				<div
-					style={!items ? { padding: 0 } : {}}
+					style={!items ? { padding: 16 } : { padding: '14px 8px' }}
 					onClick={(e) => onChoose(e)}
 					className={cn(styles.body, {
 						[styles.show]: showBody,
+						[styles.right]: posRight,
 					})}
 				>
 					{items ? <>{children}</> : <Par>{children}</Par>}

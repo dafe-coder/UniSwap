@@ -3,9 +3,7 @@ import styles from './swap.module.css';
 import { Header } from '../../Components';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import fixNum from '../../func.wallet/fixNum';
 import { ItemLoader } from '../../Components';
-import { Par } from '../../Components/UI';
 import { SvgIcon } from '../../Svgs';
 import { Item } from '../../Components/Item/Item';
 
