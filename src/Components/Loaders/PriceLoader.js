@@ -6,17 +6,17 @@ export const PriceLoader = (props) => {
 		<ContentLoader
 			speed={2}
 			width={window.innerWidth - 40}
-			height={180}
+			height={280}
 			viewBox={`0 0 ${window.innerWidth - 40} 180`}
-			backgroundColor='#09202A'
-			foregroundColor='var(--primary-light)'
+			backgroundColor='var(--bg-dark)'
+			foregroundColor='var(--gray-border)'
 			{...props}
 		>
 			<rect
 				x='0'
 				y='0'
-				rx='16'
-				ry='16'
+				rx='20'
+				ry='20'
 				width={window.innerWidth - 40}
 				height='180'
 			/>

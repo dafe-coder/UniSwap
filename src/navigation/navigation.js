@@ -36,6 +36,7 @@ import {
 	AssetInfo,
 	Receive,
 	Manage,
+	Generate,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
 
@@ -79,6 +80,7 @@ export const Navigation = () => {
 			<Route path='/home/assets-info' element={<AssetInfo />} />
 			<Route path='/home/receive' element={<Receive />} />
 			<Route path='/manage' element={<Manage />} />
+			<Route path='/generate' element={<Generate />} />
 		</Routes>
 	);
 };

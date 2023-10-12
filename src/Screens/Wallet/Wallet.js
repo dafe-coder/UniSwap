@@ -51,6 +51,7 @@ export const Wallet = () => {
 	const [showTab, setShowTab] = React.useState(false);
 
 	React.useEffect(() => {
+		console.log(dataUser);
 		const wallet = dataUser.find((item) => item.name === currentWallet);
 		if (wallet !== undefined && dataWallet === null && status !== 'loading') {
 			dispatch(fetchDataWallet([wallet.phrase, walletNew]));
@@ -244,7 +245,7 @@ export const Wallet = () => {
 						change={portfolioBalanceChange}
 					/>
 				) : (
-					<PriceLoader style={{ width: '100%' }} />
+					<PriceLoader style={{ width: '100%', marginTop: 30 }} />
 				)}
 				<div className={styles.btnsCircle}>
 					<CircleButton

@@ -63,7 +63,7 @@ export const Activity = () => {
 					<div></div>
 				</div>
 				<div
-					style={{ height: '50%', marginTop: 40 }}
+					style={{ height: 'max-content', marginTop: 40 }}
 					className={classNames(
 						styles.list,
 						!transactionList.length ? styles.list_empty : ''
@@ -115,7 +115,11 @@ export const Activity = () => {
 						))
 					) : (
 						<div className={styles.empty}>
-							<img src={EmptyImg} alt='empty' style={{ width: '100%' }} />
+							<img
+								src={EmptyImg}
+								alt='empty'
+								style={{ maxWidth: '100%', maxHeight: '100%' }}
+							/>
 							<Title
 								fw={500}
 								size='sm'

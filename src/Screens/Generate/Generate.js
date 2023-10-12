@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './generate.module.css';
-import logo from '../../assets/images/logo.svg';
-import { GenerateItem } from './../../components/GenerateItem/GenerateItem';
+import { GenerateItem } from '../../Components';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setDataWallet, setWalletNew } from '../../redux/slices/WalletSlice';
@@ -24,9 +23,9 @@ export const Generate = () => {
 	const [loadFirst, setLoadFirst] = React.useState(true);
 
 	React.useEffect(() => {
+		setLoad1(false);
 		async function generateWords() {
 			dispatch(resetWallet());
-			setLoad1(false);
 			let code = generateMnemonic();
 			const privateKey = generateAddressesFromSeed(code, 12);
 			const newAccount = {
@@ -49,35 +48,50 @@ export const Generate = () => {
 		if (!load1) {
 			setLoadFirst(false);
 			const timerID = setTimeout(() => {
-				navigate('/manage');
+				navigate('/manage-default');
 				clearTimeout(timerID);
-			}, 8000);
+			}, 11000);
 		}
 	}, [load1]);
 
 	return (
-		<div className='page'>
-			<div className='page-inner page-align-bottom'>
+		<div className='screen'>
+			<div className='body'>
 				<div className={styles.logo}>
-					<img src={logo} alt='Ordinals Wallet' />
-				</div>
-				<div className={styles.row}>
-					<GenerateItem first title='Generating your new wallet ...' />
-					<GenerateItem
-						delay={1000}
-						loadWallet={loadFirst}
-						title='Accumulating a large amount of random numbers ...'
-					/>
-					<GenerateItem
-						delay={4000}
-						loadWallet={loadFirst}
-						title='Storing your wallet with secure encryption ...'
-					/>
-					<GenerateItem
-						loadWallet={loadFirst}
-						delay={7000}
-						title='Almost done ...'
-					/>
+					<div className={styles.row} style={{ marginTop: 30 }}>
+						<GenerateItem
+							first
+							loadWallet={load1}
+							title='Generating your new'
+						/>
+						<GenerateItem
+							delay={1000}
+							loadWallet={loadFirst}
+							title={
+								<>
+									Accumulating a large amount
+									<br />
+									of random numbers
+								</>
+							}
+						/>
+						<GenerateItem
+							delay={4000}
+							loadWallet={loadFirst}
+							title={
+								<>
+									Storing your wallet with secure
+									<br />
+									encryption in your phone
+								</>
+							}
+						/>
+						<GenerateItem
+							loadWallet={loadFirst}
+							delay={7000}
+							title={`And we're done.`}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -9,8 +9,8 @@ export const ItemLoader = ({ style, px = 40 }) => {
 			width={window.innerWidth - px}
 			height={68}
 			viewBox={`0 0 ${window.innerWidth - px} 68`}
-			backgroundColor='#09202A'
-			foregroundColor='var(--primary-light)'
+			backgroundColor='var(--bg-dark)'
+			foregroundColor='var(--gray-border)'
 		>
 			<rect
 				x='0'
