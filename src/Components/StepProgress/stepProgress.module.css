@@ -1,0 +1,24 @@
+.indicator {
+    height: 4px;
+    width: 20%;
+    background-color: var(--gray-light);
+    border-radius: 50px;
+    margin-right: 4px;
+    transition: all ease .2s;
+}
+
+.indicator:last-child {
+    margin-right: 0;
+}
+
+.active, .activeLast {
+    background-color: var(--accent);
+    width: 60%;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    position: relative;
+}

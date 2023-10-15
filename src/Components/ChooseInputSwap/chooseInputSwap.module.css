@@ -1,6 +1,6 @@
 .block {
   position: relative;
-  border-radius: 20px;
+  border-radius: 8px;
   border: 1px solid var(--gray);
   background: var(--bg-main);
   padding: 8px;

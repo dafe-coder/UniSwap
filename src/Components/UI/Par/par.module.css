@@ -55,7 +55,7 @@
 }
 
 .light, .light a {
-    color: var(--light);
+    color: var(--white);
 }
 
 .light a::after {
@@ -80,4 +80,8 @@
 
 .dark {
     color: #5D6785;
+}
+
+.light  {
+    color: var(--light)
 }

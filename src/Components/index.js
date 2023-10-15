@@ -21,3 +21,4 @@ export * from './TextRowsBlock/TextRowsBlock';
 export * from './PriceInput/PriceInput';
 export * from './ButtonActions/ButtonActions';
 export * from './GenerateItem/GenerateItem';
+export * from './StepProgress/StepProgress';

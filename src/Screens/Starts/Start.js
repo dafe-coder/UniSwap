@@ -4,10 +4,9 @@ import { ButtonBig } from '../../Components/';
 
 export const Start = () => {
 	return (
-		<div className='screen grid-bg'>
-			<div className='center-bg' />
+		<div className='screen'>
 			<div className='body'>
-				<Title size='m' mb={60}>
+				<Title size='m' mb={60} fw={600}>
 					Let's get you started!
 				</Title>
 				<ButtonBig to='/generate' mb={16} title='Get a new wallet'>
@@ -18,7 +17,7 @@ export const Start = () => {
 				</ButtonBig>
 			</div>
 			<div className='body-bottom'>
-				<Par color='light'>
+				<Par color='light' center>
 					By continuing, I agree to the <a href='!#'>Terms of Service</a> and
 					consent to the{' '}
 					<a href='!#' target='_blank'>

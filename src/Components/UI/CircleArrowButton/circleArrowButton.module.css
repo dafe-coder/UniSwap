@@ -1,0 +1,11 @@
+.btn {
+    width: 48.814px;
+    height: 48.814px;
+    flex-shrink: 0;
+    background: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+}

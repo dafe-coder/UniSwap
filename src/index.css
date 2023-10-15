@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 .scroll::-webkit-scrollbar {
   width: 4px;               /* width of the entire scrollbar */
@@ -11,19 +10,22 @@
 
 .scroll::-webkit-scrollbar-thumb {
   background-color: var(--light);    /* color of the scroll thumb */
-  border-radius: 20px;    
+  border-radius: 8px;    
   width: 2px;
   border: none;   /* roundness of the scroll thumb */
 }
 
 :root {
-  --bg-main: #090D15;
-  --white: #ffffff; 
-  --light: #98A1C0;
+  --bg-main: #333;
+  --white: #ffffff;
+  --light-blue: #98A1C0; 
+  --light: #A5A5A5;
   --dark-border: #1D2C52;
+  --additional-blue: #4B74DB;
   --accent: #4D82FB;
   --gray-border: #2F3343;
   --gray: #2C303E;
+  --gray-light: #A5A5A5;
   --error: #E51C05;
   --error-light: #f1412e;
   --red: #FF7272;
@@ -131,7 +133,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -291,4 +293,10 @@ body {
 
 .items-loader > *:not(:last-child) {
     margin-bottom: 18px;
+}
+
+.footer-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

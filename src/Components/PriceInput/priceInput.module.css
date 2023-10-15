@@ -62,7 +62,7 @@
   width: 25px;
   outline: none;
   background: var(--primary-light);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   color: var(--light-blue);
   font-size: 24px;
   line-height: 30px;
@@ -96,6 +96,6 @@
 }
 
 .box {
-  border-radius: 20px;
+  border-radius: 8px;
   background: var(--bg-dark);
 }

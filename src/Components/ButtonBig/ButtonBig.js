@@ -25,7 +25,11 @@ export const ButtonBig = ({
 		>
 			<span className={styles.title}>{title}</span>
 			<Par>{children}</Par>
-			<SvgIcon className={styles.arrow} type='arrow-right' />
+			<SvgIcon
+				fill={'var(--additional-blue)'}
+				className={styles.arrow}
+				type='arrow-right'
+			/>
 		</div>
 	);
 };

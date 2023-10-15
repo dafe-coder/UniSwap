@@ -74,7 +74,7 @@
 }
 
 .chart {
-    border-radius: 20px;
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
 }
@@ -87,7 +87,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    border-radius: 20px;
+    border-radius: 8px;
     background: url(../../assets/images/grid-chart.png) center center no-repeat;
     background-size: cover;
     border: 1px solid var(--gray-border);
