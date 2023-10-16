@@ -4,7 +4,7 @@ import { Menu, ButtonActions } from '../../Components';
 import { Item } from '../../Components/Item/Item';
 import { SvgIcon } from '../../Svgs';
 import { Par } from '../../Components/UI';
-import { Area, AreaChart } from 'recharts';
+import { Area, AreaChart, YAxis } from 'recharts';
 import { useLocation } from 'react-router-dom';
 import fixNum from '../../func.wallet/fixNum';
 import { useNavigate } from 'react-router-dom';
@@ -189,6 +189,7 @@ export const AssetInfo = () => {
 										<stop offset='95%' stopColor='#4B74DB' stopOpacity={0} />
 									</linearGradient>
 								</defs>
+								<YAxis domain={['auto', 'dataMax']} hide={true} />
 								<Area
 									type='linear'
 									dataKey='value'
