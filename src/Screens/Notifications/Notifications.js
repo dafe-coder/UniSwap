@@ -6,7 +6,6 @@ import styles from './notifications.module.css';
 export const Notifications = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Notifications' />
 				<div className={styles.wrapItems}>

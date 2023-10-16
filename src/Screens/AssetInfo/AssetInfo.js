@@ -95,7 +95,6 @@ export const AssetInfo = () => {
 
 	return (
 		<div className='screen' ref={wrapRef}>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header'>
 					<div className={styles.title}>

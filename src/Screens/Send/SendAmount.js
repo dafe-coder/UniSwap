@@ -63,7 +63,6 @@ export const SendAmount = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Send a crypto' />
 

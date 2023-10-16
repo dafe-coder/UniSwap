@@ -27,7 +27,7 @@
 .price {
     display: flex;
     border-radius: 24px;
-    background: linear-gradient(90deg, #EA3AC5 0%, #F19EF3 100%);
+    background: var(--additional-blue);
     padding: 6px 16px;
 }
 

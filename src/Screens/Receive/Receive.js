@@ -39,18 +39,9 @@ export const Receive = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Receive' />
 				<div style={{ marginTop: 50 }}>
-					<QRCode
-						bgColor='transparent'
-						fgColor='var(--light)'
-						size={200}
-						value={walletAddress}
-					/>
-				</div>
-				<div style={{ marginTop: 30 }}>
 					<Par fw={600} size='sm' center mb={10}>
 						My Tokenname address
 					</Par>
@@ -58,24 +49,28 @@ export const Receive = () => {
 						{walletAddress}
 					</Par>
 				</div>
-				<div
-					className={cn('btns', styles.wrapBtn)}
-					style={{ marginBottom: 20 }}
-				>
+				<div style={{ marginTop: 40 }}>
+					<QRCode
+						bgColor='transparent'
+						fgColor='var(--white)'
+						size={200}
+						value={walletAddress}
+					/>
+				</div>
+
+				<div className={'btns'} style={{ marginBottom: 20, marginTop: 20 }}>
 					<button className={styles.buttonCopy} onClick={handleCopyToClipboard}>
 						{copied ? (
 							<SvgIcon type='check-success' fill='var(--success)' />
 						) : (
-							<SvgIcon type='copy' fill='var(--light)' />
+							<SvgIcon type='copy' fill='var(--white)' />
 						)}
 						{copied ? (
 							<Par size='sm' style={{ color: 'var(--success)' }}>
 								Address copied
 							</Par>
 						) : (
-							<Par size='sm' color='light'>
-								Copy
-							</Par>
+							<Par size='sm'>Copy</Par>
 						)}
 					</button>
 					<button
@@ -84,9 +79,7 @@ export const Receive = () => {
 						style={{ position: 'relative' }}
 					>
 						<SvgIcon type='share' fill='var(--white)' />
-						<Par color='light' size='sm'>
-							Share
-						</Par>
+						<Par size='sm'>Share</Par>
 						<div
 							className={cn(styles.bodyShared, {
 								[styles.showShareBody]: showShareBody,

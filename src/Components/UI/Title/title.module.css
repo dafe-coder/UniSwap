@@ -29,3 +29,7 @@
 .light {
     color: var(--light);
 }
+
+.black {
+    color: var(--black)
+}

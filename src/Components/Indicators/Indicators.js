@@ -18,8 +18,7 @@ export const Indicators = ({ percent, usd, style }) => {
 		>
 			{usd && (
 				<div className={styles.text}>
-					{percent > 0 ? '+' : ''}
-					{fixNum(usd)} $
+					{percent > 0 ? '+' : ''}${fixNum(usd)}
 				</div>
 			)}
 			<div className={styles.block}>

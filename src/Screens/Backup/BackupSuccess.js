@@ -5,8 +5,6 @@ import { SvgIcon } from '../../Svgs';
 export const BackupSuccess = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg-light' />
-			<div className='top-bg' />
 			<div className='body content-center'>
 				<div>
 					<SvgIcon type='success' />

@@ -41,7 +41,6 @@ export const SendAddress = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Send to address' />
 

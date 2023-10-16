@@ -12,7 +12,6 @@ const styleWrap = {
 export const About = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg'></div>
 			<Header title='About' />
 			<div className='body'>
 				<div style={styleWrap}>

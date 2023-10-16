@@ -16,6 +16,7 @@
 }
 
 :root {
+  --black: #282828;
   --bg-main: #333;
   --white: #ffffff;
   --light-blue: #98A1C0; 
@@ -31,7 +32,7 @@
   --red: #FF7272;
   --bg-dark: #282828;
   --bg-header: #282828;
-  --success: #00FFA3;
+  --success: #5ABE51;
   --yellow: #ffd900;
 
   --app-width: 400px;
@@ -157,52 +158,6 @@ body {
 .body-bottom {
   flex-shrink: 1;
   flex-grow: 0;
-}
-.top-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(./assets/images/ellipseTop.png) top center / cover no-repeat;
-  background-size: 100%;
-  z-index: -1;
-}
-.bottom-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(./assets/images/ellipseBottom.png) bottom center / cover no-repeat;
-  background-size: 100%;
-  z-index: -1;
-}
-.bottom-bg-light {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(./assets/images/ellipseBottomLight.png) bottom center / cover no-repeat;
-  background-size: 100%;
-  z-index: -1;
-}
-.center-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background: url(./assets/images/ellipseCenter.png) center center / cover no-repeat;
-  background-size: 100%;
-  z-index: -1;
-}
-
-.grid-bg {
-  background: url('./assets/images/grid.png') center center / cover repeat;
-  background-size: 100%;
 }
 
 .header {

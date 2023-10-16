@@ -110,7 +110,6 @@ export const SendPreview = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Preview Details' />
 				<div className={styles.wrapCoin} style={{ marginTop: 50 }}>

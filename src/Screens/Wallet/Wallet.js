@@ -182,13 +182,12 @@ export const Wallet = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header' style={{ marginBottom: 25 }}>
 					<div style={{ cursor: 'pointer' }} className='header-item'>
 						<ItemExpand
 							items
-							caretFill='var(--light)'
+							caretFill='var(--white)'
 							title={
 								<div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
 									<SvgIcon type='user' fill='var(--primary)' />
@@ -253,13 +252,14 @@ export const Wallet = () => {
 				)}
 				<div className={styles.btnsCircle}>
 					<CircleButton
+						position='left'
 						to='/swap-coins'
 						state={{ to: '/send-amount', from: 'swapOne' }}
 						title='Send'
 						icon='send'
 					/>
 					<CircleButton title='Receive' icon='receive' to='/home/receive' />
-					<CircleButton title='Buy' icon='buy' to='/buy' />
+					<CircleButton position='right' title='Buy' icon='buy' to='/buy' />
 				</div>
 				<div className={cn(styles.listTitle)}>
 					<div className={styles.nav}>
