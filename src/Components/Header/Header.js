@@ -10,7 +10,7 @@ export const Header = ({ title, back = true, children, mtChild = 15 }) => {
 	return (
 		<div className={styles.header}>
 			<div className={styles.headerTop}>
-				<Title>{title}</Title>
+				<Title fw={600}>{title}</Title>
 				{back && (
 					<button onClick={() => navigate(-1)}>
 						<SvgIcon type='close' />

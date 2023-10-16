@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuSettings, Menu } from '../../Components';
+import { MenuSettings, Menu, Header } from '../../Components';
 
 export const Settings = () => {
 	const list = [
@@ -47,8 +47,7 @@ export const Settings = () => {
 	];
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
-			<div className='center-bg' />
+			<Header title='Settings account' back={false} />
 			<div className='body' style={{ margin: 0 }}>
 				<MenuSettings list={list} />
 			</div>
