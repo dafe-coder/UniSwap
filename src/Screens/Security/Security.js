@@ -5,15 +5,13 @@ import { Menu } from '../../Components/Menu/Menu';
 export const Security = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg'></div>
-			<div className='top-bg'></div>
 			<div className='body content-center'>
 				<Button to='/login-pin' state={{ to: '/change-pass' }}>
 					Change my PIN code
 				</Button>
-				<Par mt={25} color='light' size='m'>
+				<Button mt={16} variant='outlined' style={{ pointerEvents: 'none' }}>
 					Authentication & PIN code
-				</Par>
+				</Button>
 			</div>
 			<Menu />
 		</div>

@@ -55,7 +55,7 @@ export const Checkbox = ({
 				)}
 				{typeof activeItem === 'boolean' && (
 					<label htmlFor={id} className={styles.label}>
-						<Par color='light'>{label}</Par>
+						<Par color='white'>{label}</Par>
 					</label>
 				)}
 				{tooltip && (

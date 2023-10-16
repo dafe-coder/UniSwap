@@ -1,6 +1,7 @@
 .empty {
     margin-top: 40px;
     position: relative;
+    min-height: 300px;
 }
 
 .emptyText {

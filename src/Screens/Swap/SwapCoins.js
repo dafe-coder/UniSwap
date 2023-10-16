@@ -64,6 +64,7 @@ export const SwapCoins = () => {
 						filtered.length ? (
 							filtered.map((item, index) => (
 								<Item
+									size='sm'
 									key={index}
 									onClick={() => onChooseCoin(item)}
 									toggle={false}

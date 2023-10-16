@@ -6,7 +6,6 @@ import { Button, Modal, Title } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import fixNum from '../../func.wallet/fixNum';
 import { SvgIcon } from '../../Svgs';
-import EmptyImg from '../../assets/images/empty.png';
 import { useNavigate } from 'react-router-dom';
 
 export const Activity = () => {
@@ -41,7 +40,6 @@ export const Activity = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header'>
 					<div>
@@ -115,20 +113,8 @@ export const Activity = () => {
 						))
 					) : (
 						<div className={styles.empty}>
-							<img
-								src={EmptyImg}
-								alt='empty'
-								style={{ maxWidth: '100%', maxHeight: '100%' }}
-							/>
-							<Title
-								fw={500}
-								size='sm'
-								center
-								color='light'
-								className={styles.emptyText}
-							>
-								Your activity will
-								<br /> appear here!
+							<Title fw={500} size='m' center color='white'>
+								Your activity will <br /> appear here!
 							</Title>
 						</div>
 					)}

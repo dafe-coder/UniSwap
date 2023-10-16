@@ -29,7 +29,7 @@ export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 				<Title center={false} size='xl' className={styles.title}>
 					{title}
 				</Title>
-				<Par mt={10} fw={500} size='sm'>
+				<Par mt={10} fw={500} size='sm' color='light'>
 					{walletAddress.slice(0, 26) + '...' + walletAddress.slice(-4)}
 				</Par>
 			</div>

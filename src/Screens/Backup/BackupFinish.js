@@ -81,13 +81,14 @@ export const BackupFinish = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
-				<Header title='Finish backup' />
-				<Par color='light'>
-					Check you have made a correct backup by <br /> entering the
-					corresponding words from your <br /> recovery phrase below.
-				</Par>
+				<Header title='Finish backup'>
+					<Par color='light'>
+						Check you have made a correct backup by <br /> entering the
+						corresponding words from your <br /> recovery phrase below.
+					</Par>
+				</Header>
+
 				<div className={styles.bodyCheck}>
 					<div className={styles.checkInput}>
 						{numsWords[0]}.

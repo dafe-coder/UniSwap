@@ -25,23 +25,25 @@ export const BackupPhrase = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
-				<Header title='Save your phrase' />
-				<Par color='light'>
-					Write this 12 words carefully, or save them to a password manager.
-				</Par>
-				<Par mt={8} color='red'>
-					Never share recovery phrase with anyone, store it securely!
-				</Par>
-				<PhraseBoxColumns
-					phrase={CryptoJS.AES.decrypt(
-						currentWalletData.phrase,
-						kitkat
-					).toString(CryptoJS.enc.Utf8)}
-				/>
+				<Header title='Save your phrase'>
+					<Par color='light'>
+						Write this 12 words carefully, or save them to a password manager.
+					</Par>
+				</Header>
+				{currentWalletData !== undefined && (
+					<PhraseBoxColumns
+						phrase={CryptoJS.AES.decrypt(
+							currentWalletData.phrase,
+							kitkat
+						).toString(CryptoJS.enc.Utf8)}
+					/>
+				)}
 			</div>
 			<div className='body-bottom'>
+				<Par mb={24} color='red' center>
+					Never share recovery phrase with <br /> anyone, store it securely!
+				</Par>
 				<Button variant='default' to='/settings/backup-finish'>
 					Next
 				</Button>

@@ -62,9 +62,8 @@ export const PinLogin = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
-				<Header title='Confirm your PIN code' />
+				<Header title='Enter Wallet Passcode' />
 				<PinCode
 					clear={clearInputs}
 					name='login'

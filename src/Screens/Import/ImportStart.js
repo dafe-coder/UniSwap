@@ -10,18 +10,18 @@ import styles from './import.module.css';
 
 export const ImportStart = () => {
 	return (
-		<div className='screen grid-bg'>
-			<div className='center-bg' />
-			<div className='bottom-bg' />
+		<div className='screen'>
 			<div className='body'>
-				<Title size='m'>Follow these steps to import your wallet</Title>
+				<Title size='m' fw={600}>
+					Follow these steps to import your wallet
+				</Title>
 				<ButtonBig
 					to='/settings/backup'
 					mt={30}
-					title='Create a backup for you current Ordinals Wallet'
+					title='Create a backup for you current Coinomi Wallet'
 				>
-					This step is required, even if your current Name wallet is empty, for
-					security.
+					This step is required, even if your current Coinomi wallet is empty,
+					for security.
 				</ButtonBig>
 				<ButtonBig
 					to='/import-data'

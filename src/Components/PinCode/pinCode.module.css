@@ -23,8 +23,8 @@
 
 .input {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: var(--primary);
   border-radius: 8px;
   border: none;
@@ -49,29 +49,36 @@
   right: -1px;
   bottom: -1px;
   left: -1px;
-  background: url(../../assets/images/star.svg) center center no-repeat;
+  border-radius: 50px;
+  background: var(--additional-blue);
   mask-composite: exclude;
   z-index: 0;
   opacity: 0;
   transform: scale(0);
+  transition: all ease .3s;
 }
 
 .input:not(:placeholder-shown) ~ label::before {
   opacity: 1;
   transform: scale(1);
 }
+.input:not(:placeholder-shown) ~ label::after {
+  opacity: 0;
+  transform: scale(0);
+}
 
 .label::after {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 8px;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  background: url(../../assets/images/start-gray.svg) center center no-repeat;
+  border-radius: 0;
+  height: 2px;
+  width: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--gray-light);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
+  transition: all ease .2s;
 }

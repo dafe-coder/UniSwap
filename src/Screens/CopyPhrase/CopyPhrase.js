@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../../Components/';
-import { Par } from '../../Components/UI';
+import { Par, Button } from '../../Components/UI';
 import { PhraseBox } from '../../Components/PhraseBox/PhraseBox';
 import CryptoJS from 'crypto-js';
 import { useSelector } from 'react-redux';
@@ -30,20 +30,23 @@ export const CopyPhrase = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
-				<Header title='Your recovery phrase' />
-				<Par mb={24} color='light'>
-					Write down or copy these words in right order <br /> and save them
-					somewhere safe.
-				</Par>
+				<Header title='Your recovery phrase'>
+					<Par color='light'>
+						Write down or copy these words in right order <br /> and save them
+						somewhere safe.
+					</Par>
+				</Header>
 				<PhraseBox copy phrase={tags} />
+			</div>
+			<div className='body-bottom'>
 				<div className='alert'>
 					<SvgIcon type='alert' />
 					<Par color='red' center>
 						Never share recovery phrase with <br /> anyone, store it securely!
 					</Par>
 				</div>
+				<Button to='/home'>Done</Button>
 			</div>
 		</div>
 	);
