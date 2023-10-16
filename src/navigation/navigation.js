@@ -1,3 +1,4 @@
+import React from 'react';
 import {
 	Step1,
 	Step2,
@@ -37,13 +38,32 @@ import {
 	Receive,
 	Manage,
 	Generate,
+	WelcomeBack,
 } from '../Screens';
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLockWallet } from '../redux/slices/StorageSlice';
 
 export const Navigation = () => {
+	const dispatch = useDispatch();
+	const { isLogin, lockWallet, password, autoLock, usePin, dataUser } =
+		useSelector((state) => state.storage);
+
+	React.useEffect(() => {
+		if (password !== '' && autoLock) {
+			dispatch(setLockWallet(true));
+		}
+	}, [password, autoLock, dispatch]);
+
 	return (
 		<Routes>
-			<Route path='/' element={<Step1 />} />
+			{password !== '' && usePin && lockWallet ? (
+				<Route path='/' element={<WelcomeBack />} />
+			) : isLogin && usePin === false ? (
+				<Route path='/' element={<Wallet />} />
+			) : (
+				<Route path='/' element={<Step1 />} />
+			)}
 			<Route path='/step2' element={<Step2 />} />
 			<Route path='/step3' element={<Step3 />} />
 			<Route path='/start' element={<Start />} />
@@ -81,6 +101,7 @@ export const Navigation = () => {
 			<Route path='/home/receive' element={<Receive />} />
 			<Route path='/manage' element={<Manage />} />
 			<Route path='/generate' element={<Generate />} />
+			<Route path='/welcome-back' element={<WelcomeBack />} />
 		</Routes>
 	);
 };

@@ -64,7 +64,7 @@ export const SendAddress = () => {
 			</div>
 			<div className='body-bottom'>
 				{addressTo !== '' && (
-					<Par fw={500} color='light' mb={20} center size='sm'>
+					<Par fw={500} color='red' mb={20} center size='sm'>
 						Check the address you have copied
 					</Par>
 				)}

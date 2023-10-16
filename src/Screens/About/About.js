@@ -16,13 +16,13 @@ export const About = () => {
 			<div className='body'>
 				<div style={styleWrap}>
 					<Item
-						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						onClick={() => window.open('https://www.coinomi.com/privacy/')}
 						toggle={false}
 						size='sm'
 						name='Terms of Use'
 					/>
 					<Item
-						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						onClick={() => window.open('https://www.coinomi.com/privacy/')}
 						toggle={false}
 						size='sm'
 						name='Privacy policy'

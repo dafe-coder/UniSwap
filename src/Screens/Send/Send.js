@@ -9,6 +9,10 @@ import { setDataWallet } from '../../redux/slices/WalletSlice';
 import CryptoJS from 'crypto-js';
 import fixNum from '../../func.wallet/fixNum';
 import { Modal } from '../../Components/UI/Modal/Modal';
+import {
+	setAddressTo,
+	setAmountSend,
+} from '../../redux/slices/TransactionsSlice';
 
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
@@ -50,6 +54,8 @@ export const SendPreview = () => {
 	function onOpenModalSuccess(value) {
 		setOpenModalSuccess(value);
 		setLoading(false);
+		dispatch(setAmountSend(''));
+		dispatch(setAddressTo(''));
 	}
 	function onOpenModalGas(value) {
 		setOpenModalGas(value);
@@ -143,7 +149,7 @@ export const SendPreview = () => {
 				<TextRowsBlock style={{ marginTop: 30 }} />
 			</div>
 			<div className='body-bottom'>
-				<Par color='light' center mt={60} mb={16}>
+				<Par color='red' center mt={20} mb={16}>
 					Wallet cannot recover any lost funds.
 				</Par>
 				<Button

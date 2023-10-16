@@ -45,9 +45,6 @@ export const AssetInfo = () => {
 			title: 'All',
 		},
 	];
-	React.useEffect(() => {
-		console.log(width);
-	}, [width]);
 
 	React.useEffect(() => {
 		if (state !== null && state.contract_address !== '') {
@@ -101,14 +98,16 @@ export const AssetInfo = () => {
 						<div className={styles.title_logo}>
 							<img src={state !== null ? state.image.thumb : ''} alt='thumb' />
 						</div>
-						{state !== null ? state.name : ''}
+						<Par size='m'>{state !== null ? state.name : ''}</Par>
 					</div>
 					<div></div>
 					<div
 						className={styles.link}
-						onClick={() => navigate('/buy', { state: { item: state } })}
+						onClick={() =>
+							navigate('/buy', { state: { item: state, from: 'swapOne' } })
+						}
 					>
-						<Par color='light'>Buy</Par>
+						<Par>Buy</Par>
 						<svg
 							width='24'
 							height='24'
@@ -117,16 +116,8 @@ export const AssetInfo = () => {
 							xmlns='http://www.w3.org/2000/svg'
 						>
 							<path
-								d='M8.25 21C9.07843 21 9.75 20.3284 9.75 19.5C9.75 18.6716 9.07843 18 8.25 18C7.42157 18 6.75 18.6716 6.75 19.5C6.75 20.3284 7.42157 21 8.25 21Z'
-								fill='#98A1C0'
-							/>
-							<path
-								d='M18.75 21C19.5784 21 20.25 20.3284 20.25 19.5C20.25 18.6716 19.5784 18 18.75 18C17.9216 18 17.25 18.6716 17.25 19.5C17.25 20.3284 17.9216 21 18.75 21Z'
-								fill='#98A1C0'
-							/>
-							<path
-								d='M21.4125 5.66156C21.3071 5.53268 21.1744 5.42888 21.0239 5.35769C20.8734 5.2865 20.709 5.24971 20.5425 5.25H6.27609L5.98875 3.61969C5.95811 3.44603 5.86726 3.28872 5.73216 3.17539C5.59706 3.06206 5.42634 2.99996 5.25 3H2.25C2.05109 3 1.86032 3.07902 1.71967 3.21967C1.57902 3.36032 1.5 3.55109 1.5 3.75C1.5 3.94891 1.57902 4.13968 1.71967 4.28033C1.86032 4.42098 2.05109 4.5 2.25 4.5H4.62094L6.76125 16.6303C6.79189 16.804 6.88274 16.9613 7.01784 17.0746C7.15294 17.1879 7.32366 17.25 7.5 17.25H19.5C19.6989 17.25 19.8897 17.171 20.0303 17.0303C20.171 16.8897 20.25 16.6989 20.25 16.5C20.25 16.3011 20.171 16.1103 20.0303 15.9697C19.8897 15.829 19.6989 15.75 19.5 15.75H8.12906L7.86469 14.25H19.1925C19.4526 14.2497 19.7046 14.1595 19.9058 13.9947C20.1071 13.8299 20.2452 13.6007 20.2969 13.3458L21.6469 6.59578C21.6794 6.43242 21.6753 6.26388 21.6347 6.10232C21.5942 5.94076 21.5183 5.79022 21.4125 5.66156Z'
-								fill='#98A1C0'
+								d='M2.40002 1.99268C1.84774 1.99268 1.40002 2.44039 1.40002 2.99268C1.40002 3.54496 1.84774 3.99268 2.40002 3.99268V1.99268ZM4.69256 2.99268L5.65779 2.73126C5.53973 2.29536 5.14417 1.99268 4.69256 1.99268V2.99268ZM8.41793 16.7479L7.45271 17.0093C7.58298 17.4903 8.0475 17.802 8.54197 17.7402L8.41793 16.7479ZM19.8806 15.3151L20.0047 16.3073C20.4293 16.2543 20.7732 15.9368 20.8599 15.5177L19.8806 15.3151ZM21.6 7.00462L22.5793 7.20722C22.6402 6.91271 22.5654 6.60641 22.3755 6.37319C22.1856 6.13998 21.9008 6.00462 21.6 6.00462V7.00462ZM5.77913 7.00462L4.8139 7.26603L5.77913 7.00462ZM2.40002 3.99268H4.69256V1.99268H2.40002V3.99268ZM8.54197 17.7402L20.0047 16.3073L19.7566 14.3228L8.2939 15.7556L8.54197 17.7402ZM20.8599 15.5177L22.5793 7.20722L20.6208 6.80201L18.9014 15.1125L20.8599 15.5177ZM3.72733 3.25409L4.8139 7.26603L6.74435 6.7432L5.65779 2.73126L3.72733 3.25409ZM4.8139 7.26603L7.45271 17.0093L9.38316 16.4865L6.74435 6.7432L4.8139 7.26603ZM21.6 6.00462H5.77913V8.00462H21.6V6.00462ZM11 20.4999C11 20.7761 10.7762 20.9999 10.5 20.9999V22.9999C11.8807 22.9999 13 21.8807 13 20.4999H11ZM10.5 20.9999C10.2239 20.9999 10 20.7761 10 20.4999H8.00002C8.00002 21.8807 9.11931 22.9999 10.5 22.9999V20.9999ZM10 20.4999C10 20.2238 10.2239 19.9999 10.5 19.9999V17.9999C9.11931 17.9999 8.00002 19.1192 8.00002 20.4999H10ZM10.5 19.9999C10.7762 19.9999 11 20.2238 11 20.4999H13C13 19.1192 11.8807 17.9999 10.5 17.9999V19.9999ZM19 20.4999C19 20.7761 18.7762 20.9999 18.5 20.9999V22.9999C19.8807 22.9999 21 21.8807 21 20.4999H19ZM18.5 20.9999C18.2239 20.9999 18 20.7761 18 20.4999H16C16 21.8807 17.1193 22.9999 18.5 22.9999V20.9999ZM18 20.4999C18 20.2238 18.2239 19.9999 18.5 19.9999V17.9999C17.1193 17.9999 16 19.1192 16 20.4999H18ZM18.5 19.9999C18.7762 19.9999 19 20.2238 19 20.4999H21C21 19.1192 19.8807 17.9999 18.5 17.9999V19.9999Z'
+								fill='white'
 							/>
 						</svg>
 					</div>
@@ -165,12 +156,15 @@ export const AssetInfo = () => {
 						</div>
 						<div className={styles.btnsAction}>
 							<CircleButton
+								style={{ borderRight: 'none' }}
+								position='left'
 								to='/send-amount'
 								state={{ item: state, from: 'swapOne' }}
 								icon='send'
 								title='Send'
 							/>
 							<CircleButton
+								position='right'
 								to='/home/receive'
 								state={{ item: state }}
 								icon='receive'
@@ -183,22 +177,25 @@ export const AssetInfo = () => {
 					<div className={styles.wrapBlock}>
 						<div className={styles.chart}>
 							<AreaChart
-								width={width}
+								width={width + 60}
 								height={130}
 								data={chartBitcoin}
+								// baseValue={1000}
 								margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
 							>
 								<defs>
 									<linearGradient id='value' x1='0' y1='0' x2='0' y2='1'>
-										<stop offset='5%' stopColor='#EA39C4' stopOpacity={0.4} />
-										<stop offset='95%' stopColor='#EA39C4' stopOpacity={0} />
+										<stop offset='5%' stopColor='#4B74DB' stopOpacity={0.4} />
+										<stop offset='95%' stopColor='#4B74DB' stopOpacity={0} />
 									</linearGradient>
 								</defs>
 								<Area
-									type='monotone'
+									type='linear'
 									dataKey='value'
-									stroke='#EA39C4'
+									stroke='#4B74DB'
 									fillOpacity={1}
+									strokeWidth={2}
+									scale='point'
 									fill='url(#value)'
 								/>
 							</AreaChart>
@@ -219,12 +216,13 @@ export const AssetInfo = () => {
 				)}
 
 				<div className={styles.list}>
-					<Par color='light' size='sm' fw={500} mb={16}>
+					<Par size='sm' fw={500} mb={16}>
 						Available Balance
 					</Par>
 
 					{state !== null ? (
 						<Item
+							className={styles.itemAsset}
 							toggle={false}
 							img={state.image.thumb}
 							name={state.name}

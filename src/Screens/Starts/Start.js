@@ -20,7 +20,11 @@ export const Start = () => {
 				<Par color='light' center>
 					By continuing, I agree to the <a href='!#'>Terms of Service</a> and
 					consent to the{' '}
-					<a href='!#' target='_blank'>
+					<a
+						href='https://www.coinomi.com/privacy/'
+						rel='noreferrer'
+						target='_blank'
+					>
 						Privacy Policy.
 					</a>
 				</Par>

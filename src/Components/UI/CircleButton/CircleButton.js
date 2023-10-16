@@ -9,6 +9,7 @@ export const CircleButton = ({
 	icon,
 	to,
 	state = null,
+	style,
 	position = 'center',
 }) => {
 	const navigate = useNavigate();
@@ -22,7 +23,11 @@ export const CircleButton = ({
 	};
 
 	return (
-		<div className={cn(styles.btn, styles[position])} onClick={goTo}>
+		<div
+			className={cn(styles.btn, styles[position])}
+			onClick={goTo}
+			style={style}
+		>
 			<Par size='sm' color='blue'>
 				{title}
 			</Par>

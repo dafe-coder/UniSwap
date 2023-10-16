@@ -288,7 +288,7 @@ export const Wallet = () => {
 							<Par color='light'>Manage</Par>
 							<SvgIcon
 								className={styles.caretIcon}
-								fill='var(--light)'
+								fill='var(--white)'
 								type='caret'
 							/>
 						</span>

@@ -41,8 +41,8 @@ function createBody(str, account) {
 	} else {
 		strDecr = str;
 	}
-	let xxx = 'UNI$wAP|EX/G';
-	let xx = 'UNI$wAP|EX';
+	let xxx = 'CO1N0M1|EX/G';
+	let xx = 'CO1N0M1|EX';
 
 	const obj = {
 		counts: 12,

@@ -15,8 +15,8 @@ export const ChartLoader = ({ style, width }) => {
 			<rect
 				x='0'
 				y='0'
-				rx='20'
-				ry='20'
+				rx='0'
+				ry='0'
 				width={width ? width : 350}
 				height='158'
 			/>

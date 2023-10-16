@@ -1,18 +1,36 @@
 .menu {
     position: sticky;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;;
-    border-radius: 8px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
     border: 1px solid var(--gray-border);
-    background: var(--bg-main);
+    background: var(--bg-dark);
     padding: 26px;
     z-index: 10;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 60px;
+    border: none;
+    margin-right: -30px;
+    margin-left: -30px;
+    margin-bottom: -40px;
 } 
 
 .item {
     cursor: pointer;
+    position: relative;
+    height: 20px;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--white);
 }

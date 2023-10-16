@@ -3,6 +3,7 @@ import styles from './item.module.css';
 import { Par } from '../UI/Par/Par';
 import { Toggle } from '../UI';
 import { useSelector } from 'react-redux';
+import cn from 'classnames';
 
 export const Item = ({
 	img = '',
@@ -15,6 +16,7 @@ export const Item = ({
 	id,
 	onClick = null,
 	toggleCheck,
+	className,
 }) => {
 	const { chooseAssets } = useSelector((state) => state.storage);
 
@@ -24,7 +26,7 @@ export const Item = ({
 		}
 	};
 	return (
-		<div className={styles.item} onClick={onClickItem}>
+		<div className={cn(styles.item, className)} onClick={onClickItem}>
 			<div className={styles.infoWrap}>
 				{img !== '' ? (
 					<div className={styles.logo}>

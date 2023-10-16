@@ -1,6 +1,6 @@
 import React from 'react';
 import { Title } from '../../Components/UI';
-import { ButtonBig } from '../../Components';
+import { ButtonBig, Menu } from '../../Components';
 import Img1 from '../../assets/images/coins/1.png';
 import Img2 from '../../assets/images/coins/2.png';
 import Img3 from '../../assets/images/coins/3.png';
@@ -47,6 +47,7 @@ export const ImportStart = () => {
 					</div>
 				</ButtonBig>
 			</div>
+			<Menu />
 		</div>
 	);
 };

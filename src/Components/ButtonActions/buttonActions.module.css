@@ -20,7 +20,7 @@
   }
   
   .button_active {
-    color: var(--light-blue);
+    color: var(--white);
     pointer-events: none;
     font-weight: 700;
   }

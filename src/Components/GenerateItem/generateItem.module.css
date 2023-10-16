@@ -47,3 +47,19 @@
 	} 
 
 }
+
+.loading {
+	animation: AnimOpacity infinite 1s;
+}
+
+@keyframes AnimOpacity {
+	0% {
+		opacity: 1;
+	} 
+	50% {
+		opacity: .3;
+	} 
+	100% {
+		opacity: 1;
+	} 
+}

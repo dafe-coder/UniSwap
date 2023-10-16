@@ -144,7 +144,7 @@
   margin-top: 50px;
 }
 .coinPrice {
-  color: var(--light-blue);
+  color: var(--white);
   text-align: center;
   font-size: 42px;
   font-style: normal;
@@ -226,8 +226,8 @@
 
 .inputAddress {
   border-radius: 4px;
-  border: 1px solid #1D2C52;
-  color: var(--light-blue);
+  border: 1px solid var(--dark-border);
+  color: var(--white);
   text-align: left;
   padding: 11px 16px;
 
@@ -246,7 +246,7 @@
   color: var(--light);
 }
 .copyButton {
-  color: var(--light);
+  color: var(--white);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
