@@ -6,7 +6,7 @@
   
   .button {
     flex-grow: 1;
-    border-radius: 16px;
+    border-radius: 4px;
     line-height: 26px;
     font-size: 10px;
     text-align: center;

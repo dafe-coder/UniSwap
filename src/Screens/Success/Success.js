@@ -9,17 +9,20 @@ export const Success = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'></div>
 			<div className='body-bottom'>
 				<div style={{ marginBottom: 114 }}>
 					<SvgIcon type='success' />
-					<Title mt={30}>
+					<Title mt={30} fw={600}>
 						Congratulations!
 						<br />
 						You have successfully <br /> added a new wallet
 					</Title>
-					{walletAddress !== '' && <Par mt={16}>{walletAddress}</Par>}
+					{walletAddress !== '' && (
+						<Par center color='light' mt={16}>
+							{walletAddress}
+						</Par>
+					)}
 				</div>
 				<Button to={password !== '' && usePin ? '/home' : '/create-pin'}>
 					Continue

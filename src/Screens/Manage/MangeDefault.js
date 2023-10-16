@@ -72,14 +72,14 @@ export const MangeDefault = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg-light' />
-			<Header title='Manage cryptos' back={false} />
-			<div className='body'>
+			<Header title='Manage cryptos' back={false}>
 				<Par color='light' size='sm'>
 					Choose what tokens will be displayed in your wallet by default.
 				</Par>
-				<ItemList mt={38} items={items} handleToggle={handleToggle} />
-				<Par mt={16} mb={15} color='light'>
+			</Header>
+			<div className='body'>
+				<ItemList mt={5} items={items} handleToggle={handleToggle} />
+				<Par mt={16} mb={15} color='light' center>
 					You can always change this later! ☺️
 				</Par>
 			</div>

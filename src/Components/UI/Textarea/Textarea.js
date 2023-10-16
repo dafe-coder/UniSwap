@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './textarea.module.css';
 
 export const Textarea = ({
-	height = 53,
+	height = 78,
 	style,
 	placeholder,
 	value,

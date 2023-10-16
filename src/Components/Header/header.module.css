@@ -1,7 +1,21 @@
 .header {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    position: relative;
+}
+.headerTop {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
-    height: 24px;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  background: var(--bg-header);
+  left: -30px;
+  top: -40px;
+  right: -30px;
+  bottom: 0;
+  height: calc(100% + 40px);
+  z-index: -1;
 }

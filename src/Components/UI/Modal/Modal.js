@@ -10,7 +10,7 @@ export const Modal = ({
 	setOpen,
 	title = '',
 	par = '',
-	fwTitle = 600,
+	fwTitle = 500,
 	warning = false,
 }) => {
 	return (
@@ -26,7 +26,7 @@ export const Modal = ({
 				</Par>
 			)}
 			{par !== '' && (
-				<Par size='sm' color='light' mt={6} center={true}>
+				<Par color='light' mt={6} center={true}>
 					{par}
 				</Par>
 			)}
