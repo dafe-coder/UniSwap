@@ -39,7 +39,7 @@ export const Buy = () => {
 							}
 							onInput={(e) => setAmountBuy(e.target.value)}
 							type='text'
-							placeholder='$ 0.0'
+							placeholder='$0.0'
 							value={`${amountBuy}`}
 						/>
 					</div>

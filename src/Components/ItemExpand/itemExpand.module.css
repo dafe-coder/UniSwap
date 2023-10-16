@@ -13,9 +13,8 @@
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
-    border-radius: 8px;
-    border: 1px solid var(--gray);
-    background: var(--bg-main);
+    border-radius: 4px;
+    background: var(--bg-dark);
     padding: 16px;
     transform: scale(0);
     opacity: 0;
@@ -38,8 +37,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(54, 64, 82, 0.50);
-    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.70);
     z-index: 11;
     opacity: 0;
     transition: all ease .3s;
@@ -60,7 +58,7 @@
 .body > :global( .item-expand) {
     cursor: pointer;
     padding: 10px 16px;
-    border-radius: 50px;
+    border-radius: 4px;
     display: flex;
     justify-content: flex-start;
     text-align: left;
@@ -75,10 +73,11 @@
 }
 
 .body > :global( .item-expand):hover {
-    background: var(--bg-dark)
+    background: var(--bg-main);
+    color: var(--additional-blue);
 }
 
 .body :global( .active) {
-    background: var(--bg-dark); 
-    color: var(--white);
+    background: var(--bg-main); 
+    color: var(--additional-blue);
 }

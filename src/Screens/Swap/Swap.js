@@ -10,8 +10,7 @@ import {
 import { Menu } from '../../Components';
 import { Button, Par } from '../../Components/UI';
 import { ItemExpand } from '../../Components/ItemExpand/ItemExpand';
-import { ChooseInputSwap, TextRowsBlock } from '../../Components';
-import Circle from '../../assets/images/circle-light.png';
+import { ChooseInputSwap, TextRowsBlock, Header } from '../../Components';
 
 export const Swap = () => {
 	const dispatch = useDispatch();
@@ -72,30 +71,29 @@ export const Swap = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
+			<Header back={false} mtChild={0}>
+				<Par color='light' mb={8}>
+					Swap in:
+				</Par>
+				<div className={styles.chooseItem}>
+					<ItemExpand items fwTitle={500} titleSize='m' title={network}>
+						{mockList.map((item) => (
+							<div
+								key={item.title}
+								onClick={() => setNetwork(item.title)}
+								className={cn('item-expand', {
+									active: item.title === network,
+								})}
+							>
+								{item.title}
+							</div>
+						))}
+					</ItemExpand>
+				</div>
+			</Header>
 			<div className='body'>
 				<div>
-					<Par color='light' mb={8}>
-						Swap in:
-					</Par>
-
-					<div className={styles.chooseItem}>
-						<ItemExpand items fwTitle={500} titleSize='m' title={network}>
-							{mockList.map((item) => (
-								<div
-									key={item.title}
-									onClick={() => setNetwork(item.title)}
-									className={cn('item-expand', {
-										active: item.title === network,
-									})}
-								>
-									{item.title}
-								</div>
-							))}
-						</ItemExpand>
-					</div>
 					<div>
-						<img className={styles.imgBg} src={Circle} alt='circle-bg' />
 						<ChooseInputSwap
 							valueTwo={valueOut}
 							valueOne={value}

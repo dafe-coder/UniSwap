@@ -1,9 +1,10 @@
 .block {
     border-radius: 8px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--white);
     background: var(--bg-main);
     padding: 24px 16px;
     position: relative;
+    border: 1px solid var(--dark-border);
 }
 
 .btns {

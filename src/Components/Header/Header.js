@@ -4,7 +4,7 @@ import { Title } from '../UI';
 import { SvgIcon } from '../../Svgs';
 import { useNavigate } from 'react-router-dom';
 
-export const Header = ({ title, back = true, children }) => {
+export const Header = ({ title, back = true, children, mtChild = 15 }) => {
 	const navigate = useNavigate();
 
 	return (
@@ -17,7 +17,7 @@ export const Header = ({ title, back = true, children }) => {
 					</button>
 				)}
 			</div>
-			{children && <div style={{ marginTop: 15 }}>{children}</div>}
+			{children && <div style={{ marginTop: mtChild }}>{children}</div>}
 		</div>
 	);
 };

@@ -29,7 +29,7 @@
   --error: #E51C05;
   --error-light: #f1412e;
   --red: #FF7272;
-  --bg-dark: #121A2A;
+  --bg-dark: #282828;
   --bg-header: #282828;
   --success: #00FFA3;
   --yellow: #ffd900;
@@ -276,10 +276,9 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 4px;
   width: max-content;
-  border-radius: 24px;
-  background: #293249;
+  background: var(--bg-main);
   padding: 4px 8px 4px 4px;
   gap: 8px;
 }

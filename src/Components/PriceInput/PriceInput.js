@@ -35,7 +35,7 @@ export const PriceInput = ({
 			className={classNames(styles.box, isFocused ? styles.box_focused : '')}
 		>
 			<div className={styles.left}>
-				<Par size='sm' color='dark'>
+				<Par size='sm' color='light'>
 					{from === 'swapOne' ? 'You sell' : 'You buy'}
 				</Par>
 				<div
@@ -47,7 +47,7 @@ export const PriceInput = ({
 							style={
 								value.toString().length > 2
 									? { width: value.toString().length + 'ch' }
-									: { width: 38 }
+									: { width: 49 }
 							}
 							onInput={(e) => setValue(e.target.value)}
 							value={value}
