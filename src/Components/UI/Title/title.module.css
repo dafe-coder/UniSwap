@@ -1,5 +1,5 @@
 .title {
-    color: var(--white);
+    color: var(--black-text);
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -28,4 +28,8 @@
 
 .light {
     color: var(--light);
+}
+
+.white {
+    color: var(--white)
 }

@@ -12,6 +12,7 @@ export const ButtonBig = ({
 	children,
 	title,
 	disabled = false,
+	bg = 'bg1',
 }) => {
 	const navigate = useNavigate();
 
@@ -19,12 +20,12 @@ export const ButtonBig = ({
 		<div
 			onClick={() => navigate(to)}
 			style={{ marginBottom: mb, marginTop: mt }}
-			className={cn(styles.btn, {
+			className={cn(styles.btn, styles[bg], {
 				[styles['disabled']]: disabled,
 			})}
 		>
 			<span className={styles.title}>{title}</span>
-			<Par>{children}</Par>
+			<Par color='white'>{children}</Par>
 			<SvgIcon className={styles.arrow} type='arrow-right' />
 		</div>
 	);

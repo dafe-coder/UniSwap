@@ -1,23 +1,24 @@
 import React from 'react';
-import { Button, Title } from '../../Components/UI';
+import { StepProgress, CircleArrowButton, Title } from '../../Components/UI';
 import styles from './start.module.css';
 import Coins from '../../assets/images/coins.png';
 
 export const Step3 = () => {
 	return (
-		<div className='screen' style={{ position: 'relative' }}>
-			<div className='top-bg' />
+		<div className='screen black-bg' style={{ position: 'relative' }}>
 			<div className='body'>
-				<Title>Access the world of cryto & DeFi</Title>
+				<Title color='white' size='m'>
+					Access the world <br /> of crypto & DeFi
+				</Title>
 			</div>
 			<div className='body-bottom'>
 				<div className={styles.bgCoins}>
 					<img src={Coins} alt='coins' />
 				</div>
-				<Button variant='inline' to='/start'>
-					Skip
-				</Button>
-				<Button to='/start'>Continue</Button>
+			</div>
+			<div className='body-bottom footer-step'>
+				<StepProgress active={3} />
+				<CircleArrowButton to='/start' />
 			</div>
 		</div>
 	);

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
 .scroll::-webkit-scrollbar {
   width: 4px;               /* width of the entire scrollbar */
@@ -17,12 +16,14 @@
 }
 
 :root {
-  --bg-main: #090D15;
+  --bg-main: #fff;
   --white: #ffffff; 
-  --light: #98A1C0;
+  --light: #5F6368;
+  --black-text: #222126;
   --dark-border: #1D2C52;
-  --accent: #4D82FB;
+  --accent: #05C0A5;
   --gray-border: #2F3343;
+  --gray-light: #E2E2E2;
   --gray: #2C303E;
   --error: #E51C05;
   --error-light: #f1412e;
@@ -131,7 +132,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -145,7 +146,9 @@ body {
   min-height: 100%;
   position: relative;
 }
-
+.black-bg {
+  background: var(--black-text);
+}
 .body {
   flex: 1;
   margin-bottom: 25px;
@@ -291,4 +294,10 @@ body {
 
 .items-loader > *:not(:last-child) {
     margin-bottom: 18px;
+}
+
+.footer-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

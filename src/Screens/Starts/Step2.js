@@ -1,5 +1,10 @@
 import React from 'react';
-import { Button, Title, Par } from '../../Components/UI';
+import {
+	CircleArrowButton,
+	StepProgress,
+	Title,
+	Par,
+} from '../../Components/UI';
 import Img1 from '../../assets/images/btc.png';
 import Img2 from '../../assets/images/eth.png';
 import Img3 from '../../assets/images/bnb.png';
@@ -9,10 +14,11 @@ import styles from './start.module.css';
 
 export const Step2 = () => {
 	return (
-		<div className='screen'>
-			<div className='top-bg' />
+		<div className='screen black-bg'>
 			<div className='body'>
-				<Title>A non-custodial & secure wallet for</Title>
+				<Title color='white' size='m'>
+					A non-custodial & secure wallet for
+				</Title>
 			</div>
 			<div className='body-bottom'>
 				<div className={styles.info}>
@@ -27,10 +33,10 @@ export const Step2 = () => {
 						and many more
 					</Par>
 				</div>
-				<Button variant='inline' to='/start'>
-					Skip
-				</Button>
-				<Button to='/step3'>Continue</Button>
+			</div>
+			<div className='body-bottom footer-step'>
+				<StepProgress active={2} />
+				<CircleArrowButton to='/step3' />
 			</div>
 		</div>
 	);

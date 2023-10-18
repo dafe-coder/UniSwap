@@ -8,3 +8,5 @@ export * from './Modal/Modal';
 export * from './Toggle/Toggle';
 export * from './CircleButton/CircleButton';
 export * from './Checkbox/Checkbox';
+export * from './CircleArrowButton/CircleArrowButton';
+export * from './StepProgress/StepProgress';

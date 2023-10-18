@@ -4,7 +4,7 @@
 }
 
 .par a {
-    color: var(--white);
+    color: var(--accent);
     font-weight: 700;
     position: relative;
 }
@@ -17,7 +17,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 0.5px;
-    background:#fff;
+    background:var(--accent);
     transition: all ease .3s;
 }
 
@@ -53,13 +53,15 @@
     font-weight: 500;
     line-height: normal;
 }
-
-.light, .light a {
-    color: var(--light);
+.light {
+    color: var(--light)
+}
+.light a {
+    color: var(--accent);
 }
 
 .light a::after {
-    background:var(--light);
+    background:var(--accent);
 }
 
 .red {

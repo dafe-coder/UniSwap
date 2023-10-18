@@ -7,9 +7,9 @@ export const Title = ({
 	center = true,
 	mt = 0,
 	mb = 0,
-	fw = 600,
+	fw = 700,
 	size = 'sm',
-	color = 'white',
+	color = 'black',
 	className,
 }) => {
 	return (
@@ -18,7 +18,7 @@ export const Title = ({
 			className={cn(styles.title, className, {
 				[styles['center']]: center,
 				[styles[size]]: size !== 'sm',
-				[styles[color]]: size !== 'white',
+				[styles[color]]: size !== 'black',
 			})}
 		>
 			{children}
