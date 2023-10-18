@@ -44,7 +44,7 @@ export const WelcomeBack = () => {
 		setTimerIDs(setInterval(timerDisabled, 1000));
 		function timerDisabled() {
 			setTimer((state) => {
-				if (state == 0) {
+				if (state === 0) {
 					setActiveBtn(true);
 					clearInterval(timerIDs);
 					return 0;

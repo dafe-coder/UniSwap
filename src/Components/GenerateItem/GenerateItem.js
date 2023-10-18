@@ -24,7 +24,7 @@ export const GenerateItem = ({
 		}
 
 		return () => clearTimeout(showID);
-	}, [loadWallet]);
+	}, [loadWallet, showID, delay]);
 
 	React.useEffect(() => {
 		if (!loadWallet && !first) {
@@ -41,7 +41,8 @@ export const GenerateItem = ({
 			);
 		}
 		return () => clearTimeout(loadID);
-	}, [loadWallet]);
+	}, [loadWallet, loadID, delay, first]);
+
 	return (
 		<div
 			className={cn(styles.item, {

@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from './backup.module.css';
 import { useSelector } from 'react-redux';
 import CryptoJS from 'crypto-js';
-import { CopyButton, Button, Par } from '../../Components/UI';
+import { Button, Par } from '../../Components/UI';
 import { Header, PhraseBoxColumns } from '../../Components/';
 
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';

@@ -27,6 +27,32 @@ export const AssetInfo = () => {
 	);
 	const [width, setWidth] = React.useState(0);
 	const wrapRef = React.useRef(null);
+	const wrapElem = wrapRef.current;
+
+	const setPeriod = React.useCallback(
+		(eth) => {
+			const day = eth ? '1' : 'day';
+			const week = eth ? '7' : 'week';
+			const month = eth ? '30' : 'month';
+			const year = eth ? '360' : 'day';
+			const all = eth ? 'max' : 'max';
+			switch (activeTimeline) {
+				case '1D':
+					return day;
+				case '7D':
+					return week;
+				case '1M':
+					return month;
+				case '1Y':
+					return year;
+				case 'All':
+					return all;
+				default:
+					break;
+			}
+		},
+		[activeTimeline]
+	);
 
 	const buttonActions = [
 		{
@@ -45,9 +71,6 @@ export const AssetInfo = () => {
 			title: 'All',
 		},
 	];
-	React.useEffect(() => {
-		console.log(width);
-	}, [width]);
 
 	React.useEffect(() => {
 		if (state !== null && state.contract_address !== '') {
@@ -55,43 +78,21 @@ export const AssetInfo = () => {
 		} else {
 			dispatch(fetchChartCoinDefault([state.id, setPeriod(true)]));
 		}
-	}, [activeTimeline]);
+	}, [activeTimeline, dispatch, setPeriod, state]);
 
 	React.useEffect(() => {
 		const observer = new ResizeObserver((entries) => {
 			setWidth(entries[0].contentRect.width);
 		});
 
-		if (wrapRef.current) {
-			observer.observe(wrapRef.current);
+		if (wrapElem) {
+			observer.observe(wrapElem);
 		}
 
 		return () => {
-			wrapRef.current && observer.unobserve(wrapRef.current);
+			wrapElem && observer.unobserve(wrapElem);
 		};
-	}, []);
-
-	const setPeriod = (eth) => {
-		const day = eth ? '1' : 'day';
-		const week = eth ? '7' : 'week';
-		const month = eth ? '30' : 'month';
-		const year = eth ? '360' : 'day';
-		const all = eth ? 'max' : 'max';
-		switch (activeTimeline) {
-			case '1D':
-				return day;
-			case '7D':
-				return week;
-			case '1M':
-				return month;
-			case '1Y':
-				return year;
-			case 'All':
-				return all;
-			default:
-				break;
-		}
-	};
+	}, [wrapElem]);
 
 	return (
 		<div className='screen' ref={wrapRef}>
