@@ -21,7 +21,7 @@ export const Modal = ({
 			onRequestClose={() => setOpen(false)}
 		>
 			{title !== '' && (
-				<Par color={warning ? 'red' : ''} fw={fwTitle} size='m' center>
+				<Par color={warning ? 'red' : 'black'} fw={fwTitle} size='m' center>
 					{title}
 				</Par>
 			)}

@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 52px;
+    height: 39px;
     width: 100%;
-    border-radius: 16px;
+    border-radius: 4px;
     border: none;
     color: var(--white);
 
@@ -16,11 +16,11 @@
 }
 
 .default {
-    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
+    background: var(--accent);
 }
 
 .disabled {
-    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
+    background: var(--accent);
     opacity: 0.4;
     pointer-events: none;
 }
@@ -31,13 +31,14 @@
 
 .outlined {
     background: transparent;
-    border: 1px solid var(--gray-border);
+    border: 1px solid var(--black-text);
+    color: var(--black-text);
 }
 
 .sm {
+    border-radius: 4px;
     height: 37px;
-    padding: 0 16px;
-    color: var(--white);
+    padding: 0 24px;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;

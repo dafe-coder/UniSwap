@@ -34,7 +34,7 @@ export const Item = ({
 					<></>
 				)}
 				<div className={styles.info}>
-					<Par fw={600} size={size}>
+					<Par color='black' fw={600} size={size}>
 						{name}
 					</Par>
 					{symbol !== '' ? (

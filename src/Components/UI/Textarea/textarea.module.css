@@ -1,15 +1,14 @@
 .input {
-    height: 53px;
-    border-radius: 12px;
+    border-radius: 4px;
     width: 100%;
     border: 1px solid var(--dark-border);
     padding: 8px 16px;
     resize: none;
     
-    color: var(--white);
+    color: var(--black-text);
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 

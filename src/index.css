@@ -20,7 +20,7 @@
   --white: #ffffff; 
   --light: #5F6368;
   --black-text: #222126;
-  --dark-border: #1D2C52;
+  --dark-border: #E2E2E2;
   --accent: #05C0A5;
   --gray-border: #2F3343;
   --gray-light: #E2E2E2;
@@ -253,7 +253,7 @@ body {
 }
 
 .btns button {
-  border-radius: 24px;
+  border-radius: 4px;
 }
 
 .content-center {

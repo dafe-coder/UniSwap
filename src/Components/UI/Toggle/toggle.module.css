@@ -18,8 +18,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: transparent;
-  border: 1px solid #5D6785;
+  background: #ADADAD3D;
+  border: 1px solid transparent;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -31,18 +31,18 @@
   width: 16px;
   left: 2.5px;
   bottom: 2px;
-  background-color: #5D6785;
+  background-color: var(--white);
   transition: 0.4s;
   border-radius: 50%;
 }
 
 .input:checked + .switch {
-  background: var(--dark-border);
-  border-color: var(--dark-border);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .input:checked + .switch::before {
- background-color: var(--accent);
+ background-color: var(--white);
 }
 
 .input:checked + .switch::before {

@@ -115,15 +115,22 @@ export const ImportData = () => {
 			<div className='header-back'>
 				<button onClick={() => navigate(-1)}>
 					<SvgIcon type='check-left' />
-					<Par color='light'>Back</Par>
 				</button>
 			</div>
-			<div className='top-bg' />
 			<div className='body'>
 				<PhraseBox setPhrase={setPhrase} phrase={phrase} />
 			</div>
 			<div className='body-bottom'>
-				<Button onClick={() => setOpenName(true)}>Import</Button>
+				<Par color='light' mb={16} center>
+					Enter your recovery phrase <br /> Your recovery phrase will only be
+					stored on your device.
+				</Par>
+				<Button
+					variant={disabledBtn ? 'disabled' : 'default'}
+					onClick={() => setOpenName(true)}
+				>
+					Import
+				</Button>
 			</div>
 			<Modal
 				open={openName}

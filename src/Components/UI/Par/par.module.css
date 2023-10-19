@@ -83,3 +83,7 @@
 .dark {
     color: #5D6785;
 }
+
+.black {
+    color: var(--black-text);
+}
