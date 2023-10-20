@@ -67,7 +67,7 @@ export const PriceInput = ({
 						onClick={() => navigate('/swap-coins', { state: { from, to: to } })}
 					>
 						<img src={chooseItem.image.thumb} alt={chooseItem.name} />
-						<Par size='m' fw={500}>
+						<Par size='m' fw={600}>
 							{chooseItem.symbol.toUpperCase()}
 						</Par>
 						<SvgIcon type='check' />

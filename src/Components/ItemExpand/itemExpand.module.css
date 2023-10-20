@@ -1,84 +1,103 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
 }
 
 .item {
-    position: relative;
+	position: relative;
 }
 
 .body {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 0;
-    border-radius: 20px;
-    border: 1px solid var(--gray);
-    background: var(--bg-main);
-    padding: 16px;
-    transform: scale(0);
-    opacity: 0;
-    transform-origin: top center;
-    transition: all ease .3s;
-    z-index: 1000;
-    min-width: 200px;
+	position: absolute;
+	top: calc(100% + 10px);
+	left: 0;
+	border-radius: 8px;
+	background: var(--white);
+	padding: 16px;
+	transform: scale(0);
+	opacity: 0;
+	transform-origin: top center;
+	transition: all ease 0.3s;
+	z-index: 1000;
+	min-width: 200px;
 }
 
 .right {
-    right: 0;
-    left: auto;
+	right: 0;
+	left: auto;
 }
 .overflow {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(54, 64, 82, 0.50);
-    backdrop-filter: blur(3px);
-    z-index: 11;
-    opacity: 0;
-    transition: all ease .3s;
-    visibility: hidden;
-    pointer-events: none;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 11;
+	opacity: 0;
+	transition: all ease 0.3s;
+	visibility: hidden;
+	pointer-events: none;
 }
 .showOverflow {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
 }
 
 .show {
-    opacity: 1;
-    transform: scale(1);
+	opacity: 1;
+	transform: scale(1);
 }
 
-.body > :global( .item-expand) {
-    cursor: pointer;
-    padding: 10px 16px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    
-    color: var(--light);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    min-width: max-content;
-    transition: all ease .3s;
+.body > :global(.item-expand) {
+	cursor: pointer;
+	padding: 10px 16px 10px 16px;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+
+	color: var(--light);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	min-width: max-content;
+	transition: all ease 0.3s;
+	position: relative;
+	border-radius: 4px;
 }
 
-.body > :global( .item-expand):hover {
-    background: var(--bg-dark)
+.body > :global(.item-expand)::after {
+	content: '';
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 10px;
+	height: 10px;
+	background: var(--accent);
+	border-radius: 5px;
+	transition: all ease 0.2s;
+	opacity: 0;
 }
 
-.body :global( .active) {
-    background: var(--bg-dark); 
-    color: var(--white);
+.body > :global(.item-expand):hover {
+	background: rgba(5, 192, 165, 0.2);
+	color: var(--accent);
+}
+
+.body :global(.active) {
+	background: rgba(5, 192, 165, 0.2);
+	color: var(--accent);
+	padding: 10px 16px 10px 35px;
+}
+
+.body :global(.active)::after {
+	opacity: 1;
 }

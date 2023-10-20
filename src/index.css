@@ -10,7 +10,7 @@
 
 .scroll::-webkit-scrollbar-thumb {
 	background-color: var(--light); /* color of the scroll thumb */
-	border-radius: 20px;
+	border-radius: 8px;
 	width: 2px;
 	border: none; /* roundness of the scroll thumb */
 }
@@ -29,7 +29,7 @@
 	--error-light: #f1412e;
 	--red: #ff7272;
 	--bg-dark: #121a2a;
-	--success: #00ffa3;
+	--success: #05c0a5;
 	--yellow: #ffd900;
 
 	--app-width: 400px;
@@ -291,12 +291,12 @@ body {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	border-radius: 50px;
 	width: max-content;
-	border-radius: 24px;
-	background: #293249;
-	padding: 4px 8px 4px 4px;
+	background: var(--white);
+	padding: 6px 14px;
 	gap: 8px;
+	border-radius: 6px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 .choose-item img {

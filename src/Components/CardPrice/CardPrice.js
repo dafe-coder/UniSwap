@@ -7,10 +7,12 @@ export const CardPrice = ({ balance, change }) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.cardInfo}>
-				<Par size='sm' mb={8}>
+				<Par color='white' size='sm' mb={8} center={false}>
 					My balance
 				</Par>
-				<Title size='xl'>$ {balance}</Title>
+				<Title color='white' center={false} size='xl'>
+					$ {balance}
+				</Title>
 			</div>
 			<Indicators
 				usd={change.usd}

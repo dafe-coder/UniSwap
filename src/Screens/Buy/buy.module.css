@@ -1,31 +1,42 @@
 .wrapInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
 }
 
 .wrapInput input {
-    text-align: center;
-    color: #FFF;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    min-width: 40px;
-    margin-bottom: 14px;
-    display: block;
-    max-width: 220px;
+	text-align: center;
+	color: var(--black-text);
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	min-width: 40px;
+	margin-bottom: 14px;
+	display: block;
+	max-width: 220px;
 }
 .wrapInp {
-    display: flex;
+	display: flex;
 }
 .wrapInp {
-    text-align: center;
-    color: #FFF;
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+	text-align: center;
+	color: var(--black-text);
+	font-size: 42px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.bodyTop {
+	padding: 40px 30px 70px;
+	position: relative;
+	margin-left: -30px;
+	margin-right: -30px;
+	margin-top: -40px;
+	border-radius: 4px;
+	background-color: #fff;
+	filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
 }

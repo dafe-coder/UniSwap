@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { setChooseCoinOne } from '../../redux/slices/TransactionsSlice';
 import styles from './buy.module.css';
+import { Header } from '../../Components/Header/Header';
 
 export const Buy = () => {
 	const dispatch = useDispatch();
@@ -22,11 +23,8 @@ export const Buy = () => {
 
 	return (
 		<div className='screen'>
-			<div className='body'>
-				<Title fw={600} size='sm' center className='title'>
-					Add Cash
-				</Title>
-
+			<div className={styles.bodyTop}>
+				<Header title='Add Cash' back={false} />
 				<div className={styles.wrapInput}>
 					<div className={styles.wrapInp}>
 						{String(amountBuy).length !== 0 && '$'}
@@ -43,11 +41,12 @@ export const Buy = () => {
 							value={`${amountBuy}`}
 						/>
 					</div>
-					<Par center color='light'>
+					<Par center color='light' fw={600}>
 						{chooseCoinOne !== null ? chooseCoinOne.name : 'Ethereum'}
 					</Par>
 				</div>
 			</div>
+			<div className='body'></div>
 
 			<div className='body-bottom'>
 				<Button

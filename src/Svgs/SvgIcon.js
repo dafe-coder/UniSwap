@@ -118,7 +118,7 @@ function SvgIcon(props) {
 				>
 					<path
 						d='M3.06252 5.9393L7.43065 11.0368C7.50106 11.1189 7.5884 11.1848 7.68668 11.23C7.78496 11.2752 7.89185 11.2986 8.00002 11.2986C8.10819 11.2986 8.21509 11.2752 8.31337 11.23C8.41165 11.1848 8.49899 11.1189 8.5694 11.0368L12.9375 5.9393C13.3544 5.45273 13.0088 4.70117 12.3681 4.70117H3.63065C2.99002 4.70117 2.6444 5.45273 3.06252 5.9393Z'
-						fill={fill ? fill : 'white'}
+						fill={fill ? fill : 'var(--black-text)'}
 					/>
 				</svg>
 			);
@@ -294,24 +294,24 @@ function SvgIcon(props) {
 				>
 					<path
 						d='M7.28033 0.46967C7.57322 0.762563 7.57322 1.23744 7.28033 1.53033L4.28033 4.53033C4.13968 4.67098 3.94891 4.75 3.75 4.75C3.55109 4.75 3.36032 4.67098 3.21967 4.53033L0.21967 1.53033C-0.0732233 1.23744 -0.0732233 0.762564 0.21967 0.46967C0.512563 0.176777 0.987437 0.176777 1.28033 0.46967L3.75 2.93934L6.21967 0.46967C6.51256 0.176777 6.98744 0.176777 7.28033 0.46967Z'
-						fill='white'
+						fill='var(--black-text)'
 					/>
 				</svg>
 			);
 		case 'change':
 			return (
 				<svg
-					width='8'
-					height='9'
-					viewBox='0 0 8 9'
+					width={27}
+					height={16}
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
+					{...props}
 				>
 					<path
 						fillRule='evenodd'
 						clipRule='evenodd'
-						d='M3.75 0C3.33579 0 3 0.335786 3 0.75V6.43934L1.28033 4.71967C0.987437 4.42678 0.512563 4.42678 0.21967 4.71967C-0.0732233 5.01256 -0.0732233 5.48744 0.21967 5.78033L3.21967 8.78033C3.36032 8.92098 3.55109 9 3.75 9C3.94891 9 4.13968 8.92098 4.28033 8.78033L7.28033 5.78033C7.57322 5.48744 7.57322 5.01256 7.28033 4.71967C6.98744 4.42678 6.51256 4.42678 6.21967 4.71967L4.5 6.43934V0.75C4.5 0.335786 4.16421 0 3.75 0Z'
-						fill='white'
+						d='M6.667 0C5.93 0 5.333.597 5.333 1.333v10.115L2.276 8.39a1.333 1.333 0 00-1.885 1.885l5.333 5.334a1.334 1.334 0 001.885 0l5.334-5.334a1.333 1.333 0 10-1.886-1.885L8 11.448V1.333C8 .597 7.403 0 6.667 0zM19.583 16c.737 0 1.334-.597 1.334-1.333V4.552l3.057 3.057a1.333 1.333 0 001.886-1.885L20.526.39a1.333 1.333 0 00-1.886 0l-5.333 5.333a1.333 1.333 0 001.886 1.885l3.057-3.057v10.115c0 .736.597 1.333 1.333 1.333z'
+						fill='#222126'
 					/>
 				</svg>
 			);
@@ -434,6 +434,56 @@ function SvgIcon(props) {
 						d='M20.1237 15.4072L12.7881 8.07283L11.0625 9.79842L16.6762 15.4121L11.0625 21.0172L12.7881 22.7428L20.1237 15.4072Z'
 						fill='#fff'
 					/>
+				</svg>
+			);
+		case 'swap-polygon':
+			return (
+				<svg
+					width={400}
+					height={64}
+					fill='none'
+					xmlns='http://www.w3.org/2000/svg'
+					{...props}
+				>
+					<g filter='url(#prefix__filter0_d_402_2989)'>
+						<path
+							fillRule='evenodd'
+							clipRule='evenodd'
+							d='M400 6a6 6 0 00-6-6H6a6 6 0 00-6 6v18.876a6 6 0 006 6h165a6 6 0 016 6V47c0 5.523 4.477 10 10 10h26c5.523 0 10-4.477 10-10V36.876a6 6 0 016-6h165a6 6 0 006-6V6z'
+							fill='#fff'
+						/>
+					</g>
+					<defs>
+						<filter
+							id='prefix__filter0_d_402_2989'
+							x={-5}
+							y={-3}
+							width={410}
+							height={67}
+							filterUnits='userSpaceOnUse'
+							colorInterpolationFilters='sRGB'
+						>
+							<feFlood floodOpacity={0} result='BackgroundImageFix' />
+							<feColorMatrix
+								in='SourceAlpha'
+								values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+								result='hardAlpha'
+							/>
+							<feOffset dy={2} />
+							<feGaussianBlur stdDeviation={2.5} />
+							<feComposite in2='hardAlpha' operator='out' />
+							<feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0' />
+							<feBlend
+								in2='BackgroundImageFix'
+								result='effect1_dropShadow_402_2989'
+							/>
+							<feBlend
+								in='SourceGraphic'
+								in2='effect1_dropShadow_402_2989'
+								result='shape'
+							/>
+						</filter>
+					</defs>
 				</svg>
 			);
 		default:

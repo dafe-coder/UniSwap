@@ -72,7 +72,6 @@ export const Swap = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div>
 					<Par color='light' mb={8}>
@@ -80,7 +79,13 @@ export const Swap = () => {
 					</Par>
 
 					<div className={styles.chooseItem}>
-						<ItemExpand items fwTitle={500} titleSize='m' title={network}>
+						<ItemExpand
+							items
+							fwTitle={700}
+							caretFill={'var(--success)'}
+							titleSize='m'
+							title={network}
+						>
 							{mockList.map((item) => (
 								<div
 									key={item.title}
@@ -95,7 +100,6 @@ export const Swap = () => {
 						</ItemExpand>
 					</div>
 					<div>
-						<img className={styles.imgBg} src={Circle} alt='circle-bg' />
 						<ChooseInputSwap
 							valueTwo={valueOut}
 							valueOne={value}
@@ -110,7 +114,7 @@ export const Swap = () => {
 							<TextRowsBlock style={{ marginTop: 40 }} />
 						</div>
 					)}
-					<Button mb={40} mt={10}>
+					<Button mb={40} mt={30}>
 						Swap
 					</Button>
 				</div>

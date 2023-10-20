@@ -57,8 +57,6 @@ export const Rpc = () => {
 
 	return (
 		<div className='screen'>
-			<div className='center-bg'></div>
-			<div className='bottom-bg'></div>
 			<div className='body'>
 				<Header title='RPC Node' />
 				<Par size='sm' color='light'>
@@ -71,23 +69,23 @@ export const Rpc = () => {
 						speeds, it is recommended to choose the one which has a higher
 						height.
 					</ItemExpand>
-					<Par mt={30} mb={16} tt='uppercase' color='light'>
-						Custom
-					</Par>
-					<Button onClick={() => setShowModalAdd(true)}>Add Node</Button>
-					<Par mt={30} tt='uppercase' color='light'>
-						Default
-					</Par>
-					<div className={cn(styles.listRpc, 'scroll')}>
-						{rpcLinks.map((item) => (
-							<RpcItem
-								key={item.id}
-								{...item}
-								active={activeRpcLink}
-								onChoose={chooseRpcLink}
-							/>
-						))}
-					</div>
+				</div>
+				<Par mt={30} mb={15} tt='uppercase' color='light'>
+					Custom
+				</Par>
+				<Button onClick={() => setShowModalAdd(true)}>Add Node</Button>
+				<Par mt={30} mb={15} tt='uppercase' color='light'>
+					Default
+				</Par>
+				<div className={cn(styles.listRpc, 'scroll')}>
+					{rpcLinks.map((item) => (
+						<RpcItem
+							key={item.id}
+							{...item}
+							active={activeRpcLink}
+							onChoose={chooseRpcLink}
+						/>
+					))}
 				</div>
 			</div>
 			<Modal
@@ -145,7 +143,7 @@ export const Rpc = () => {
 					</Button>
 					<Button
 						size='sm'
-						variant='inline'
+						variant='outlined'
 						onClick={() => setShowModalRestart(false)}
 					>
 						Cancel

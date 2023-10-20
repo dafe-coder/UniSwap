@@ -1,67 +1,67 @@
 .btnsCircle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 16px;
-    margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin-top: 16px;
+	margin-bottom: 30px;
 }
 
 .caretIcon {
-    display: flex;
-    transform: rotate(-90deg);
+	display: flex;
+	transform: rotate(-90deg);
 }
 
 .listTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .nav {
-    display: flex;
-    gap: 24px;
+	display: flex;
+	gap: 24px;
 }
 
 .navItem {
-    color: var(--light);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    position: relative;
-    transition: all ease .3s;
-    cursor: pointer;
+	color: var(--light);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	position: relative;
+	transition: all ease 0.3s;
+	cursor: pointer;
 }
 
 .navItem::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%)  scale(0);
-    width: 16px;
-    height: 2px;
-    background: var(--accent);
-    bottom: -6px;
-    transform-origin: top center;
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) scale(0);
+	width: 16px;
+	height: 2px;
+	background: var(--accent);
+	bottom: -6px;
+	transform-origin: top center;
 }
 
 .active {
-    font-weight: 600;
-    color: var(--white);
+	font-weight: 600;
+	color: var(--white);
 }
 
 .active::after {
-    transform: translateX(-50%) scale(1);
+	transform: translateX(-50%) scale(1);
 }
 
 .list {
-    border-radius: 20px;
-    border: 1px solid var(--gray-border);
-    padding: 24px 16px;
-    margin-top: 22px;
+	border-radius: 8px;
+	border: 1px solid var(--gray-border);
+	padding: 24px 16px;
+	margin-top: 22px;
 }
 
 .list > div:not(:last-child) {
-    margin-bottom: 24px;
+	margin-bottom: 24px;
 }
