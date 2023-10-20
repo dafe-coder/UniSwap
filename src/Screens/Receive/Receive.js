@@ -15,7 +15,7 @@ import {
 	TwitterShareButton,
 } from 'react-share';
 import { SvgIcon } from '../../Svgs';
-import { Par } from '../../Components/UI';
+import { Par, Title } from '../../Components/UI';
 
 let timerID;
 
@@ -39,25 +39,25 @@ export const Receive = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Receive' />
 				<div style={{ marginTop: 50 }}>
+					<Title fw={600} color='black' size='sm' center mb={10}>
+						My Tokenname address
+					</Title>
+					<Par center color='light' fw={500}>
+						{walletAddress}
+					</Par>
+				</div>
+				<div style={{ marginTop: 30 }}>
 					<QRCode
 						bgColor='transparent'
-						fgColor='var(--light)'
+						fgColor='var(--black-text)'
 						size={200}
 						value={walletAddress}
 					/>
 				</div>
-				<div style={{ marginTop: 30 }}>
-					<Par fw={600} size='sm' center mb={10}>
-						My Tokenname address
-					</Par>
-					<Par center size='sm' color='light' fw={500}>
-						{walletAddress}
-					</Par>
-				</div>
+
 				<div
 					className={cn('btns', styles.wrapBtn)}
 					style={{ marginBottom: 20 }}
@@ -66,7 +66,7 @@ export const Receive = () => {
 						{copied ? (
 							<SvgIcon type='check-success' fill='var(--success)' />
 						) : (
-							<SvgIcon type='copy' fill='var(--light)' />
+							<SvgIcon type='copy' fill='var(--accent)' />
 						)}
 						{copied ? (
 							<Par size='sm' style={{ color: 'var(--success)' }}>

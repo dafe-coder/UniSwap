@@ -74,21 +74,13 @@ export const WelcomeBack = () => {
 				<Button variant='default' onClick={onLogin}>
 					Continue
 				</Button>
-				<Par center mt={20}>
-					Unable to Log in? <br />{' '}
-					<a
-						onClick={(e) => onResetWallet(e, 'start')}
-						href='!#'
-						style={{ color: 'white' }}
-					>
+				<Par center mt={20} color='light'>
+					Unable to Log in? <br />
+					<a onClick={(e) => onResetWallet(e, 'start')} href='!#'>
 						Import
-					</a>{' '}
-					or{' '}
-					<a
-						onClick={(e) => onResetWallet(e, 'start')}
-						href='!#'
-						style={{ color: 'white' }}
-					>
+					</a>
+					or
+					<a onClick={(e) => onResetWallet(e, 'start')} href='!#'>
 						create a new wallet
 					</a>
 					.

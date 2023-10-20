@@ -142,15 +142,15 @@ function SvgIcon(props) {
 		case 'share':
 			return (
 				<svg
-					width='24'
+					width='25'
 					height='24'
-					viewBox='0 0 24 24'
+					viewBox='0 0 25 24'
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
 				>
 					<path
-						d='M21.0002 11.459L11.4002 5.09998L11.4002 8.69998C3 10.5 3 18.9 3 18.9C3 18.9 6.6 14.1 11.4002 14.7L11.4002 18.42L21.0002 11.459Z'
-						stroke='white'
+						d='M21.5002 11.459L11.9002 5.09998L11.9002 8.69998C3.5 10.5 3.5 18.9 3.5 18.9C3.5 18.9 7.1 14.1 11.9002 14.7L11.9002 18.42L21.5002 11.459Z'
+						stroke='#05C0A5'
 						strokeWidth='2'
 						strokeLinejoin='round'
 					/>
@@ -354,7 +354,7 @@ function SvgIcon(props) {
 				>
 					<path
 						d='M12 12.9V8.414m0 7.81v.04M17.67 20H6.33a3.398 3.398 0 01-3.267-2.424c-.176-.598.04-1.22.37-1.751L9.103 5.6c1.328-2.135 4.466-2.135 5.794 0l5.67 10.224c.33.53.546 1.153.37 1.75A3.398 3.398 0 0117.67 20z'
-						stroke='#C05567'
+						stroke='var(--error)'
 						strokeWidth={2}
 						strokeLinecap='round'
 						strokeLinejoin='round'

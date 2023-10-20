@@ -101,6 +101,7 @@ export const Navigation = () => {
 			<Route path='/home/receive' element={<Receive />} />
 			<Route path='/manage' element={<Manage />} />
 			<Route path='/generate' element={<Generate />} />
+			<Route path='/welcome-back' element={<WelcomeBack />} />
 		</Routes>
 	);
 };

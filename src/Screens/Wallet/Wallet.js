@@ -51,9 +51,11 @@ export const Wallet = () => {
 		[]
 	);
 	const [showTab, setShowTab] = React.useState(false);
+	const [dataCurrentWallet, setDataCurrentWallet] = React.useState(undefined);
 
 	React.useEffect(() => {
 		const wallet = dataUser.find((item) => item.name === currentWallet);
+		setDataCurrentWallet(wallet);
 		if (wallet !== undefined && dataWallet === null && status !== 'loading') {
 			dispatch(
 				fetchDataWallet([
@@ -226,15 +228,25 @@ export const Wallet = () => {
 								</div>
 							}
 						>
-							{menuItems.map((item) => (
-								<div
-									key={item.title}
-									className='item-expand'
-									onClick={() => handleItemClick(item)}
-								>
-									{item.title}
-								</div>
-							))}
+							{menuItems.map((item) => {
+								if (
+									item.title === 'View Recovery Phrase' &&
+									dataCurrentWallet !== undefined &&
+									dataCurrentWallet.phrase === ''
+								) {
+									return <></>;
+								} else {
+									return (
+										<div
+											key={item.title}
+											className='item-expand'
+											onClick={() => handleItemClick(item)}
+										>
+											{item.title}
+										</div>
+									);
+								}
+							})}
 						</ItemExpand>
 					</div>
 				</div>
