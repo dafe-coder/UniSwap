@@ -18,13 +18,8 @@ export const BackupPhrase = () => {
 		}
 	}, [dataUser, currentWallet]);
 
-	React.useEffect(() => {
-		console.log(currentWalletData);
-	}, [currentWalletData]);
-
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Save your phrase' />
 				<Par color='light'>
@@ -33,12 +28,14 @@ export const BackupPhrase = () => {
 				<Par mt={8} color='red'>
 					Never share recovery phrase with anyone, store it securely!
 				</Par>
-				<PhraseBoxColumns
-					phrase={CryptoJS.AES.decrypt(
-						currentWalletData.phrase,
-						kitkat
-					).toString(CryptoJS.enc.Utf8)}
-				/>
+				{currentWalletData !== undefined && (
+					<PhraseBoxColumns
+						phrase={CryptoJS.AES.decrypt(
+							currentWalletData.phrase,
+							kitkat
+						).toString(CryptoJS.enc.Utf8)}
+					/>
+				)}
 			</div>
 			<div className='body-bottom'>
 				<Button variant='default' to='/settings/backup-finish'>

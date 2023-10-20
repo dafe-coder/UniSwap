@@ -26,10 +26,10 @@ export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 	return (
 		<div>
 			<div className={classNames(styles.card)}>
-				<Title center={false} size='xl' className={styles.title}>
+				<Title fw={600} center={false} size='xl' className={styles.title}>
 					{title}
 				</Title>
-				<Par mt={10} fw={500} size='sm'>
+				<Par mt={10} fw={400} size='sm'>
 					{walletAddress.slice(0, 26) + '...' + walletAddress.slice(-4)}
 				</Par>
 			</div>

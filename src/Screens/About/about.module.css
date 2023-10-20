@@ -1,0 +1,5 @@
+.item {
+	border-radius: 8px;
+	border: 1px solid var(--Stroke, #e2e2e2);
+	padding: 24px 16px;
+}

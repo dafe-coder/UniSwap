@@ -7,7 +7,6 @@ export const BackupStart = () => {
 	const [submitValue, setSubmitValue] = React.useState(false);
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<Header title='Manual backup' />
 			<div className='body' mb={10}>
 				<Par color='light'>

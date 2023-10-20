@@ -5,12 +5,10 @@ import { SvgIcon } from '../../Svgs';
 export const BackupSuccess = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg-light' />
-			<div className='top-bg' />
 			<div className='body content-center'>
 				<div>
 					<SvgIcon type='success' />
-					<Par mt={30} color='light' size='m'>
+					<Par fw={600} mt={30} color='black' size='m'>
 						Manual backup successful
 					</Par>
 				</div>

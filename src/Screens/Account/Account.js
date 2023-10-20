@@ -80,7 +80,6 @@ export const AccountWallets = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Wallet' />
 				{dataUser.length && chooseAccount !== null ? (

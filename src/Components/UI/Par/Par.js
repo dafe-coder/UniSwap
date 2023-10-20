@@ -5,7 +5,7 @@ import cn from 'classnames';
 export const Par = ({
 	children,
 	size = 'xs',
-	color = 'white',
+	color = 'black',
 	mt = 0,
 	mb = 0,
 	fw = 400,

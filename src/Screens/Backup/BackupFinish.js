@@ -81,12 +81,11 @@ export const BackupFinish = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Finish backup' />
 				<Par color='light'>
-					Check you have made a correct backup by <br /> entering the
-					corresponding words from your <br /> recovery phrase below.
+					Check you have made a correct backup by entering the <br />
+					corresponding words from your recovery phrase below.
 				</Par>
 				<div className={styles.bodyCheck}>
 					<div className={styles.checkInput}>
@@ -128,7 +127,7 @@ export const BackupFinish = () => {
 					variant={disabledBtn ? 'disabled' : 'default'}
 					onClick={submitBackup}
 				>
-					Done
+					Next
 				</Button>
 			</div>
 

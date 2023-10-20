@@ -7,23 +7,26 @@ import Img3 from '../../assets/images/coins/3.png';
 import Img4 from '../../assets/images/coins/4.png';
 import Img5 from '../../assets/images/coins/5.png';
 import styles from './import.module.css';
+import { useSelector } from 'react-redux';
 
 export const ImportStart = () => {
+	const { backup } = useSelector((state) => state.storage);
+
 	return (
 		<div className='screen grid-bg'>
-			<div className='center-bg' />
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Title size='m'>Follow these steps to import your wallet</Title>
 				<ButtonBig
 					to='/settings/backup'
 					mt={30}
-					title='Create a backup for you current Ordinals Wallet'
+					title='Create a backup for you current Mew Wallet'
 				>
-					This step is required, even if your current Name wallet is empty, for
+					This step is required, even if your current Mew wallet is empty, for
 					security.
 				</ButtonBig>
 				<ButtonBig
+					disabled={!backup}
+					bg='bg2'
 					to='/import-data'
 					mt={30}
 					title='Import your other wallet using a recovery phrase'

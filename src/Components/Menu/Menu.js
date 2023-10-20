@@ -32,15 +32,17 @@ export const Menu = () => {
 			{menus.map((item) => (
 				<div
 					key={item.icon}
-					className={cn(styles.item)}
+					className={cn(styles.item, {
+						[styles['active']]: location.pathname.includes(item.to),
+					})}
 					onClick={() => navigate(item.to)}
 				>
 					<SvgMenu
 						type={item.icon}
 						fill={
 							location.pathname.includes(item.to)
-								? 'var(--white)'
-								: 'var(--light)'
+								? 'var(--accent)'
+								: 'var(--black-text)'
 						}
 					/>
 				</div>
