@@ -10,6 +10,8 @@ import {
 	setDataWallet,
 } from '../../redux/slices/WalletSlice';
 import {
+	setAddressTo,
+	setAmountSend,
 	setChooseCoinOne,
 	setChooseCoinTwo,
 } from '../../redux/slices/TransactionsSlice';
@@ -63,6 +65,8 @@ export const Wallet = () => {
 	}, [dataUser, dataWallet, dispatch, currentWallet, walletNew, status]);
 
 	React.useEffect(() => {
+		dispatch(setAmountSend(0));
+		dispatch(setAddressTo(''));
 		if (coins === null) {
 			dispatch(fetchAllCoins());
 		}
@@ -182,7 +186,6 @@ export const Wallet = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header' style={{ marginBottom: 25 }}>
 					<div style={{ cursor: 'pointer' }} className='header-item'>
@@ -253,13 +256,14 @@ export const Wallet = () => {
 				)}
 				<div className={styles.btnsCircle}>
 					<CircleButton
+						position='left'
 						to='/swap-coins'
 						state={{ to: '/send-amount', from: 'swapOne' }}
 						title='Send'
 						icon='send'
 					/>
 					<CircleButton title='Receive' icon='receive' to='/home/receive' />
-					<CircleButton title='Buy' icon='buy' to='/buy' />
+					<CircleButton position='right' title='Buy' icon='buy' to='/buy' />
 				</div>
 				<div className={cn(styles.listTitle)}>
 					<div className={styles.nav}>
@@ -285,12 +289,9 @@ export const Wallet = () => {
 							className='list-title-link'
 							onClick={() => navigate('/manage')}
 						>
-							<Par color='light'>Manage</Par>
-							<SvgIcon
-								className={styles.caretIcon}
-								fill='var(--light)'
-								type='caret'
-							/>
+							<Par fw={600} color='light'>
+								Manage Account
+							</Par>
 						</span>
 					)}
 				</div>
@@ -310,7 +311,7 @@ export const Wallet = () => {
 						)}
 					</div>
 				) : (
-					<div className={styles.list}>
+					<div className={styles.listNft}>
 						{mockNft.map((item, i) => (
 							<ItemNft item={item} key={i} />
 						))}

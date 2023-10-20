@@ -63,7 +63,6 @@ export const SendAmount = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Send a crypto' />
 
@@ -89,7 +88,12 @@ export const SendAmount = () => {
 						</div>
 						<div
 							className={styles.row}
-							style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								gap: '10px',
+								marginTop: 0,
+							}}
 						>
 							<Par size='sm' color='light'>
 								<span>{fixNum(chooseCoinOne.market_data.balance)}</span>{' '}

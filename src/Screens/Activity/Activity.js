@@ -41,7 +41,6 @@ export const Activity = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header'>
 					<div>
@@ -115,18 +114,7 @@ export const Activity = () => {
 						))
 					) : (
 						<div className={styles.empty}>
-							<img
-								src={EmptyImg}
-								alt='empty'
-								style={{ maxWidth: '100%', maxHeight: '100%' }}
-							/>
-							<Title
-								fw={500}
-								size='sm'
-								center
-								color='light'
-								className={styles.emptyText}
-							>
+							<Title fw={400} size='m' center color='black'>
 								Your activity will
 								<br /> appear here!
 							</Title>

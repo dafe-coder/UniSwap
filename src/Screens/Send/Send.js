@@ -110,22 +110,16 @@ export const SendPreview = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Preview Details' />
 				<div className={styles.wrapCoin} style={{ marginTop: 50 }}>
 					<span className={styles.coinPrice}>
 						{amountSend !== '' ? amountSend : '0'}
 					</span>
-					<div
-						className={styles.row}
-						style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
-					>
-						<h5 className={styles.coinTitle}>
-							<span>{fixNum(chooseCoinOne.market_data.balance)}</span>{' '}
-							{chooseCoinOne.symbol}
-						</h5>
-					</div>
+					<Par size='sm' mt={10}>
+						<span>{fixNum(chooseCoinOne.market_data.balance)}</span>{' '}
+						{chooseCoinOne.symbol}
+					</Par>
 				</div>
 				<div
 					className={styles.wrapAddress}
@@ -141,10 +135,10 @@ export const SendPreview = () => {
 						value={addressTo.slice(0, 30) + '...' + addressTo.slice(-7)}
 					/>
 				</div>
-				<TextRowsBlock style={{ marginTop: 30 }} />
+				<TextRowsBlock style={{ marginTop: 10 }} />
 			</div>
 			<div className='body-bottom'>
-				<Par color='light' center mt={60} mb={16}>
+				<Par color='red' center mt={0} mb={16}>
 					Wallet cannot recover any lost funds.
 				</Par>
 				<Button

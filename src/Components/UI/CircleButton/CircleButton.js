@@ -3,8 +3,15 @@ import styles from './circleButton.module.css';
 import { SvgMenu } from '../../../Svgs/SvgMenu';
 import { Par } from '../Par/Par';
 import { useNavigate } from 'react-router-dom';
+import cn from 'classnames';
 
-export const CircleButton = ({ title, icon, to, state = null }) => {
+export const CircleButton = ({
+	position = 'center',
+	title,
+	icon,
+	to,
+	state = null,
+}) => {
 	const navigate = useNavigate();
 
 	const goTo = () => {
@@ -16,11 +23,9 @@ export const CircleButton = ({ title, icon, to, state = null }) => {
 	};
 
 	return (
-		<div className={styles.btn} onClick={goTo}>
-			<div className={styles.circle}>
-				<SvgMenu type={icon} />
-			</div>
-			<Par mt={8} size='sm' color='light'>
+		<div className={cn(styles.btn, styles[position])} onClick={goTo}>
+			<SvgMenu type={icon} />
+			<Par fw={600} mt={8} size='sm' color='black'>
 				{title}
 			</Par>
 		</div>

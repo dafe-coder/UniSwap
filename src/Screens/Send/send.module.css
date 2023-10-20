@@ -144,7 +144,7 @@
 	margin-top: 50px;
 }
 .coinPrice {
-	color: var(--light-blue);
+	color: var(--black-text);
 	text-align: center;
 	font-size: 42px;
 	font-style: normal;
@@ -168,12 +168,14 @@
 }
 
 .maxBtn {
-	color: var(--green);
+	color: var(--error);
+	background: rgba(213, 0, 0, 0.2);
+	padding: 4px;
+	border-radius: 4px;
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
-	background-color: transparent;
 	border: none;
 	position: absolute;
 	top: 20px;
@@ -187,8 +189,6 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 50px;
-	border-radius: 8px;
-	border: 1px solid var(--gray-border);
 }
 
 .chooseCoinInfo {
@@ -207,7 +207,7 @@
 }
 
 .chooseTitle {
-	color: var(--white);
+	color: var(--black-text);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -217,7 +217,7 @@
 }
 
 .chooseCoinPrice {
-	color: var(--white);
+	color: var(--black-text);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -225,9 +225,9 @@
 }
 
 .inputAddress {
-	border-radius: 4px;
-	border: 1px solid #1d2c52;
-	color: var(--light-blue);
+	border-radius: 8px;
+	border: 1px solid var(--gray-light);
+	color: var(--black-text);
 	text-align: left;
 	padding: 11px 16px;
 
@@ -247,7 +247,7 @@
 	color: var(--light);
 }
 .copyButton {
-	color: var(--light);
+	color: var(--accent);
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -292,7 +292,7 @@
 
 .wrapInput input {
 	text-align: center;
-	color: #fff;
+	color: var(--black-text);
 	font-size: 42px;
 	font-style: normal;
 	font-weight: 500;

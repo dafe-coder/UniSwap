@@ -17,7 +17,7 @@ export const TransactionItem = ({ data }) => {
 					<img src={data.image.thumb} alt={data.title} />
 				</div>
 				<div>
-					<Par size='sm' fw={600} mb={4}>
+					<Par size='sm' fw={400} mb={4}>
 						{data.name}
 					</Par>
 					<Par color='light'>
