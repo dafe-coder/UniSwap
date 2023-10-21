@@ -6,7 +6,6 @@ import { Button, Modal, Title } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import fixNum from '../../func.wallet/fixNum';
 import { SvgIcon } from '../../Svgs';
-import EmptyImg from '../../assets/images/empty.png';
 import { useNavigate } from 'react-router-dom';
 
 export const Activity = () => {

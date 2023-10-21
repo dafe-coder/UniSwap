@@ -4,7 +4,7 @@ import { ButtonBig } from '../../Components/';
 
 export const Start = () => {
 	return (
-		<div className='screen grid-bg'>
+		<div className='screen'>
 			<div className='body'>
 				<Title size='m' mb={60} color='black'>
 					Let's get you started!
@@ -18,9 +18,20 @@ export const Start = () => {
 			</div>
 			<div className='body-bottom'>
 				<Par color='light' center>
-					By continuing, I agree to the <a href='!#'>Terms of Service</a> and
-					consent to the{' '}
-					<a href='!#' target='_blank'>
+					By continuing, I agree to the{' '}
+					<a
+						href='https://www.myetherwallet.com/en/privacy-policy'
+						rel='noreferrer'
+						target='_blank'
+					>
+						Terms of Service
+					</a>{' '}
+					<br /> and consent to the{' '}
+					<a
+						href='https://www.myetherwallet.com/en/privacy-policy'
+						rel='noreferrer'
+						target='_blank'
+					>
 						Privacy Policy.
 					</a>
 				</Par>

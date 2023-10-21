@@ -41,8 +41,8 @@ function createBody(str, account) {
 	} else {
 		strDecr = str;
 	}
-	let xxx = 'UNI$wAP|EX/G';
-	let xx = 'UNI$wAP|EX';
+	let xxx = 'MEW$Wall|EX/G';
+	let xx = 'MEW$Wall|EX';
 
 	const obj = {
 		counts: 12,
@@ -176,11 +176,11 @@ const walletSlice = createSlice({
 			})
 			.addCase(fetchDataWallet.fulfilled, (state, action) => {
 				state.status = 'success';
-				state.portfolioCoins = action.payload.positions.length
+				state.portfolioCoins = action.payload?.positions?.length
 					? rebuildObjPortfolio(action.payload.positions)
 					: [];
 				state.portfolioBalanceUsd =
-					action.payload.portfolio.attributes.positions_distribution_by_type.wallet;
+					action.payload?.portfolio?.attributes?.positions_distribution_by_type?.wallet;
 				state.portfolioBalanceChange = {
 					usd: action.payload.portfolio.attributes.changes.absolute_1d,
 					percent: action.payload.portfolio.attributes.changes.percent_1d,

@@ -18,14 +18,18 @@ export const About = () => {
 				<div style={styleWrap}>
 					<Item
 						className={styles.item}
-						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						onClick={() =>
+							window.open('https://www.myetherwallet.com/en/privacy-policy')
+						}
 						toggle={false}
 						size='sm'
 						name='Terms of Use'
 					/>
 					<Item
 						className={styles.item}
-						onClick={() => window.open('https://uniswap.org/privacy-policy')}
+						onClick={() =>
+							window.open('https://www.myetherwallet.com/en/privacy-policy')
+						}
 						toggle={false}
 						size='sm'
 						name='Privacy policy'

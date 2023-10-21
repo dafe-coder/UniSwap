@@ -16,6 +16,7 @@ import CryptoJS from 'crypto-js';
 import generateAddressesFromSeed from '../../func.wallet/generateWallet';
 
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
+
 export const Generate = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -23,8 +24,8 @@ export const Generate = () => {
 	const [loadFirst, setLoadFirst] = React.useState(true);
 
 	React.useEffect(() => {
-		setLoad1(false);
 		async function generateWords() {
+			setLoad1(false);
 			dispatch(resetWallet());
 			let code = generateMnemonic();
 			const privateKey = generateAddressesFromSeed(code, 12);
@@ -42,7 +43,7 @@ export const Generate = () => {
 			dispatch(setIsLogin(true));
 		}
 		generateWords();
-	}, [dispatch]);
+	}, []);
 
 	React.useEffect(() => {
 		if (!load1) {
@@ -50,12 +51,12 @@ export const Generate = () => {
 			const timerID = setTimeout(() => {
 				navigate('/manage-default');
 				clearTimeout(timerID);
-			}, 11000);
+			}, 11200);
 		}
 	}, [load1, navigate]);
 
 	return (
-		<div className='screen'>
+		<div className='screen black-bg'>
 			<div className='body'>
 				<div className={styles.logo}>
 					<div className={styles.row} style={{ marginTop: 30 }}>

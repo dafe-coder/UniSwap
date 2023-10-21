@@ -1,77 +1,77 @@
 .wrap {
-    border-radius: 4px;
-    border: 1px solid var(--dark-border);
-    padding: 20px;
+	border-radius: 8px;
+	border: 1px solid var(--dark-border);
+	padding: 20px;
 }
 
 .digits {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .label {
-  display: block;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--white);
+	display: block;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--white);
 }
 
 .inner {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
+	display: flex;
+	justify-content: center;
+	gap: 16px;
 }
 
 .input {
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: var(--primary);
-  border-radius: 8px;
-  border: none;
-  transition: all .2s;
-  font-size: 23px;
-  outline: none;
-  text-align: center;
-  color: transparent;
-  box-sizing: border-box;
-  position: relative;
-  caret-color: transparent;
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: var(--primary);
+	border-radius: 8px;
+	border: none;
+	transition: all 0.2s;
+	font-size: 23px;
+	outline: none;
+	text-align: center;
+	color: transparent;
+	box-sizing: border-box;
+	position: relative;
+	caret-color: transparent;
 }
 .box {
-  position: relative;
+	position: relative;
 }
 
 .label::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  background: url(../../assets/images/star.svg) center center no-repeat;
-  mask-composite: exclude;
-  z-index: 0;
-  opacity: 0;
-  transform: scale(0);
+	content: '';
+	position: absolute;
+	inset: 0;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+	background: url(../../assets/images/star.svg) center center no-repeat;
+	mask-composite: exclude;
+	z-index: 0;
+	opacity: 0;
+	transform: scale(0);
 }
 
 .input:not(:placeholder-shown) ~ label::before {
-  opacity: 1;
-  transform: scale(1);
+	opacity: 1;
+	transform: scale(1);
 }
 
 .label::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  background: url(../../assets/images/start-gray.svg) center center no-repeat;
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: -1;
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 8px;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+	background: url(../../assets/images/start-gray.svg) center center no-repeat;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1;
 }

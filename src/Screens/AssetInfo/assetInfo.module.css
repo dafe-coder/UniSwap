@@ -2,10 +2,6 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 19px;
-	color: var(--light-blue);
 }
 
 .title_logo {
@@ -69,26 +65,15 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .chart {
 	border-radius: 8px;
 	overflow: hidden;
 	position: relative;
-}
-
-.chart::after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	border-radius: 8px;
-	background: url(../../assets/images/grid-chart.png) center center no-repeat;
-	background-size: cover;
-	border: 1px solid var(--gray-border);
+	margin-left: -30px;
+	margin-right: -30px;
 }
 
 .wrapBlock {

@@ -15,9 +15,7 @@ export const PinLogin = () => {
 	const [validInp, setValidInp] = React.useState(false);
 	const [disabledBtnPass, setDisabledBtnPass] = React.useState(true);
 	const [clearInputs, setClearInputs] = React.useState(false);
-	React.useEffect(() => {
-		console.log(state);
-	}, [state]);
+
 	React.useEffect(() => {
 		if (passwordInit !== '' && password !== '') {
 			if (
@@ -62,7 +60,6 @@ export const PinLogin = () => {
 
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body'>
 				<Header title='Confirm your PIN code' />
 				<PinCode

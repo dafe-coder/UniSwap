@@ -6,10 +6,10 @@ export const PriceLoader = (props) => {
 		<ContentLoader
 			speed={2}
 			width={window.innerWidth - 40}
-			height={291}
-			viewBox={`0 0 ${window.innerWidth - 40} 291`}
-			backgroundColor='var(--bg-dark)'
-			foregroundColor='var(--gray-border)'
+			height={221}
+			viewBox={`0 0 ${window.innerWidth - 40} 221`}
+			backgroundColor='var(--light)'
+			foregroundColor='var(--gray-light)'
 			{...props}
 		>
 			<rect
@@ -18,7 +18,7 @@ export const PriceLoader = (props) => {
 				rx='20'
 				ry='20'
 				width={window.innerWidth - 40}
-				height='291'
+				height='221'
 			/>
 		</ContentLoader>
 	);

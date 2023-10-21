@@ -3,7 +3,7 @@ import styles from './assetInfo.module.css';
 import { Menu, ButtonActions } from '../../Components';
 import { Item } from '../../Components/Item/Item';
 import { SvgIcon } from '../../Svgs';
-import { Par } from '../../Components/UI';
+import { Par, Title } from '../../Components/UI';
 import { Area, AreaChart, YAxis } from 'recharts';
 import { useLocation } from 'react-router-dom';
 import fixNum from '../../func.wallet/fixNum';
@@ -96,15 +96,14 @@ export const AssetInfo = () => {
 
 	return (
 		<div className='screen' ref={wrapRef}>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header'>
-					<div className={styles.title}>
+					<Par fw={600} color='black' className={styles.title}>
 						<div className={styles.title_logo}>
 							<img src={state !== null ? state.image.thumb : ''} alt='thumb' />
 						</div>
 						{state !== null ? state.name : ''}
-					</div>
+					</Par>
 					<div></div>
 					<div
 						className={styles.link}
@@ -112,23 +111,25 @@ export const AssetInfo = () => {
 					>
 						<Par color='light'>Buy</Par>
 						<svg
-							width='24'
-							height='24'
-							viewBox='0 0 24 24'
+							width='20'
+							height='20'
+							viewBox='0 0 20 20'
 							fill='none'
 							xmlns='http://www.w3.org/2000/svg'
 						>
 							<path
-								d='M8.25 21C9.07843 21 9.75 20.3284 9.75 19.5C9.75 18.6716 9.07843 18 8.25 18C7.42157 18 6.75 18.6716 6.75 19.5C6.75 20.3284 7.42157 21 8.25 21Z'
-								fill='#98A1C0'
+								d='M3.21988 13.7127C2.50493 10.8529 2.14745 9.42294 2.89814 8.46147C3.64883 7.5 5.12275 7.5 8.07059 7.5H11.9295C14.8773 7.5 16.3513 7.5 17.102 8.46147C17.8526 9.42294 17.4952 10.8529 16.7802 13.7127C16.3255 15.5316 16.0981 16.441 15.42 16.9705C14.7418 17.5 13.8044 17.5 11.9295 17.5H8.07059C6.19572 17.5 5.25828 17.5 4.58012 16.9705C3.90197 16.441 3.67461 15.5316 3.21988 13.7127Z'
+								stroke='#202124'
+								strokeWidth='1.5'
 							/>
 							<path
-								d='M18.75 21C19.5784 21 20.25 20.3284 20.25 19.5C20.25 18.6716 19.5784 18 18.75 18C17.9216 18 17.25 18.6716 17.25 19.5C17.25 20.3284 17.9216 21 18.75 21Z'
-								fill='#98A1C0'
+								d='M16.25 7.91666L15.658 5.74553C15.4297 4.90837 15.3156 4.48978 15.0815 4.17455C14.8483 3.8606 14.5315 3.61861 14.1673 3.47626C13.8016 3.33333 13.3677 3.33333 12.5 3.33333M3.75 7.91666L4.342 5.74553C4.57027 4.90837 4.6844 4.48978 4.91851 4.17455C5.15166 3.8606 5.46846 3.61861 5.83269 3.47626C6.1984 3.33333 6.63227 3.33333 7.5 3.33333'
+								stroke='#05C0A5'
+								strokeWidth='1.5'
 							/>
 							<path
-								d='M21.4125 5.66156C21.3071 5.53268 21.1744 5.42888 21.0239 5.35769C20.8734 5.2865 20.709 5.24971 20.5425 5.25H6.27609L5.98875 3.61969C5.95811 3.44603 5.86726 3.28872 5.73216 3.17539C5.59706 3.06206 5.42634 2.99996 5.25 3H2.25C2.05109 3 1.86032 3.07902 1.71967 3.21967C1.57902 3.36032 1.5 3.55109 1.5 3.75C1.5 3.94891 1.57902 4.13968 1.71967 4.28033C1.86032 4.42098 2.05109 4.5 2.25 4.5H4.62094L6.76125 16.6303C6.79189 16.804 6.88274 16.9613 7.01784 17.0746C7.15294 17.1879 7.32366 17.25 7.5 17.25H19.5C19.6989 17.25 19.8897 17.171 20.0303 17.0303C20.171 16.8897 20.25 16.6989 20.25 16.5C20.25 16.3011 20.171 16.1103 20.0303 15.9697C19.8897 15.829 19.6989 15.75 19.5 15.75H8.12906L7.86469 14.25H19.1925C19.4526 14.2497 19.7046 14.1595 19.9058 13.9947C20.1071 13.8299 20.2452 13.6007 20.2969 13.3458L21.6469 6.59578C21.6794 6.43242 21.6753 6.26388 21.6347 6.10232C21.5942 5.94076 21.5183 5.79022 21.4125 5.66156Z'
-								fill='#98A1C0'
+								d='M7.5 3.33333C7.5 2.8731 7.8731 2.5 8.33333 2.5H11.6667C12.1269 2.5 12.5 2.8731 12.5 3.33333C12.5 3.79357 12.1269 4.16667 11.6667 4.16667H8.33333C7.8731 4.16667 7.5 3.79357 7.5 3.33333Z'
+								stroke='#202124'
 							/>
 						</svg>
 					</div>
@@ -149,17 +150,15 @@ export const AssetInfo = () => {
 							<Par color='light' size='sm' mb={10}>
 								Price
 							</Par>
-							<Par
+							<Title
 								size='m'
 								fw={500}
 								style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
 							>
 								${' '}
 								{state !== null ? fixNum(state.market_data.current_price) : ''}
-								<div className={styles.notification}>
-									<SvgIcon type='bell' />
-								</div>
-							</Par>
+								<SvgIcon type='bell' />
+							</Title>
 							<Indicators
 								percent={state.changes.percent}
 								style={{ position: 'relative', marginTop: 10 }}
@@ -167,16 +166,34 @@ export const AssetInfo = () => {
 						</div>
 						<div className={styles.btnsAction}>
 							<CircleButton
+								style={{
+									width: 40,
+									height: 40,
+									padding: 0,
+									border: '1px solid var(--gray-light)',
+									borderRadius: 12,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}
 								to='/send-amount'
 								state={{ item: state, from: 'swapOne' }}
-								icon='send'
-								title='Send'
+								icon='send-future'
 							/>
 							<CircleButton
+								style={{
+									width: 40,
+									height: 40,
+									padding: 0,
+									border: '1px solid var(--gray-light)',
+									borderRadius: 12,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}
 								to='/home/receive'
 								state={{ item: state }}
-								icon='receive'
-								title='Receive'
+								icon='receive-future'
 							/>
 						</div>
 					</div>
@@ -185,15 +202,23 @@ export const AssetInfo = () => {
 					<div className={styles.wrapBlock}>
 						<div className={styles.chart}>
 							<AreaChart
-								width={width}
+								width={width + 60}
 								height={130}
 								data={chartBitcoin}
 								margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
 							>
 								<defs>
 									<linearGradient id='value' x1='0' y1='0' x2='0' y2='1'>
-										<stop offset='5%' stopColor='#EA39C4' stopOpacity={0.4} />
-										<stop offset='95%' stopColor='#EA39C4' stopOpacity={0} />
+										<stop
+											offset='5%'
+											stopColor='var(--accent)'
+											stopOpacity={0.4}
+										/>
+										<stop
+											offset='95%'
+											stopColor='var(--accent)'
+											stopOpacity={0}
+										/>
 									</linearGradient>
 								</defs>
 								<YAxis domain={['auto', 'dataMax']} hide={true} />
@@ -201,7 +226,7 @@ export const AssetInfo = () => {
 									type='linear'
 									strokeWidth={2}
 									dataKey='value'
-									stroke='#EA39C4'
+									stroke='var(--accent)'
 									fillOpacity={1}
 									fill='url(#value)'
 								/>
@@ -223,7 +248,7 @@ export const AssetInfo = () => {
 				)}
 
 				<div className={styles.list}>
-					<Par color='light' size='sm' fw={500} mb={16}>
+					<Par mt={10} color='light' size='sm' fw={600} mb={16}>
 						Available Balance
 					</Par>
 

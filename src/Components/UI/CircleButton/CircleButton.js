@@ -7,10 +7,11 @@ import cn from 'classnames';
 
 export const CircleButton = ({
 	position = 'center',
-	title,
+	title = '',
 	icon,
 	to,
 	state = null,
+	style,
 }) => {
 	const navigate = useNavigate();
 
@@ -23,11 +24,17 @@ export const CircleButton = ({
 	};
 
 	return (
-		<div className={cn(styles.btn, styles[position])} onClick={goTo}>
+		<div
+			className={cn(styles.btn, styles[position])}
+			style={style}
+			onClick={goTo}
+		>
 			<SvgMenu type={icon} />
-			<Par fw={600} mt={8} size='sm' color='black'>
-				{title}
-			</Par>
+			{title !== '' && (
+				<Par fw={600} mt={8} size='sm' color='black'>
+					{title}
+				</Par>
+			)}
 		</div>
 	);
 };

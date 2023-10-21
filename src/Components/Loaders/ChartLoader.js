@@ -9,8 +9,8 @@ export const ChartLoader = ({ style, width }) => {
 			width={width ? width : 350}
 			height={158}
 			viewBox={width ? `0 0 ${width} 158` : '0 0 350 208'}
-			backgroundColor='var(--bg-dark)'
-			foregroundColor='var(--gray-border)'
+			backgroundColor='var(--light)'
+			foregroundColor='var(--gray-light)'
 		>
 			<rect
 				x='0'
