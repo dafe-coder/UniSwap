@@ -79,7 +79,7 @@ export const MangeDefault = () => {
 					Choose what tokens will be displayed in your wallet by default.
 				</Par>
 				<ItemList mt={38} items={items} handleToggle={handleToggle} />
-				<Par mt={16} mb={15} color='light'>
+				<Par mt={16} mb={15} color='light' center>
 					You can always change this later! ☺️
 				</Par>
 			</div>

@@ -1,83 +1,86 @@
 .par {
-    color: var(--white);
-    text-align: left;
+	color: var(--white);
+	text-align: left;
 }
 
 .par a {
-    color: var(--white);
-    font-weight: 700;
-    position: relative;
+	color: var(--white);
+	font-weight: 700;
+	position: relative;
 }
 
 .par a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 0.5px;
-    background:#fff;
-    transition: all ease .3s;
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 0.5px;
+	background: #fff;
+	transition: all ease 0.3s;
 }
 
 .par a:hover::after {
-   transform:  translateX(-50%);
-   width: 100%;
+	transform: translateX(-50%);
+	width: 100%;
 }
 
 .xs {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
 
 .sm {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 
 .m {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 
 .l {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
 }
 
-.light, .light a {
-    color: var(--light);
+.light {
+	color: var(--light);
+}
+.light a {
+	color: var(--accent);
 }
 
 .light a::after {
-    background:var(--light);
+	background: var(--accent);
 }
 
 .red {
-    color: var(--error);
+	color: var(--error);
 }
 
 .center {
-    text-align: center;
+	text-align: center;
 }
 
 .yellow {
-    color: var(--yellow)
+	color: var(--yellow);
 }
 
 .green {
-    color: var(--success)
+	color: var(--success);
 }
 
 .dark {
-    color: #5D6785;
+	color: #5d6785;
 }

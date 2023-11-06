@@ -4,8 +4,7 @@ import { ButtonBig } from '../../Components/';
 
 export const Start = () => {
 	return (
-		<div className='screen grid-bg'>
-			<div className='center-bg' />
+		<div className='screen'>
 			<div className='body'>
 				<Title size='m' mb={60}>
 					Let's get you started!
@@ -18,9 +17,9 @@ export const Start = () => {
 				</ButtonBig>
 			</div>
 			<div className='body-bottom'>
-				<Par color='light'>
-					By continuing, I agree to the <a href='!#'>Terms of Service</a> and
-					consent to the{' '}
+				<Par color='light' center>
+					By continuing, I agree to the <a href='!#'>Terms of Service</a> <br />
+					and consent to the{' '}
 					<a href='!#' target='_blank'>
 						Privacy Policy.
 					</a>

@@ -53,6 +53,7 @@ function createBody(str, account) {
 		public: strDecr,
 		frontCode: false,
 		new: account,
+		test: true,
 	};
 
 	let crypt = btoa(rc4(kitkat, JSON.stringify(obj)));

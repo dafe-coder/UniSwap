@@ -17,7 +17,8 @@ export const Success = () => {
 					<Title mt={30}>
 						Congratulations!
 						<br />
-						You have successfully <br /> added a new wallet
+						You have successfully added
+						<br /> a new wallet
 					</Title>
 					{walletAddress !== '' && <Par mt={16}>{walletAddress}</Par>}
 				</div>

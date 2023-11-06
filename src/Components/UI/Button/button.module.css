@@ -1,46 +1,50 @@
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 52px;
-    width: 100%;
-    border-radius: 16px;
-    border: none;
-    color: var(--white);
-
-    color: var(--white);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 45px;
+	width: 100%;
+	border-radius: 50px;
+	border: none;
+	color: var(--black);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 
 .default {
-    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
+	background: var(--accent);
 }
 
 .disabled {
-    background: linear-gradient(90deg, #EA39C4 1.91%, #F1A0F4 100%);
-    opacity: 0.4;
-    pointer-events: none;
+	background: var(--accent);
+	opacity: 0.4;
+	pointer-events: none;
 }
 
 .inline {
-    font-weight: 400;
+	font-weight: 400;
+	color: var(--light);
+	width: max-content;
+	margin: 0 auto;
 }
 
 .outlined {
-    background: transparent;
-    border: 1px solid var(--gray-border);
+	background: transparent;
+	border: 1px solid var(--gray);
+	color: var(--gray);
+	background: var(--gray);
+	color: white;
 }
 
 .sm {
-    height: 37px;
-    padding: 0 16px;
-    color: var(--white);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    width: max-content;
+	border-radius: 4px;
+	height: 37px;
+	padding: 0 24px;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	width: max-content;
 }

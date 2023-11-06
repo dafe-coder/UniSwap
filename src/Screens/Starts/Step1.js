@@ -1,17 +1,29 @@
 import React from 'react';
-import { SvgIcon } from '../../Svgs';
-import { Button, Title } from '../../Components/UI';
+import { Title, Button } from '../../Components/UI';
+import BgImg from '../../assets/images/bg-steps.svg';
 
 export const Step1 = () => {
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
 			<div className='body' style={{ paddingTop: 30 }}>
-				<SvgIcon type='logo' />
-				<Title mt={30}>The crypto wallet for everyone</Title>
+				<img
+					src={BgImg}
+					alt='bg'
+					style={{
+						maxWidth: '100vw',
+						marginLeft: -30,
+						marginRight: -30,
+						position: 'relative',
+					}}
+				/>
+				<Title color='white' mt={30} size='m'>
+					The crypto wallet
+					<br />
+					for everyone
+				</Title>
 			</div>
 			<div className='body-bottom'>
-				<Button variant='inline' to='/start'>
+				<Button to='/start' variant='inline'>
 					Skip
 				</Button>
 				<Button to='/step2'>Continue</Button>

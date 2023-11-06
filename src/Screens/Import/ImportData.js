@@ -123,6 +123,10 @@ export const ImportData = () => {
 				<PhraseBox setPhrase={setPhrase} phrase={phrase} />
 			</div>
 			<div className='body-bottom'>
+				<Par color='light' mb={16} center>
+					Enter your recovery phrase <br /> Your recovery phrase will only be
+					stored on your device.
+				</Par>
 				<Button onClick={() => setOpenName(true)}>Import</Button>
 			</div>
 			<Modal
