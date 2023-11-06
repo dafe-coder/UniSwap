@@ -11,9 +11,13 @@ export const Security = () => {
 				<Button to='/login-pin' state={{ to: '/change-pass' }}>
 					Change my PIN code
 				</Button>
-				<Par mt={25} color='light' size='m'>
+				<Button
+					style={{ pointerEvent: 'none', cursor: 'default' }}
+					variant='outlined'
+					mt={10}
+				>
 					Authentication & PIN code
-				</Par>
+				</Button>
 			</div>
 			<Menu />
 		</div>

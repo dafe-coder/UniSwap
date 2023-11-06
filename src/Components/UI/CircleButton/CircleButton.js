@@ -20,7 +20,7 @@ export const CircleButton = ({ title, icon, to, state = null }) => {
 			<div className={styles.circle}>
 				<SvgMenu type={icon} />
 			</div>
-			<Par mt={8} size='sm' color='light'>
+			<Par mt={8} size='sm' color='white'>
 				{title}
 			</Par>
 		</div>

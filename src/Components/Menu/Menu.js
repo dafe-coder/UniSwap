@@ -32,7 +32,9 @@ export const Menu = () => {
 			{menus.map((item) => (
 				<div
 					key={item.icon}
-					className={cn(styles.item)}
+					className={cn(styles.item, {
+						[styles.active]: location.pathname.includes(item.to),
+					})}
 					onClick={() => navigate(item.to)}
 				>
 					<SvgMenu

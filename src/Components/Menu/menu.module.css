@@ -1,18 +1,31 @@
 .menu {
-    position: sticky;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;;
-    border-radius: 20px;
-    border: 1px solid var(--gray-border);
-    background: var(--bg-main);
-    padding: 26px;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-} 
+	position: sticky;
+	bottom: 0;
+	margin-bottom: -40px;
+	margin-left: -30px;
+	margin-right: -30px;
+	border-top: 1px solid #282f39;
+	box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08);
+	background: var(--bg-dark);
+	padding: 26px;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	gap: 60px;
+}
 
 .item {
-    cursor: pointer;
+	cursor: pointer;
+	position: relative;
+}
+
+.active::after {
+	content: '';
+	width: 70px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: -26px;
+	left: 50%;
+	transform: translateX(-50%);
 }

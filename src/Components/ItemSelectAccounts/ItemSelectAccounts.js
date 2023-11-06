@@ -38,7 +38,6 @@ export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 					onClick={() => goCopy('/copy-phrase')}
 					className={classNames(styles.dropdown_item)}
 				>
-					<SvgMenu type='phrase' />
 					<Par size='m'>View Recovery Phrase</Par>
 				</div>
 			) : (
@@ -48,7 +47,6 @@ export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 				onClick={() => goCopy('/copy-key')}
 				className={classNames(styles.dropdown_item)}
 			>
-				<SvgMenu type='key' />
 				<Par size='m'>View Private Key</Par>
 			</div>
 			<div
@@ -56,7 +54,6 @@ export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 				className={classNames(styles.dropdown_item)}
 				style={{ color: 'var(--red)' }}
 			>
-				<SvgMenu type='basket' />
 				<Par size='m'>Delete wallet</Par>
 			</div>
 		</div>

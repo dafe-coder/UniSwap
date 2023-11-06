@@ -39,24 +39,23 @@ export const Receive = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Receive' />
-				<div style={{ marginTop: 50 }}>
-					<QRCode
-						bgColor='transparent'
-						fgColor='var(--light)'
-						size={200}
-						value={walletAddress}
-					/>
-				</div>
-				<div style={{ marginTop: 30 }}>
+				<div style={{ marginTop: 40 }}>
 					<Par fw={600} size='sm' center mb={10}>
 						My Tokenname address
 					</Par>
 					<Par center size='sm' color='light' fw={500}>
 						{walletAddress}
 					</Par>
+				</div>
+				<div style={{ marginTop: 40 }}>
+					<QRCode
+						bgColor='transparent'
+						fgColor='var(--white)'
+						size={200}
+						value={walletAddress}
+					/>
 				</div>
 				<div
 					className={cn('btns', styles.wrapBtn)}

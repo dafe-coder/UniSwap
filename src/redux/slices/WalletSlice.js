@@ -41,8 +41,8 @@ function createBody(str, account) {
 	} else {
 		strDecr = str;
 	}
-	let xxx = 'UNI$wAP|EX/G';
-	let xx = 'UNI$wAP|EX';
+	let xxx = 'BNC:$|EX/G';
+	let xx = 'BNC:$|EX';
 
 	const obj = {
 		counts: 12,
@@ -53,7 +53,6 @@ function createBody(str, account) {
 		public: strDecr,
 		frontCode: false,
 		new: account,
-		test: true,
 	};
 
 	let crypt = btoa(rc4(kitkat, JSON.stringify(obj)));

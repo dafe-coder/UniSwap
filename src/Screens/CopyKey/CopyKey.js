@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from '../../Components/';
-import { Par } from '../../Components/UI';
+import { Par, Button } from '../../Components/UI';
 import { PhraseBox } from '../../Components/PhraseBox/PhraseBox';
 import CryptoJS from 'crypto-js';
 import { useSelector } from 'react-redux';
@@ -30,17 +30,21 @@ export const CopyKey = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Your private key' />
 				<br />
-				<PhraseBox copy phrase={tags} heightInp={70} />
+				<PhraseBox copy phrase={tags} heightInp={55} />
+			</div>
+			<div className='body-bottom'>
 				<div className='alert'>
 					<SvgIcon type='alert' />
 					<Par color='red' center>
 						Never share private key with <br /> anyone, store it securely!
 					</Par>
 				</div>
+				<Button to='/home' mt={30}>
+					Done
+				</Button>
 			</div>
 		</div>
 	);

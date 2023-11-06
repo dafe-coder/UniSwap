@@ -23,8 +23,8 @@ export const Generate = () => {
 	const [loadFirst, setLoadFirst] = React.useState(true);
 
 	React.useEffect(() => {
-		setLoad1(false);
 		async function generateWords() {
+			setLoad1(false);
 			dispatch(resetWallet());
 			let code = generateMnemonic();
 			const privateKey = generateAddressesFromSeed(code, 12);

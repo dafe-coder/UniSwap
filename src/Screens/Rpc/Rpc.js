@@ -57,37 +57,35 @@ export const Rpc = () => {
 
 	return (
 		<div className='screen'>
-			<div className='center-bg'></div>
-			<div className='bottom-bg'></div>
 			<div className='body'>
 				<Header title='RPC Node' />
-				<Par size='sm' color='light'>
+				<Par size='sm' color='light' mb={20}>
 					Bitcoin
 				</Par>
-				<div className={styles.box}>
-					<ItemExpand title={`What's the "Height" of nodes?`}>
-						The larger number of height means that the nodes have more stable
-						and in-time synchronization. When the nodes are connected at similar
-						speeds, it is recommended to choose the one which has a higher
-						height.
-					</ItemExpand>
-					<Par mt={30} mb={16} tt='uppercase' color='light'>
-						Custom
-					</Par>
-					<Button onClick={() => setShowModalAdd(true)}>Add Node</Button>
-					<Par mt={30} tt='uppercase' color='light'>
-						Default
-					</Par>
-					<div className={cn(styles.listRpc, 'scroll')}>
-						{rpcLinks.map((item) => (
-							<RpcItem
-								key={item.id}
-								{...item}
-								active={activeRpcLink}
-								onChoose={chooseRpcLink}
-							/>
-						))}
-					</div>
+				<ItemExpand
+					className={styles.itemExpand}
+					title={`What's the "Height" of nodes?`}
+				>
+					The larger number of height means that the nodes have more stable and
+					in-time synchronization. When the nodes are connected at similar
+					speeds, it is recommended to choose the one which has a higher height.
+				</ItemExpand>
+				<Par mt={30} mb={16} color='light'>
+					Custom
+				</Par>
+				<Button onClick={() => setShowModalAdd(true)}>Add Node</Button>
+				<Par mt={30} color='light'>
+					Default
+				</Par>
+				<div className={cn(styles.listRpc, 'scroll')}>
+					{rpcLinks.map((item) => (
+						<RpcItem
+							key={item.id}
+							{...item}
+							active={activeRpcLink}
+							onChoose={chooseRpcLink}
+						/>
+					))}
 				</div>
 			</div>
 			<Modal

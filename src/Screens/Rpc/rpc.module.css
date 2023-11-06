@@ -1,14 +1,19 @@
 .box {
-    border-radius: 20px;
-    border: 1px solid var(--gray);
-    background: var(--bg-main);
-    padding: 24px 20px;
-    margin-top: 24px;
+	border-radius: 20px;
+	border: 1px solid var(--gray);
+	background: var(--bg-main);
+	padding: 24px 20px;
+	margin-top: 24px;
 }
 
 .listRpc {
-    height: 230px;
-    overflow: auto;
-    width: 100%;
-    margin-top: 24px;
+	height: 230px;
+	overflow: auto;
+	width: 100%;
+	margin-top: 24px;
+}
+.itemExpand {
+	border: 1px solid var(--dark-border);
+	padding: 24px 16px;
+	border-radius: 8px;
 }

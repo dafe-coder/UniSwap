@@ -18,9 +18,7 @@ export const BackupFinish = () => {
 	const [values, setValues] = React.useState(['', '', '', '']);
 	const [disabledBtn, setDisabledBtn] = React.useState(true);
 	const [showValid, setShowValid] = React.useState(false);
-	React.useEffect(() => {
-		console.log(values);
-	}, [values]);
+
 	React.useEffect(() => {
 		const generateRandomNumbers = () => {
 			const uniqueNumbers = new Set();
@@ -61,10 +59,6 @@ export const BackupFinish = () => {
 		let w2 = phrase[numsWords[1] - 1].toLowerCase() === values[1].toLowerCase();
 		let w3 = phrase[numsWords[2] - 1].toLowerCase() === values[2].toLowerCase();
 		let w4 = phrase[numsWords[3] - 1].toLowerCase() === values[3].toLowerCase();
-		console.log(phrase[numsWords[0] - 1].toLowerCase());
-		console.log(phrase[numsWords[1] - 1].toLowerCase());
-		console.log(phrase[numsWords[2] - 1].toLowerCase());
-		console.log(phrase[numsWords[3] - 1].toLowerCase());
 		if (w1 && w2 && w3 && w4) {
 			dispatch(setBackup(true));
 			navigate('/settings/backup-success');

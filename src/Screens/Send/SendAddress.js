@@ -58,14 +58,14 @@ export const SendAddress = () => {
 						className={styles.copyButton}
 						onClick={(e) => pasteWords(e)}
 					>
-						<SvgIcon type='copy' />
+						<SvgIcon fill='var(--accent)' type='copy' />
 						Paste from clipboard
 					</a>
 				</div>
 			</div>
 			<div className='body-bottom'>
 				{addressTo !== '' && (
-					<Par fw={500} color='light' mb={20} center size='sm'>
+					<Par fw={400} color='red' mb={20} center size='sm'>
 						Check the address you have copied
 					</Par>
 				)}

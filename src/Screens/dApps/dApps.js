@@ -7,7 +7,7 @@ export const DApps = () => {
 		<div className='screen'>
 			<Header title='dApps' />
 			<div className='body content-center'>
-				<Title size='m' fw={500} color='light'>
+				<Title size='sm' fw={600} color='white'>
 					No dApp connected yet.
 				</Title>
 			</div>

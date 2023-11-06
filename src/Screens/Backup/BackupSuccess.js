@@ -10,7 +10,7 @@ export const BackupSuccess = () => {
 			<div className='body content-center'>
 				<div>
 					<SvgIcon type='success' />
-					<Par mt={30} color='light' size='m'>
+					<Par mt={30} fw={600} color='white' size='m'>
 						Manual backup successful
 					</Par>
 				</div>

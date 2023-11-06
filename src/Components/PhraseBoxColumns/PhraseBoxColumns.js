@@ -30,7 +30,7 @@ export const PhraseBoxColumns = ({ phrase = '' }) => {
 				<div className={styles.left}>
 					{leftPart.length ? (
 						leftPart.map((item, i) => (
-							<div className={styles.item}>
+							<div key={i} className={styles.item}>
 								{i + 1}. {item}
 							</div>
 						))
@@ -41,7 +41,7 @@ export const PhraseBoxColumns = ({ phrase = '' }) => {
 				<div className={styles.right}>
 					{rightPart.length ? (
 						rightPart.map((item, i) => (
-							<div className={styles.item}>
+							<div className={styles.item} key={i}>
 								{phrasePart + 1 + i}. {item}
 							</div>
 						))

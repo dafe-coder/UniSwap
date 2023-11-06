@@ -11,7 +11,7 @@ export const DAppsQr = () => {
 					size={215}
 					viewBox={`0 0 155 155`}
 					value='Coming soon!'
-					bgColor='var(--light)'
+					bgColor='var(--white)'
 					fgColor='transparent'
 				/>
 			</div>

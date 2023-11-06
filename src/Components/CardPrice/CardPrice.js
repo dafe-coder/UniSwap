@@ -15,7 +15,7 @@ export const CardPrice = ({ balance, change }) => {
 			<Indicators
 				usd={change.usd}
 				percent={change.percent}
-				style={{ right: 16, bottom: 16 }}
+				style={{ right: 6, top: -20 }}
 			/>
 		</div>
 	);

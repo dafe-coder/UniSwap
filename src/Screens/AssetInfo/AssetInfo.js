@@ -118,18 +118,17 @@ export const AssetInfo = () => {
 							fill='none'
 							xmlns='http://www.w3.org/2000/svg'
 						>
-							<path
-								d='M8.25 21C9.07843 21 9.75 20.3284 9.75 19.5C9.75 18.6716 9.07843 18 8.25 18C7.42157 18 6.75 18.6716 6.75 19.5C6.75 20.3284 7.42157 21 8.25 21Z'
-								fill='#98A1C0'
-							/>
-							<path
-								d='M18.75 21C19.5784 21 20.25 20.3284 20.25 19.5C20.25 18.6716 19.5784 18 18.75 18C17.9216 18 17.25 18.6716 17.25 19.5C17.25 20.3284 17.9216 21 18.75 21Z'
-								fill='#98A1C0'
-							/>
-							<path
-								d='M21.4125 5.66156C21.3071 5.53268 21.1744 5.42888 21.0239 5.35769C20.8734 5.2865 20.709 5.24971 20.5425 5.25H6.27609L5.98875 3.61969C5.95811 3.44603 5.86726 3.28872 5.73216 3.17539C5.59706 3.06206 5.42634 2.99996 5.25 3H2.25C2.05109 3 1.86032 3.07902 1.71967 3.21967C1.57902 3.36032 1.5 3.55109 1.5 3.75C1.5 3.94891 1.57902 4.13968 1.71967 4.28033C1.86032 4.42098 2.05109 4.5 2.25 4.5H4.62094L6.76125 16.6303C6.79189 16.804 6.88274 16.9613 7.01784 17.0746C7.15294 17.1879 7.32366 17.25 7.5 17.25H19.5C19.6989 17.25 19.8897 17.171 20.0303 17.0303C20.171 16.8897 20.25 16.6989 20.25 16.5C20.25 16.3011 20.171 16.1103 20.0303 15.9697C19.8897 15.829 19.6989 15.75 19.5 15.75H8.12906L7.86469 14.25H19.1925C19.4526 14.2497 19.7046 14.1595 19.9058 13.9947C20.1071 13.8299 20.2452 13.6007 20.2969 13.3458L21.6469 6.59578C21.6794 6.43242 21.6753 6.26388 21.6347 6.10232C21.5942 5.94076 21.5183 5.79022 21.4125 5.66156Z'
-								fill='#98A1C0'
-							/>
+							<g clipPath='url(#clip0_805_10594)'>
+								<path
+									d='M17.21 9L12.83 2.44C12.64 2.16 12.32 2.02 12 2.02C11.68 2.02 11.36 2.16 11.17 2.45L6.79 9H2C1.45 9 1 9.45 1 10C1 10.09 1.01 10.18 1.04 10.27L3.58 19.54C3.81 20.38 4.58 21 5.5 21H18.5C19.42 21 20.19 20.38 20.43 19.54L22.97 10.27L23 10C23 9.45 22.55 9 22 9H17.21ZM9 9L12 4.6L15 9H9ZM12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13C13.1 13 14 13.9 14 15C14 16.1 13.1 17 12 17Z'
+									fill='#434C5B'
+								/>
+							</g>
+							<defs>
+								<clipPath id='clip0_805_10594'>
+									<rect width='24' height='24' fill='white' />
+								</clipPath>
+							</defs>
 						</svg>
 					</div>
 				</div>
@@ -185,15 +184,23 @@ export const AssetInfo = () => {
 					<div className={styles.wrapBlock}>
 						<div className={styles.chart}>
 							<AreaChart
-								width={width}
+								width={width + 60}
 								height={130}
 								data={chartBitcoin}
 								margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
 							>
 								<defs>
 									<linearGradient id='value' x1='0' y1='0' x2='0' y2='1'>
-										<stop offset='5%' stopColor='#EA39C4' stopOpacity={0.4} />
-										<stop offset='95%' stopColor='#EA39C4' stopOpacity={0} />
+										<stop
+											offset='5%'
+											stopColor='var(--accent)'
+											stopOpacity={0.4}
+										/>
+										<stop
+											offset='95%'
+											stopColor='var(--accent)'
+											stopOpacity={0}
+										/>
 									</linearGradient>
 								</defs>
 								<YAxis domain={['auto', 'dataMax']} hide={true} />
@@ -201,7 +208,7 @@ export const AssetInfo = () => {
 									type='linear'
 									strokeWidth={2}
 									dataKey='value'
-									stroke='#EA39C4'
+									stroke='var(--accent)'
 									fillOpacity={1}
 									fill='url(#value)'
 								/>
@@ -223,7 +230,7 @@ export const AssetInfo = () => {
 				)}
 
 				<div className={styles.list}>
-					<Par color='light' size='sm' fw={500} mb={16}>
+					<Par color='white' size='sm' fw={500} mb={16}>
 						Available Balance
 					</Par>
 

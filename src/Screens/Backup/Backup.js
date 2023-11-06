@@ -3,6 +3,8 @@ import { Button } from '../../Components/UI';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Menu } from '../../Components';
+import { Header } from '../../Components/Header/Header';
+import BgImage from '../../assets/images/backup-bg.png';
 
 export const Backup = () => {
 	const { usePin } = useSelector((state) => state.storage);
@@ -18,8 +20,9 @@ export const Backup = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
+			<Header title='Manual backup' />
 			<div className='body content-center'>
+				<img src={BgImage} alt='bg' />
 				<Button onClick={goBackUp}>Perform manual backup</Button>
 			</div>
 			<Menu />

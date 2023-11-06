@@ -13,6 +13,7 @@ export const ItemExpand = ({
 	fwTitle = 600,
 	items = false,
 	posRight = false,
+	className,
 }) => {
 	const [showBody, setShowBody] = React.useState(false);
 
@@ -31,7 +32,10 @@ export const ItemExpand = ({
 				})}
 			></div>
 			<div className={styles.item}>
-				<div className={styles.header} onClick={() => setShowBody(!showBody)}>
+				<div
+					className={cn(styles.header, className)}
+					onClick={() => setShowBody(!showBody)}
+				>
 					{titleSize === 'sm' ? (
 						<Par size='m' fw={fwTitle}>
 							{title}

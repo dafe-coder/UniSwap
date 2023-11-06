@@ -35,7 +35,7 @@ export const PriceInput = ({
 			className={classNames(styles.box, isFocused ? styles.box_focused : '')}
 		>
 			<div className={styles.left}>
-				<Par size='sm' color='dark'>
+				<Par size='sm' color='light'>
 					{from === 'swapOne' ? 'You sell' : 'You buy'}
 				</Par>
 				<div
@@ -67,7 +67,7 @@ export const PriceInput = ({
 						onClick={() => navigate('/swap-coins', { state: { from, to: to } })}
 					>
 						<img src={chooseItem.image.thumb} alt={chooseItem.name} />
-						<Par size='m' fw={500}>
+						<Par size='m' fw={700}>
 							{chooseItem.symbol.toUpperCase()}
 						</Par>
 						<SvgIcon type='check' />

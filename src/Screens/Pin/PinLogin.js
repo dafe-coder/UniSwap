@@ -15,9 +15,7 @@ export const PinLogin = () => {
 	const [validInp, setValidInp] = React.useState(false);
 	const [disabledBtnPass, setDisabledBtnPass] = React.useState(true);
 	const [clearInputs, setClearInputs] = React.useState(false);
-	React.useEffect(() => {
-		console.log(state);
-	}, [state]);
+
 	React.useEffect(() => {
 		if (passwordInit !== '' && password !== '') {
 			if (

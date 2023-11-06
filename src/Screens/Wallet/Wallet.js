@@ -188,11 +188,10 @@ export const Wallet = () => {
 					<div style={{ cursor: 'pointer' }} className='header-item'>
 						<ItemExpand
 							items
-							caretFill='var(--light)'
 							title={
-								<div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+								<div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
 									<SvgIcon type='user' fill='var(--primary)' />
-									<Par style={{ marginRight: 2 }} color='light'>
+									<Par fw={600} style={{ marginRight: 2 }} color='white'>
 										{currentWallet}
 									</Par>
 								</div>
@@ -249,7 +248,9 @@ export const Wallet = () => {
 						change={portfolioBalanceChange}
 					/>
 				) : (
-					<PriceLoader style={{ width: '100%', marginTop: 30 }} />
+					<PriceLoader
+						style={{ width: '100%', marginTop: 20, marginBottom: 20 }}
+					/>
 				)}
 				<div className={styles.btnsCircle}>
 					<CircleButton
@@ -310,7 +311,7 @@ export const Wallet = () => {
 						)}
 					</div>
 				) : (
-					<div className={styles.list}>
+					<div className={styles.listNft}>
 						{mockNft.map((item, i) => (
 							<ItemNft item={item} key={i} />
 						))}

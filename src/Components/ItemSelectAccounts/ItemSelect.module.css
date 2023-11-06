@@ -1,34 +1,17 @@
 .card {
-    border-radius: 12px;
-    border: 1px solid var(--dark-border);
-    background: rgba(29, 44, 82, 0.30);
-    padding: 16px;
+	border-radius: 4px;
+	border: 1px solid var(--dark-border);
+	padding: 16px;
+	margin-bottom: 50px;
 }
 
 .dropdown_item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    width: max-content;
-    position: relative;
-    cursor: pointer;
-    margin: 24px 0 48px;
-}
-
-
-.dropdown_item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -24px;
-    width: 32px;
-    height: 1px;
-    background: rgba(249, 249, 249, 0.16);
-    transition: all ease .3s;
-}
-
-
-.dropdown_item:hover::after {
-    width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+	width: max-content;
+	position: relative;
+	cursor: pointer;
+	margin: 24px 0 48px;
 }

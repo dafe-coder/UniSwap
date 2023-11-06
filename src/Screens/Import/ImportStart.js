@@ -7,12 +7,12 @@ import Img3 from '../../assets/images/coins/3.png';
 import Img4 from '../../assets/images/coins/4.png';
 import Img5 from '../../assets/images/coins/5.png';
 import styles from './import.module.css';
+import { useSelector } from 'react-redux';
 
 export const ImportStart = () => {
+	const { backup } = useSelector((state) => state.storage);
 	return (
-		<div className='screen grid-bg'>
-			<div className='center-bg' />
-			<div className='bottom-bg' />
+		<div className='screen'>
 			<div className='body'>
 				<Title size='m'>Follow these steps to import your wallet</Title>
 				<ButtonBig
@@ -24,6 +24,7 @@ export const ImportStart = () => {
 					security.
 				</ButtonBig>
 				<ButtonBig
+					disabled={!backup}
 					to='/import-data'
 					mt={30}
 					title='Import your other wallet using a recovery phrase'

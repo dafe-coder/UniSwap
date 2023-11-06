@@ -9,14 +9,14 @@ export const ChartLoader = ({ style, width }) => {
 			width={width ? width : 350}
 			height={158}
 			viewBox={width ? `0 0 ${width} 158` : '0 0 350 208'}
-			backgroundColor='var(--bg-dark)'
-			foregroundColor='var(--gray-border)'
+			backgroundColor='var(--dark-border)'
+			foregroundColor='var(--gray)'
 		>
 			<rect
 				x='0'
 				y='0'
-				rx='20'
-				ry='20'
+				rx='8'
+				ry='8'
 				width={width ? width : 350}
 				height='158'
 			/>
