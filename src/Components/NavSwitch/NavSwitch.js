@@ -13,7 +13,7 @@ export const NavSwitch = ({
 	return (
 		<div className={styles.wrap} style={{ ...styleWrap }}>
 			<div
-				style={size === 'sm' ? { padding: '3px 8px' } : {}}
+				style={size === 'sm' ? { padding: '6px 8px', fontSize: 14 } : {}}
 				onClick={() => setActive(true)}
 				className={cn(styles.item, {
 					[styles.active]: active,
@@ -22,7 +22,7 @@ export const NavSwitch = ({
 				{leftText}
 			</div>
 			<div
-				style={size === 'sm' ? { padding: '3px 8px' } : {}}
+				style={size === 'sm' ? { padding: '6px 8px', fontSize: 14 } : {}}
 				onClick={() => setActive(false)}
 				className={cn(styles.item, {
 					[styles.active]: !active,

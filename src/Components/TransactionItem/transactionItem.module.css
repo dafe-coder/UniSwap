@@ -1,24 +1,27 @@
 .item {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	border-radius: 16px;
+	padding: 10px 16px;
+	background: var(--gray);
 }
 
 .itemLeft {
-    display: flex;
-    gap: 12px;
-} 
+	display: flex;
+	gap: 12px;
+}
 
 .img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    overflow: hidden;
-    flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	overflow: hidden;
+	flex-shrink: 0;
 }
 
 .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }

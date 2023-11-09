@@ -144,7 +144,7 @@
 	margin-top: 50px;
 }
 .coinPrice {
-	color: var(--accent);
+	color: var(--white);
 	text-align: center;
 	font-size: 42px;
 	font-style: normal;
@@ -168,7 +168,6 @@
 }
 
 .maxBtn {
-	color: var(--green);
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 600;
@@ -176,9 +175,14 @@
 	background-color: transparent;
 	border: none;
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 5px;
+	right: 10px;
 	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background: var(--gray);
+	border-radius: 50px;
+	color: var(--accent);
 }
 
 .chooseCoin {
@@ -186,7 +190,9 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 50px;
-	border-radius: 20px;
+	border-radius: 16px;
+	background: var(--gray);
+	padding: 10px 16px;
 }
 
 .chooseCoinInfo {
@@ -223,15 +229,17 @@
 }
 
 .inputAddress {
-	border-radius: 4px;
-	border: 1px solid var(--dark-border);
+	border-radius: 8px;
+	border: 1px solid var(--gray);
+	background: var(--gray);
 	color: var(--light-blue);
 	text-align: left;
-	padding: 11px 16px;
+	padding: 16px 16px;
+	width: 100%;
 
 	font-size: 14px;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: normal;
 }
 
@@ -245,7 +253,7 @@
 	color: var(--light);
 }
 .copyButton {
-	color: var(--accent);
+	color: var(--white);
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -254,15 +262,16 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 35px;
+	margin-top: 7px;
 	gap: 10px;
 	margin-bottom: 90px;
+	margin-left: auto;
 }
 
 .wrapAddress {
 	display: flex;
 	flex-direction: column;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .buyBody {
 	padding: 0 16px 40px;
@@ -299,6 +308,9 @@
 	margin-bottom: 14px;
 	display: block;
 	max-width: 220px;
+}
+.wrapInput input::placeholder {
+	color: var(--light);
 }
 .wrapInp {
 	display: flex;

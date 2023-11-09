@@ -93,7 +93,7 @@ export const SendAmount = () => {
 						>
 							<Par size='sm' color='light'>
 								<span>{fixNum(chooseCoinOne.market_data.balance)}</span>{' '}
-								{chooseCoinOne.symbol}
+								{chooseCoinOne.symbol.toUpperCase()}
 							</Par>
 						</div>
 					</div>
@@ -124,7 +124,7 @@ export const SendAmount = () => {
 					onClick={setValue}
 					variant={disabledBtn ? 'disabled' : 'default'}
 				>
-					Continue
+					Send
 				</Button>
 			</div>
 		</div>

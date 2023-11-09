@@ -1,20 +1,25 @@
 .wrap {
-	background: transparent;
+	border-radius: 6px;
+	background: #131b24;
 	display: flex;
+	padding: 3px;
 	width: max-content;
+	color: var(--white);
 }
 
 .item {
-	color: var(--light);
+	color: var(--white);
 	font-size: 12px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-	padding: 0 16px 6px;
+	padding: 2px 16px;
 	cursor: pointer;
+	border-radius: 6px;
+	min-width: 60px;
+	width: 50%;
 }
 
 .active {
-	border-bottom: 1px solid var(--accent);
-	color: var(--accent);
+	background: var(--gray);
 }

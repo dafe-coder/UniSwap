@@ -80,6 +80,9 @@
 .green {
 	color: var(--success);
 }
+.accent {
+	color: var(--accent);
+}
 
 .dark {
 	color: #5d6785;

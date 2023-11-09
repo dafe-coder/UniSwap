@@ -86,7 +86,7 @@ export const GenerateItem = ({
 					</svg>
 				)}
 			</div>
-			<Par fw={500} size='m' center color={!load ? 'green' : 'white'}>
+			<Par fw={500} size='m' center color={!load ? 'white' : 'white'}>
 				{title}
 			</Par>
 		</div>

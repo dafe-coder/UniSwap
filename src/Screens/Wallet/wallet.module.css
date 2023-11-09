@@ -2,8 +2,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 70px;
-	margin-bottom: 70px;
+	width: 100%;
+	gap: 60px;
 }
 
 .caretIcon {
@@ -13,8 +13,9 @@
 
 .listTitle {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
+	margin-bottom: 10px;
 }
 
 .nav {
@@ -60,13 +61,13 @@
 }
 
 .list > div:not(:last-child) {
-	margin-bottom: 24px;
+	margin-bottom: 10px;
 }
 
 .listNft {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 12px;
-	margin-top: 32px;
+	gap: 10px;
+	margin-top: 15px;
 }

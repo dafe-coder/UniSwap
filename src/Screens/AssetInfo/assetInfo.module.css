@@ -72,9 +72,6 @@
 }
 
 .chart {
-	border-radius: 20px;
-	margin-left: -30px;
-	margin-right: -30px;
 	overflow: hidden;
 	position: relative;
 }

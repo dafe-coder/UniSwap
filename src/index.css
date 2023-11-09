@@ -245,13 +245,14 @@ body {
 }
 
 .choose-item {
+	border-radius: 24px;
+	background: #222b3e;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	width: max-content;
-	padding: 12px 14px;
+	padding: 5px 10px 5px 6px;
 	gap: 8px;
-	border-radius: 6px;
 }
 
 .choose-item img {
@@ -271,7 +272,7 @@ body {
 }
 
 .items-loader > *:not(:last-child) {
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 
 .footer-step {

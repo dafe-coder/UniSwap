@@ -7,7 +7,6 @@ import { Par } from '../../Components/UI';
 import { Area, AreaChart, YAxis } from 'recharts';
 import { useLocation } from 'react-router-dom';
 import fixNum from '../../func.wallet/fixNum';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	fetchChartCoin,
@@ -19,7 +18,6 @@ import { Indicators } from '../../Components/Indicators/Indicators';
 
 export const AssetInfo = () => {
 	const { state } = useLocation();
-	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const [activeTimeline, setActiveTimeline] = React.useState('All');
 	const { chartBitcoin, statusChartBitcoin } = useSelector(
@@ -106,31 +104,6 @@ export const AssetInfo = () => {
 						{state !== null ? state.name : ''}
 					</div>
 					<div></div>
-					<div
-						className={styles.link}
-						onClick={() => navigate('/buy', { state: { item: state } })}
-					>
-						<Par color='light'>Buy</Par>
-						<svg
-							width='24'
-							height='24'
-							viewBox='0 0 24 24'
-							fill='none'
-							xmlns='http://www.w3.org/2000/svg'
-						>
-							<g clipPath='url(#clip0_805_10594)'>
-								<path
-									d='M17.21 9L12.83 2.44C12.64 2.16 12.32 2.02 12 2.02C11.68 2.02 11.36 2.16 11.17 2.45L6.79 9H2C1.45 9 1 9.45 1 10C1 10.09 1.01 10.18 1.04 10.27L3.58 19.54C3.81 20.38 4.58 21 5.5 21H18.5C19.42 21 20.19 20.38 20.43 19.54L22.97 10.27L23 10C23 9.45 22.55 9 22 9H17.21ZM9 9L12 4.6L15 9H9ZM12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13C13.1 13 14 13.9 14 15C14 16.1 13.1 17 12 17Z'
-									fill='#434C5B'
-								/>
-							</g>
-							<defs>
-								<clipPath id='clip0_805_10594'>
-									<rect width='24' height='24' fill='white' />
-								</clipPath>
-							</defs>
-						</svg>
-					</div>
 				</div>
 
 				<div
@@ -145,19 +118,16 @@ export const AssetInfo = () => {
 				>
 					<div className={styles.info}>
 						<div>
-							<Par color='light' size='sm' mb={10}>
+							<Par color='white' size='sm' mb={10}>
 								Price
 							</Par>
 							<Par
-								size='m'
+								size='l'
 								fw={500}
 								style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
 							>
 								${' '}
 								{state !== null ? fixNum(state.market_data.current_price) : ''}
-								<div className={styles.notification}>
-									<SvgIcon type='bell' />
-								</div>
 							</Par>
 							<Indicators
 								percent={state.changes.percent}
@@ -165,6 +135,12 @@ export const AssetInfo = () => {
 							/>
 						</div>
 						<div className={styles.btnsAction}>
+							<CircleButton
+								to='/buy'
+								state={{ item: state, from: 'swapOne' }}
+								icon='buy'
+								title='Buy'
+							/>
 							<CircleButton
 								to='/send-amount'
 								state={{ item: state, from: 'swapOne' }}
@@ -184,7 +160,7 @@ export const AssetInfo = () => {
 					<div className={styles.wrapBlock}>
 						<div className={styles.chart}>
 							<AreaChart
-								width={width + 60}
+								width={width}
 								height={130}
 								data={chartBitcoin}
 								margin={{ top: 0, right: 0, left: 0, bottom: 0 }}

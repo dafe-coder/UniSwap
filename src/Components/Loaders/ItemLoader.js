@@ -7,18 +7,18 @@ export const ItemLoader = ({ style, px = 40 }) => {
 			style={style}
 			speed={2}
 			width={window.innerWidth - px}
-			height={130}
-			viewBox={`0 0 ${window.innerWidth - px} 130`}
-			backgroundColor='var(--dark-border)'
-			foregroundColor='var(--gray)'
+			height={100}
+			viewBox={`0 0 ${window.innerWidth - px} 100`}
+			backgroundColor='var(--gray)'
+			foregroundColor='var(--dark-border)'
 		>
 			<rect
 				x='0'
 				y='0'
-				rx='4'
-				ry='4'
+				rx='16'
+				ry='16'
 				width={window.innerWidth - px}
-				height='130'
+				height='100'
 			/>
 		</ContentLoader>
 	);

@@ -12,7 +12,7 @@ export const ItemExpand = ({
 	caretFill,
 	fwTitle = 600,
 	items = false,
-	posRight = false,
+	pos = 'left',
 	className,
 }) => {
 	const [showBody, setShowBody] = React.useState(false);
@@ -54,7 +54,7 @@ export const ItemExpand = ({
 					onClick={(e) => onChoose(e)}
 					className={cn(styles.body, {
 						[styles.show]: showBody,
-						[styles.right]: posRight,
+						[styles[pos]]: pos,
 					})}
 				>
 					{items ? <>{children}</> : <Par>{children}</Par>}

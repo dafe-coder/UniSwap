@@ -26,7 +26,6 @@ import {
 } from '../../Components';
 import fixNum from '../../func.wallet/fixNum';
 import { Par } from '../../Components/UI';
-import { CircleButton } from '../../Components/UI/';
 import { setCurrentWallet } from '../../redux/slices/StorageSlice';
 
 export const Wallet = () => {
@@ -48,7 +47,7 @@ export const Wallet = () => {
 	const [portfolioCoinsFiltered, setPortfolioCoinsFiltered] = React.useState(
 		[]
 	);
-	const [showTab, setShowTab] = React.useState(false);
+	const [showTab, setShowTab] = React.useState(true);
 
 	React.useEffect(() => {
 		const wallet = dataUser.find((item) => item.name === currentWallet);
@@ -185,16 +184,16 @@ export const Wallet = () => {
 			<div className='bottom-bg' />
 			<div className='body'>
 				<div className='header' style={{ marginBottom: 25 }}>
+					<div></div>
 					<div style={{ cursor: 'pointer' }} className='header-item'>
 						<ItemExpand
 							items
+							caretFill='var(--light)'
+							pos='center'
 							title={
-								<div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-									<SvgIcon type='user' fill='var(--primary)' />
-									<Par fw={600} style={{ marginRight: 2 }} color='white'>
-										{currentWallet}
-									</Par>
-								</div>
+								<Par fw={600} style={{ marginRight: 2 }} color='light'>
+									{currentWallet}
+								</Par>
 							}
 						>
 							{dataUser.map((item) => (
@@ -210,10 +209,9 @@ export const Wallet = () => {
 							))}
 						</ItemExpand>
 					</div>
-					<div></div>
 					<div>
 						<ItemExpand
-							posRight
+							pos='right'
 							ownTitle
 							items
 							title={
@@ -234,54 +232,19 @@ export const Wallet = () => {
 						</ItemExpand>
 					</div>
 				</div>
-				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<NavSwitch
-						setActive={() => navigate('/activity')}
-						active={true}
-						leftText='Wallet'
-						rightText='Activity'
-					/>
-				</div>
 				{portfolioBalanceUsd !== null ? (
 					<CardPrice
+						stylesBtn={styles}
 						balance={fixNum(portfolioBalanceUsd)}
 						change={portfolioBalanceChange}
 					/>
 				) : (
 					<PriceLoader
-						style={{ width: '100%', marginTop: 20, marginBottom: 20 }}
+						style={{ width: '100%', marginTop: -10, marginBottom: 20 }}
 					/>
 				)}
-				<div className={styles.btnsCircle}>
-					<CircleButton
-						to='/swap-coins'
-						state={{ to: '/send-amount', from: 'swapOne' }}
-						title='Send'
-						icon='send'
-					/>
-					<CircleButton title='Receive' icon='receive' to='/home/receive' />
-					<CircleButton title='Buy' icon='buy' to='/buy' />
-				</div>
-				<div className={cn(styles.listTitle)}>
-					<div className={styles.nav}>
-						<div
-							onClick={() => setShowTab(false)}
-							className={cn(styles.navItem, {
-								[styles.active]: !showTab,
-							})}
-						>
-							Wallet
-						</div>
-						<div
-							onClick={() => setShowTab(true)}
-							className={cn(styles.navItem, {
-								[styles.active]: showTab,
-							})}
-						>
-							NFT
-						</div>
-					</div>
-					{!showTab && (
+				{showTab && (
+					<div className={cn(styles.listTitle)}>
 						<span
 							className='list-title-link'
 							onClick={() => navigate('/manage')}
@@ -293,9 +256,19 @@ export const Wallet = () => {
 								type='caret'
 							/>
 						</span>
-					)}
+					</div>
+				)}
+				<div>
+					<NavSwitch
+						size='sm'
+						styleWrap={{ width: '100%' }}
+						leftText='Wallet'
+						rightText='NFT'
+						active={showTab}
+						setActive={setShowTab}
+					/>
 				</div>
-				{!showTab ? (
+				{showTab ? (
 					<div className={styles.list}>
 						{portfolioCoinsFiltered.length ? (
 							portfolioCoinsFiltered.map((item, i) => (

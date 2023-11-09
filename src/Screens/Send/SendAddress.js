@@ -41,7 +41,6 @@ export const SendAddress = () => {
 
 	return (
 		<div className='screen'>
-			<div className='bottom-bg' />
 			<div className='body'>
 				<Header title='Send to address' />
 
@@ -58,7 +57,7 @@ export const SendAddress = () => {
 						className={styles.copyButton}
 						onClick={(e) => pasteWords(e)}
 					>
-						<SvgIcon fill='var(--accent)' type='copy' />
+						<SvgIcon fill='var(--white)' type='copy' />
 						Paste from clipboard
 					</a>
 				</div>

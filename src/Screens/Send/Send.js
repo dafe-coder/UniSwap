@@ -144,7 +144,7 @@ export const SendPreview = () => {
 				<TextRowsBlock style={{ marginTop: 30 }} />
 			</div>
 			<div className='body-bottom'>
-				<Par color='light' center mt={10} mb={16}>
+				<Par color='red' center mt={10} mb={16}>
 					Wallet cannot recover any lost funds.
 				</Par>
 				<Button
