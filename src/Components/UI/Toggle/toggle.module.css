@@ -19,8 +19,8 @@
 	right: 0;
 	bottom: 0;
 	background: transparent;
-	border: 1px solid var(--gray);
-	background: var(--gray);
+	border: 1px solid var(--light);
+	background: var(--light);
 	transition: 0.4s;
 	border-radius: 50px;
 }

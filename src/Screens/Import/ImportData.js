@@ -120,13 +120,14 @@ export const ImportData = () => {
 			</div>
 			<div className='top-bg' />
 			<div className='body'>
+				<Par color='light' mb={16}>
+					Each word should be separated by a single space.
+					<br />
+					No numbers, special characters or line breaks.
+				</Par>
 				<PhraseBox setPhrase={setPhrase} phrase={phrase} />
 			</div>
 			<div className='body-bottom'>
-				<Par color='light' mb={16} center>
-					Enter your recovery phrase <br /> Your recovery phrase will only be
-					stored on your device.
-				</Par>
 				<Button onClick={() => setOpenName(true)}>Import</Button>
 			</div>
 			<Modal

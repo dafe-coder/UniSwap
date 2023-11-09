@@ -43,9 +43,9 @@ export const CopyButton = ({ copy = false, textCopied = '', setPhrase }) => {
 		<button
 			onClick={onClick}
 			className={styles.btn}
-			style={{ color: 'var(--accent)' }}
+			style={{ color: 'var(--white)' }}
 		>
-			<SvgIcon type='copy' fill={'var(--accent)'} />
+			<SvgIcon type='copy' fill={'var(--white)'} />
 			{copied ? 'Copied!' : text}
 		</button>
 	);

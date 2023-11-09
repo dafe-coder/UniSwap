@@ -7,7 +7,7 @@ export const Title = ({
 	center = true,
 	mt = 0,
 	mb = 0,
-	fw = 600,
+	fw = 700,
 	size = 'sm',
 	color = 'white',
 	className,

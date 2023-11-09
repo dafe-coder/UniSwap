@@ -381,7 +381,7 @@ function SvgIcon(props) {
 					<g clipPath='url(#clip0_805_10612)'>
 						<path
 							d='M1 21H23L12 2L1 21ZM13 18H11V16H13V18ZM13 14H11V10H13V14Z'
-							fill='#F93B68'
+							fill='var(--error)'
 						/>
 					</g>
 					<defs>
@@ -427,22 +427,23 @@ function SvgIcon(props) {
 				<svg
 					width={101}
 					height={101}
+					viewBox='0 0 101 101'
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
 					{...props}
 				>
-					<circle cx={51} cy={51} r={43} fill='#F4C714' fillOpacity={0.2} />
+					<circle cx={51} cy={51} r={43} fill='#2C8EEE' fillOpacity={0.2} />
 					<circle
 						cx={50.5}
 						cy={50.5}
 						r={50.5}
-						fill='#F4C714'
+						fill='#2C8EEE'
 						fillOpacity={0.2}
 					/>
-					<circle cx={51} cy={51} r={33} fill='#F4C714' />
+					<circle cx={51} cy={51} r={33} fill='#2C8EEE' />
 					<path
-						d='M37 49.205l8.963 9.994a1 1 0 001.464.027L65 41'
-						stroke='#1F2630'
+						d='M37 49.2045L45.963 59.1994C46.3508 59.6318 47.0243 59.644 47.4274 59.2258L65 41'
+						stroke='#1B252F'
 						strokeWidth={4}
 						strokeLinecap='round'
 					/>

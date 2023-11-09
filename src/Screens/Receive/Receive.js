@@ -41,7 +41,7 @@ export const Receive = () => {
 		<div className='screen'>
 			<div className='body'>
 				<Header title='Receive' />
-				<div style={{ marginTop: 40 }}>
+				<div style={{ marginTop: 70 }}>
 					<Par fw={600} size='sm' center mb={10}>
 						My Tokenname address
 					</Par>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 .scroll::-webkit-scrollbar {
 	width: 4px; /* width of the entire scrollbar */
 }
@@ -18,19 +17,20 @@
 :root {
 	--black: #222126;
 	--bg-main: #1f2630;
+	--bg-primary: #203952;
 	--white: #ffffff;
-	--light: #777e90;
+	--light: #6e8699;
 	--black-text: #222126;
 	--dark-border: #384352;
-	--accent: #f4c714;
+	--accent: #2c8eee;
 	--gray-border: #2f3343;
 	--gray-light: #e2e2e2;
-	--gray: #434c5b;
-	--error: #f93b68;
+	--gray: #22303e;
+	--error: #e51c05;
 	--error-light: #f1412e;
 	--red: #ff7272;
 	--bg-dark: #1f2630;
-	--success: #05c0a5;
+	--success: #00ffa3;
 	--yellow: #ffd900;
 
 	--app-width: 400px;
@@ -154,7 +154,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

@@ -1,26 +1,27 @@
 import React from 'react';
 import { Title, Button } from '../../Components/UI';
-import BgImg from '../../assets/images/bg-steps.svg';
+import BgImg from '../../assets/images/bg-step1.png';
 
 export const Step1 = () => {
 	return (
 		<div className='screen'>
 			<div className='body' style={{ paddingTop: 30 }}>
+				<Title color='white' size='m'>
+					The crypto wallet
+					<br />
+					for everyone
+				</Title>
 				<img
 					src={BgImg}
 					alt='bg'
 					style={{
 						maxWidth: '100vw',
-						marginLeft: -30,
-						marginRight: -30,
-						position: 'relative',
+						width: '100%',
+						position: 'absolute',
+						top: '50%',
+						transform: 'translate(-50%, -50%)',
 					}}
 				/>
-				<Title color='white' mt={30} size='m'>
-					The crypto wallet
-					<br />
-					for everyone
-				</Title>
 			</div>
 			<div className='body-bottom'>
 				<Button to='/start' variant='inline'>

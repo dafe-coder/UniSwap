@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Par, Title } from '../UI';
-import { SvgMenu } from '../../Svgs/SvgMenu';
 
 export const ItemSelectAccounts = ({ title, item, deleteFunc }) => {
 	const navigate = useNavigate();

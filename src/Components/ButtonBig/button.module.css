@@ -1,9 +1,9 @@
 .btn {
-	border-radius: 20px;
+	border-radius: 10px;
 	background: var(--gray);
 	width: 100%;
 	cursor: pointer;
-	padding: 28px 30% 44px 24px;
+	padding: 24px 30% 24px 24px;
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
@@ -18,22 +18,6 @@
 	transform: translateY(-50%) scale(-1);
 }
 
-.btn::after {
-	content: '';
-	background: #384352;
-	backdrop-filter: blur(0.5px);
-	border-radius: 100px;
-	position: absolute;
-	width: 32px;
-	height: 32px;
-	right: 10px;
-	z-index: 1;
-	top: 50%;
-	transform: translateY(-50%) scale(1);
-	transition: all ease 0.3s;
-	z-index: 0;
-}
-
 .disabled {
 	opacity: 0.4;
 	pointer-events: none;
@@ -41,8 +25,8 @@
 
 .arrow {
 	position: absolute;
-	right: 18px;
-	top: 50%;
+	right: 24px;
+	top: 37px;
 	transform: translateY(-50%);
 	transition: all ease 0.3s;
 	z-index: 2;

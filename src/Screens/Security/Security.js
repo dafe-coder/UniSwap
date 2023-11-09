@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, Par } from '../../Components/UI';
+import { Button } from '../../Components/UI';
 import { Menu } from '../../Components/Menu/Menu';
+import { Header } from '../../Components';
 
 export const Security = () => {
 	return (
 		<div className='screen'>
-			<div className='bottom-bg'></div>
-			<div className='top-bg'></div>
+			<Header title='Security' />
 			<div className='body content-center'>
 				<Button to='/login-pin' state={{ to: '/change-pass' }}>
 					Change my PIN code

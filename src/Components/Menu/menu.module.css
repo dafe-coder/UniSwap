@@ -4,28 +4,31 @@
 	margin-bottom: -40px;
 	margin-left: -30px;
 	margin-right: -30px;
-	border-top: 1px solid #282f39;
-	box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08);
-	background: var(--bg-dark);
 	padding: 26px;
 	z-index: 10;
 	display: flex;
 	justify-content: center;
-	gap: 60px;
+	gap: 80px;
+	overflow: hidden;
+	background: rgba(35, 49, 63, 0.8);
+	backdrop-filter: blur(29.5px);
 }
 
 .item {
 	cursor: pointer;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .active::after {
 	content: '';
-	width: 70px;
-	height: 2px;
-	background: #fff;
+	width: 40px;
+	height: 32px;
+	background: #3a8bd8;
+	filter: blur(17px);
 	position: absolute;
-	bottom: -26px;
+	top: -45px;
 	left: 50%;
 	transform: translateX(-50%);
 }

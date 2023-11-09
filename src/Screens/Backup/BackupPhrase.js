@@ -37,8 +37,8 @@ export const BackupPhrase = () => {
 			</div>
 			<div className='body-bottom'>
 				<Par mt={8} color='red' center>
-					Never share recovery phrase with
-					<br /> anyone, store it securely!
+					Never share recovery phrase with anyone,
+					<br /> store it securely!
 				</Par>
 				<Button mt={18} variant='default' to='/settings/backup-finish'>
 					Next

@@ -17,10 +17,13 @@ export const Success = () => {
 					<Title mt={30}>
 						Congratulations!
 						<br />
-						You have successfully added
-						<br /> a new wallet
+						You have successfully added a new wallet
 					</Title>
-					{walletAddress !== '' && <Par mt={16}>{walletAddress}</Par>}
+					{walletAddress !== '' && (
+						<Par center mt={16} color='light'>
+							{walletAddress}
+						</Par>
+					)}
 				</div>
 				<Button to={password !== '' && usePin ? '/home' : '/create-pin'}>
 					Continue
