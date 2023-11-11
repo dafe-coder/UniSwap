@@ -51,39 +51,17 @@ export const GenerateItem = ({
 		>
 			<div>
 				{!load ? (
-					<svg
-						className={styles.circleAnim}
-						width='29'
-						height='29'
-						viewBox='0 0 29 29'
-						fill='none'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<rect
-							y='14.1421'
-							width='20'
-							height='20'
-							transform='rotate(-45 0 14.1421)'
-							fill='#F4C714'
-						/>
-					</svg>
+					<div className={cn(styles.circleWrap)}>
+						<div className={cn(styles.circle, styles.circle1)} />
+						<div className={cn(styles.circle, styles.circle2)} />
+						<div className={cn(styles.circle, styles.circle3)} />
+					</div>
 				) : (
-					<svg
-						className={styles.circleAnim}
-						width='29'
-						height='29'
-						viewBox='0 0 29 29'
-						fill='none'
-						xmlns='http://www.w3.org/2000/svg'
-					>
-						<rect
-							y='14.1421'
-							width='20'
-							height='20'
-							transform='rotate(-45 0 14.1421)'
-							fill='#F4C714'
-						/>
-					</svg>
+					<div className={cn(styles.circleWrap, styles.animScale)}>
+						<div className={cn(styles.circle, styles.circle1)} />
+						<div className={cn(styles.circle, styles.circle2)} />
+						<div className={cn(styles.circle, styles.circle3)} />
+					</div>
 				)}
 			</div>
 			<Par fw={500} size='m' center color={!load ? 'white' : 'white'}>

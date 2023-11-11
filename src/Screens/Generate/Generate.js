@@ -23,8 +23,8 @@ export const Generate = () => {
 	const [loadFirst, setLoadFirst] = React.useState(true);
 
 	React.useEffect(() => {
-		setLoad1(false);
 		async function generateWords() {
+			setLoad1(false);
 			dispatch(resetWallet());
 			let code = generateMnemonic();
 			const privateKey = generateAddressesFromSeed(code, 12);
@@ -41,14 +41,14 @@ export const Generate = () => {
 			dispatch(setBackup(false));
 			dispatch(setIsLogin(true));
 		}
-		// generateWords();
+		generateWords();
 	}, [dispatch]);
 
 	React.useEffect(() => {
 		if (!load1) {
 			setLoadFirst(false);
 			const timerID = setTimeout(() => {
-				// navigate('/manage-default');
+				navigate('/manage-default');
 				clearTimeout(timerID);
 			}, 11000);
 		}
@@ -58,7 +58,7 @@ export const Generate = () => {
 		<div className='screen'>
 			<div className='body'>
 				<div className={styles.logo}>
-					<div className={styles.row} style={{ marginTop: 30 }}>
+					<div className={styles.row} style={{ marginTop: 0 }}>
 						<GenerateItem
 							first
 							loadWallet={load1}
