@@ -3,7 +3,6 @@ import styles from './itemNft.module.css';
 import { Par } from '../UI/';
 
 export const ItemNft = ({ item }) => {
-	console.log(item);
 	return (
 		<div className={styles.item}>
 			<div className={styles.itemLeft}>

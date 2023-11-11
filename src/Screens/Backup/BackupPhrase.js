@@ -19,10 +19,6 @@ export const BackupPhrase = () => {
 		}
 	}, [dataUser, currentWallet]);
 
-	React.useEffect(() => {
-		console.log(currentWalletData);
-	}, [currentWalletData]);
-
 	return (
 		<div className='screen'>
 			<div className='body'>

@@ -13,7 +13,6 @@ export const Buy = () => {
 	const [amountBuy, setAmountBuy] = React.useState('');
 
 	React.useEffect(() => {
-		console.log(state);
 		if (state !== null) {
 			if (state.from === 'swapOne') {
 				dispatch(setChooseCoinOne(state.item));
