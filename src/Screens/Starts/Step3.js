@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, CircleArrowButton, Title } from '../../Components/UI';
+import { CircleArrowButton } from '../../Components/UI';
 import styles from './start.module.css';
 import Coins from '../../assets/images/coins.png';
 import { StepProgress } from '../../Components';

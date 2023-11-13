@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './welcome.module.css';
 import { PinCode } from '../../Components';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

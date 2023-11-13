@@ -6,7 +6,7 @@ import { StepProgress } from '../../Components/StepProgress/StepProgress';
 export const Step1 = () => {
 	return (
 		<div className='screen'>
-			<div className='body' style={{ paddingTop: 30 }}>
+			<div className='body' style={{ paddingTop: '10vh' }}>
 				<SvgIcon type='logo' />
 				<Title mt={30}>The crypto wallet for everyone</Title>
 			</div>

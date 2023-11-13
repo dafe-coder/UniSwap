@@ -46,8 +46,9 @@ import { setLockWallet } from '../redux/slices/StorageSlice';
 
 export const Navigation = () => {
 	const dispatch = useDispatch();
-	const { isLogin, lockWallet, password, autoLock, usePin, dataUser } =
-		useSelector((state) => state.storage);
+	const { isLogin, lockWallet, password, autoLock, usePin } = useSelector(
+		(state) => state.storage
+	);
 
 	React.useEffect(() => {
 		if (password !== '' && autoLock) {
