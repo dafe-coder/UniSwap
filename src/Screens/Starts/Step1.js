@@ -11,6 +11,7 @@ export const Step1 = () => {
 					alt='bg'
 					style={{
 						maxWidth: '100vw',
+						width: '100vw',
 						marginLeft: -30,
 						marginRight: -30,
 						position: 'relative',
