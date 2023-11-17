@@ -52,41 +52,59 @@ export const GenerateItem = ({
 			<div>
 				{!load ? (
 					<svg
-						className={styles.circleAnim}
-						width='29'
-						height='29'
-						viewBox='0 0 29 29'
+						width={44}
+						height={44}
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
 					>
+						<circle cx={22} cy={22} r={22} fill='#fff' fillOpacity={0.08} />
+						<circle cx={22} cy={22} r={18.674} fill='#fff' fillOpacity={0.1} />
+						<circle
+							cx={21.936}
+							cy={21.936}
+							r={16.564}
+							fill='#fff'
+							fillOpacity={0.16}
+						/>
+						<circle cx={22} cy={22} r={14.198} fill='#fff' />
 						<rect
-							y='14.1421'
-							width='20'
-							height='20'
-							transform='rotate(-45 0 14.1421)'
-							fill='#F4C714'
+							x={17.012}
+							y={17.012}
+							width={9.977}
+							height={9.849}
+							rx={1.535}
+							fill='#3773F5'
 						/>
 					</svg>
 				) : (
 					<svg
-						className={styles.circleAnim}
-						width='29'
-						height='29'
-						viewBox='0 0 29 29'
+						width={44}
+						height={44}
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
 					>
+						<circle cx={22} cy={22} r={22} fill='#fff' fillOpacity={0.08} />
+						<circle cx={22} cy={22} r={18.674} fill='#fff' fillOpacity={0.1} />
+						<circle
+							cx={21.936}
+							cy={21.936}
+							r={16.564}
+							fill='#fff'
+							fillOpacity={0.16}
+						/>
+						<circle cx={22} cy={22} r={14.198} fill='#fff' />
 						<rect
-							y='14.1421'
-							width='20'
-							height='20'
-							transform='rotate(-45 0 14.1421)'
-							fill='#F4C714'
+							x={17.012}
+							y={17.012}
+							width={9.977}
+							height={9.849}
+							rx={1.535}
+							fill='#3773F5'
 						/>
 					</svg>
 				)}
 			</div>
-			<Par fw={500} size='m' center color={!load ? 'green' : 'white'}>
+			<Par fw={500} size='m' center color={!load ? 'white' : 'white'}>
 				{title}
 			</Par>
 		</div>

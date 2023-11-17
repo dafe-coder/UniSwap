@@ -65,14 +65,14 @@ export const Receive = () => {
 						{copied ? (
 							<SvgIcon type='check-success' fill='var(--success)' />
 						) : (
-							<SvgIcon type='copy' fill='var(--light)' />
+							<SvgIcon type='copy' fill='var(--white)' />
 						)}
 						{copied ? (
 							<Par size='sm' style={{ color: 'var(--success)' }}>
 								Address copied
 							</Par>
 						) : (
-							<Par size='sm' color='light'>
+							<Par size='sm' color='white'>
 								Copy
 							</Par>
 						)}
@@ -83,7 +83,7 @@ export const Receive = () => {
 						style={{ position: 'relative' }}
 					>
 						<SvgIcon type='share' fill='var(--white)' />
-						<Par color='light' size='sm'>
+						<Par color='white' size='sm'>
 							Share
 						</Par>
 						<div

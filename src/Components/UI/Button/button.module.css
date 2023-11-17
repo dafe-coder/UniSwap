@@ -18,7 +18,7 @@
 }
 
 .disabled {
-	background: var(--accent);
+	background: var(--white);
 	opacity: 0.4;
 	pointer-events: none;
 }
