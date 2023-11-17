@@ -1,0 +1,13 @@
+.styleWrap {
+	flex-direction: column;
+	display: flex;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+.styleWrap > div {
+	border-radius: 8px;
+	border: 1px solid var(--dark-border);
+	padding: 24px 16px;
+	min-height: 67px;
+}

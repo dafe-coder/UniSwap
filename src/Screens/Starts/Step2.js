@@ -9,9 +9,9 @@ import styles from './start.module.css';
 
 export const Step2 = () => {
 	return (
-		<div className='screen'>
+		<div className='screen white-bg'>
 			<div className='body'>
-				<Title color='white' size='m'>
+				<Title color='black' size='m'>
 					A non-custodial &<br />
 					secure wallet for
 				</Title>
@@ -34,7 +34,9 @@ export const Step2 = () => {
 				<Button to='/start' variant='inline'>
 					Skip
 				</Button>
-				<Button to='/step3'>Continue</Button>
+				<Button variant='blue' to='/step3'>
+					Continue
+				</Button>
 			</div>
 		</div>
 	);

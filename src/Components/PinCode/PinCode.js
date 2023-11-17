@@ -34,14 +34,16 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 	}, [clear]);
 
 	function handleEnter(event) {
-		event.preventDefault();
-		const form = formRef?.current;
-		const index = [...form].indexOf(event.target);
-		if (event.target.value.length && hasOnlyDigits(event.target.value)) {
-			form[index + 1]?.focus();
-			setPasswordValue((state) => state + event.target.value);
-		} else {
-			event.target.value = '';
+		if (passwordValue.length <= 6) {
+			event.preventDefault();
+			const form = formRef?.current;
+			const index = [...form].indexOf(event.target);
+			if (event.target.value.length && hasOnlyDigits(event.target.value)) {
+				form[index + 1]?.focus();
+				setPasswordValue((state) => state + event.target.value);
+			} else {
+				event.target.value = '';
+			}
 		}
 	}
 
@@ -66,11 +68,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 					<input
 						placeholder=' '
 						autoFocus
-						type='password'
 						className={styles.input}
 						id={name + `01`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>
@@ -79,11 +83,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 				<div className={styles.box}>
 					<input
 						placeholder=' '
-						type='password'
 						className={styles.input}
 						id={name + `02`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>
@@ -92,11 +98,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 				<div className={styles.box}>
 					<input
 						placeholder=' '
-						type='password'
 						className={styles.input}
 						id={name + `03`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>
@@ -105,11 +113,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 				<div className={styles.box}>
 					<input
 						placeholder=' '
-						type='password'
 						className={styles.input}
 						id={name + `04`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>
@@ -118,11 +128,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 				<div className={styles.box}>
 					<input
 						placeholder=' '
-						type='password'
 						className={styles.input}
 						id={name + `05`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>
@@ -131,11 +143,13 @@ export const PinCode = ({ styleWrap, className, name, clear }) => {
 				<div className={styles.box}>
 					<input
 						placeholder=' '
-						type='password'
 						className={styles.input}
 						id={name + `06`}
 						name={name}
+						inputMode='numeric'
 						maxLength='1'
+						pattern='([0-9]{3})'
+						type='text'
 						onChange={(e) => handleEnter(e)}
 						onKeyDown={(e) => handleEnterKeyboard(e)}
 					/>

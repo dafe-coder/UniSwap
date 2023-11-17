@@ -14,7 +14,7 @@
 	top: calc(100% + 10px);
 	left: 0;
 	border-radius: 8px;
-	background: var(--bg-main);
+	background: var(--black);
 	padding: 16px;
 	transform: scale(0);
 	opacity: 0;
@@ -37,7 +37,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(54, 64, 82, 0.5);
+	background: rgba(139, 139, 139, 0.5);
 	backdrop-filter: blur(3px);
 	z-index: 11;
 	opacity: 0;

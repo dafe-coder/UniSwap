@@ -1,31 +1,34 @@
 .title {
-    color: var(--white);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-top: 30px;
-    text-align: left;
+	color: var(--white);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-top: 30px;
+	text-align: left;
 }
 
 .center {
-    text-align: center;
+	text-align: center;
 }
 
 .m {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 
 .xl {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 
 .light {
-    color: var(--light);
+	color: var(--light);
+}
+.black {
+	color: var(--black);
 }

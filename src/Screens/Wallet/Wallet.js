@@ -51,8 +51,14 @@ export const Wallet = () => {
 	const [showTab, setShowTab] = React.useState(false);
 
 	React.useEffect(() => {
+		console.log(dataUser);
 		const wallet = dataUser.find((item) => item.name === currentWallet);
-		if (wallet !== undefined && dataWallet === null && status !== 'loading') {
+		if (
+			wallet !== undefined &&
+			dataWallet === null &&
+			status !== 'loading' &&
+			status !== 'error'
+		) {
 			dispatch(
 				fetchDataWallet([
 					wallet.phrase !== '' ? wallet.phrase : wallet.privateKey,

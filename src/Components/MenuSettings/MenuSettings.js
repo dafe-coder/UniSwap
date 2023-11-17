@@ -18,9 +18,8 @@ export const MenuSettings = ({ list }) => {
 					onClick={() => navigate(item.to)}
 				>
 					<div className={styles.itemInfo}>
-						<Par fw={600} size='m'>
-							{item.title}
-						</Par>
+						<SvgMenu type={item.icon} />
+						<Par size='m'>{item.title}</Par>
 					</div>
 					{item.status && <SvgMenu type={backup ? 'success' : 'error'} />}
 				</div>

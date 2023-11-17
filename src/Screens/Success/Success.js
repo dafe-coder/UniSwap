@@ -10,9 +10,8 @@ export const Success = () => {
 	return (
 		<div className='screen'>
 			<div className='top-bg' />
-			<div className='body'></div>
-			<div className='body-bottom'>
-				<div style={{ marginBottom: 114 }}>
+			<div className='body content-center'>
+				<div>
 					<SvgIcon type='success' />
 					<Title mt={30}>
 						Congratulations!
@@ -20,8 +19,14 @@ export const Success = () => {
 						You have successfully added
 						<br /> a new wallet
 					</Title>
-					{walletAddress !== '' && <Par mt={16}>{walletAddress}</Par>}
+					{walletAddress !== '' && (
+						<Par center mt={25}>
+							{walletAddress}
+						</Par>
+					)}
 				</div>
+			</div>
+			<div className='body-bottom '>
 				<Button to={password !== '' && usePin ? '/home' : '/create-pin'}>
 					Continue
 				</Button>

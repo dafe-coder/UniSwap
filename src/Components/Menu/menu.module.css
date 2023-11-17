@@ -4,7 +4,7 @@
 	margin-bottom: -40px;
 	margin-left: -30px;
 	margin-right: -30px;
-	border-top: 1px solid #282f39;
+	border-top: 1px solid #24262a;
 	box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08);
 	background: var(--bg-dark);
 	padding: 26px;
@@ -23,7 +23,7 @@
 	content: '';
 	width: 70px;
 	height: 2px;
-	background: #fff;
+	background: var(--accent);
 	position: absolute;
 	bottom: -26px;
 	left: 50%;

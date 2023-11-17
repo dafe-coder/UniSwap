@@ -12,7 +12,7 @@ export const DApps = () => {
 				</Title>
 			</div>
 			<div className='body-bottom'>
-				<Par size='sm' color='light' mb={30}>
+				<Par size='sm' center color='light' mb={30}>
 					Your Wallet is compatible with WalletConnect.
 				</Par>
 				<Button to='/dapps-qr'>Continue</Button>

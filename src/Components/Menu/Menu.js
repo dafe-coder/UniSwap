@@ -41,7 +41,7 @@ export const Menu = () => {
 						type={item.icon}
 						fill={
 							location.pathname.includes(item.to)
-								? 'var(--white)'
+								? 'var(--accent)'
 								: 'var(--light)'
 						}
 					/>

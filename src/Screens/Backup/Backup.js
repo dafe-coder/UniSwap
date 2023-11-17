@@ -23,7 +23,9 @@ export const Backup = () => {
 			<Header title='Manual backup' />
 			<div className='body content-center'>
 				<img src={BgImage} alt='bg' />
-				<Button onClick={goBackUp}>Perform manual backup</Button>
+				<Button mt={70} onClick={goBackUp}>
+					Perform manual backup
+				</Button>
 			</div>
 			<Menu />
 		</div>

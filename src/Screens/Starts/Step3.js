@@ -5,9 +5,9 @@ import Coins from '../../assets/images/coins.png';
 
 export const Step3 = () => {
 	return (
-		<div className='screen' style={{ position: 'relative' }}>
+		<div className='screen white-bg' style={{ position: 'relative' }}>
 			<div className='body'>
-				<Title color='white' size='m'>
+				<Title color='black' size='m'>
 					Access the world of <br />
 					crypto & DeFi
 				</Title>
@@ -21,7 +21,9 @@ export const Step3 = () => {
 				<Button to='/start' variant='inline'>
 					Skip
 				</Button>
-				<Button to='/start'>Continue</Button>
+				<Button variant='blue' to='/start'>
+					Continue
+				</Button>
 			</div>
 		</div>
 	);
