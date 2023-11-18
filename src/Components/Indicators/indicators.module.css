@@ -1,32 +1,36 @@
 .row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    position: absolute;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+	position: absolute;
 }
 
 .green {
-    color: var(--success);
+	color: var(--success);
 }
 
 .red {
-    color: var(--error-light);
+	color: var(--error-light);
 }
 
 .block {
-    padding: 0 7px;
-    line-height: 25px;
-    border-radius: 6px;
-    font-size: 10px;
+	padding: 0 7px;
+	line-height: 25px;
+	border-radius: 6px;
+	font-size: 10px;
 }
 
 .green .block {
-    background: rgba(255, 255, 255, 0.20);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 6px;
+	background: rgba(67, 184, 150, 0.2);
 }
 
 .red .block {
-    background: rgba(255, 255, 255, 0.20);
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 6px;
+	background: rgba(213, 0, 0, 0.2);
 }

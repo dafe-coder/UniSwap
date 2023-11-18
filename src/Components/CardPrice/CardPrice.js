@@ -7,17 +7,17 @@ export const CardPrice = ({ balance, change }) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.cardInfo}>
-				<Par color='white' size='sm' mb={8} center={false}>
+				<Par color='light' fw={500} size='sm' mb={8} center={false}>
 					My balance
 				</Par>
-				<Title color='white' center={false} size='xl'>
+				<Title color='black' center={false} size='xxl'>
 					$ {balance}
 				</Title>
 			</div>
 			<Indicators
 				usd={change.usd}
 				percent={change.percent}
-				style={{ right: 16, bottom: 16 }}
+				style={{ position: 'relative' }}
 			/>
 		</div>
 	);

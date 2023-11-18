@@ -51,20 +51,54 @@ export const GenerateItem = ({
 		>
 			<div>
 				{!load ? (
-					<div className={cn(styles.circleWrap)}>
-						<div className={cn(styles.circle, styles.circle1)} />
-						<div className={cn(styles.circle, styles.circle2)} />
-						<div className={cn(styles.circle, styles.circle3)} />
-					</div>
+					<svg
+						width={31}
+						height={31}
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<circle
+							cx={15.5}
+							cy={15.5}
+							r={15.5}
+							fill='#006DEB'
+							fillOpacity={0.1}
+						/>
+						<circle
+							cx={15.5}
+							cy={15.5}
+							r={11.5}
+							fill='#006DEB'
+							fillOpacity={0.1}
+						/>
+						<circle cx={15.5} cy={15.5} r={7.5} fill='#006DEB' />
+					</svg>
 				) : (
-					<div className={cn(styles.circleWrap, styles.animScale)}>
-						<div className={cn(styles.circle, styles.circle1)} />
-						<div className={cn(styles.circle, styles.circle2)} />
-						<div className={cn(styles.circle, styles.circle3)} />
-					</div>
+					<svg
+						width={31}
+						height={31}
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<circle
+							cx={15.5}
+							cy={15.5}
+							r={15.5}
+							fill='#006DEB'
+							fillOpacity={0.1}
+						/>
+						<circle
+							cx={15.5}
+							cy={15.5}
+							r={11.5}
+							fill='#006DEB'
+							fillOpacity={0.1}
+						/>
+						<circle cx={15.5} cy={15.5} r={7.5} fill='#006DEB' />
+					</svg>
 				)}
 			</div>
-			<Par fw={500} size='m' center color={'white'}>
+			<Par fw={500} size='m' center color='black'>
 				{title}
 			</Par>
 		</div>

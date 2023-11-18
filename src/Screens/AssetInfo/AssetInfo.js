@@ -209,16 +209,8 @@ export const AssetInfo = () => {
 							>
 								<defs>
 									<linearGradient id='value' x1='0' y1='0' x2='0' y2='1'>
-										<stop
-											offset='5%'
-											stopColor='var(--accent)'
-											stopOpacity={0.4}
-										/>
-										<stop
-											offset='95%'
-											stopColor='var(--accent)'
-											stopOpacity={0}
-										/>
+										<stop offset='5%' stopColor='#FF8A00' stopOpacity={0.4} />
+										<stop offset='95%' stopColor='#FF8A00' stopOpacity={0} />
 									</linearGradient>
 								</defs>
 								<YAxis domain={['auto', 'dataMax']} hide={true} />
@@ -226,7 +218,7 @@ export const AssetInfo = () => {
 									type='linear'
 									strokeWidth={2}
 									dataKey='value'
-									stroke='var(--accent)'
+									stroke='#FF8A00'
 									fillOpacity={1}
 									fill='url(#value)'
 								/>

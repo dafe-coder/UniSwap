@@ -2,8 +2,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 16px;
+	margin-top: 32px;
 	margin-bottom: 30px;
+	border-radius: 14px;
+	background: #fff;
+	box-shadow: 0px 0px 15.7px 0px rgba(162, 162, 162, 0.25);
+	padding: 3px 0;
 }
 
 .caretIcon {

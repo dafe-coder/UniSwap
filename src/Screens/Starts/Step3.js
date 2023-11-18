@@ -5,9 +5,9 @@ import Coins from '../../assets/images/coins.png';
 
 export const Step3 = () => {
 	return (
-		<div className='screen black-bg' style={{ position: 'relative' }}>
+		<div className='screen white-bg' style={{ position: 'relative' }}>
 			<div className='body'>
-				<Title color='white' size='m'>
+				<Title color='black' size='m'>
 					Access the world <br /> of crypto & DeFi
 				</Title>
 			</div>

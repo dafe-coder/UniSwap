@@ -88,13 +88,11 @@
 }
 
 .body > :global(.item-expand):hover {
-	background: rgba(5, 192, 165, 0.2);
-	color: var(--accent);
+	background: #f7f7f8;
 }
 
 .body :global(.active) {
-	background: rgba(5, 192, 165, 0.2);
-	color: var(--accent);
+	background: #f7f7f8;
 	padding: 10px 16px 10px 35px;
 }
 

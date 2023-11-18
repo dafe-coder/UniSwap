@@ -14,13 +14,13 @@ import styles from './start.module.css';
 
 export const Step2 = () => {
 	return (
-		<div className='screen black-bg'>
+		<div className='screen white-bg'>
 			<div className='body'>
-				<Title color='white' size='m'>
-					A non-custodial & secure wallet for
+				<Title color='black' size='m'>
+					A non-custodial &<br /> secure wallet for
 				</Title>
 			</div>
-			<div className='body-bottom'>
+			<div className='body content-center'>
 				<div className={styles.info}>
 					<div className={styles.logoCoinWrap}>
 						<img className={styles.logoCoin} src={Img1} alt='btc' />
@@ -34,6 +34,7 @@ export const Step2 = () => {
 					</Par>
 				</div>
 			</div>
+			<div className='body-bottom'></div>
 			<div className='body-bottom footer-step'>
 				<StepProgress active={2} />
 				<CircleArrowButton to='/step3' />

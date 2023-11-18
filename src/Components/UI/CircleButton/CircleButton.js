@@ -31,7 +31,7 @@ export const CircleButton = ({
 		>
 			<SvgMenu type={icon} />
 			{title !== '' && (
-				<Par fw={600} mt={8} size='sm' color='black'>
+				<Par fw={600} mt={3} size='sm' color='black'>
 					{title}
 				</Par>
 			)}

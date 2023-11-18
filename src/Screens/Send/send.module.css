@@ -225,8 +225,9 @@
 }
 
 .inputAddress {
-	border-radius: 8px;
-	border: 1px solid var(--gray-light);
+	border-radius: 40px;
+	border: 1px solid var(--dark-border);
+	background: #f7f7f8;
 	color: var(--black-text);
 	text-align: left;
 	padding: 11px 16px;

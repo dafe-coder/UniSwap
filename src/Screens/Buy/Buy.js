@@ -23,28 +23,26 @@ export const Buy = () => {
 
 	return (
 		<div className='screen'>
-			<div className={styles.bodyTop}>
-				<Header title='Add Cash' back={false} />
-				<div className={styles.wrapInput}>
-					<div className={styles.wrapInp}>
-						{String(amountBuy).length !== 0 && '$'}
-						<input
-							size={
-								String(amountBuy).length > 0 &&
-								String(amountBuy).length !== undefined
-									? String(amountBuy).length
-									: '4'
-							}
-							onInput={(e) => setAmountBuy(e.target.value)}
-							type='text'
-							placeholder='$ 0.0'
-							value={`${amountBuy}`}
-						/>
-					</div>
-					<Par center color='light' fw={600}>
-						{chooseCoinOne !== null ? chooseCoinOne.name : 'Ethereum'}
-					</Par>
+			<Header title='Add Cash' back={false} />
+			<div className={styles.wrapInput}>
+				<div className={styles.wrapInp}>
+					{String(amountBuy).length !== 0 && '$'}
+					<input
+						size={
+							String(amountBuy).length > 0 &&
+							String(amountBuy).length !== undefined
+								? String(amountBuy).length
+								: '4'
+						}
+						onInput={(e) => setAmountBuy(e.target.value)}
+						type='text'
+						placeholder='$ 0.0'
+						value={`${amountBuy}`}
+					/>
 				</div>
+				<Par center color='light' fw={600}>
+					{chooseCoinOne !== null ? chooseCoinOne.name : 'Ethereum'}
+				</Par>
 			</div>
 			<div className='body'></div>
 

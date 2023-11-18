@@ -56,7 +56,7 @@ export const Generate = () => {
 	}, [load1, navigate]);
 
 	return (
-		<div className='screen black-bg'>
+		<div className='screen white-bg'>
 			<div className='body'>
 				<div className={styles.logo}>
 					<div className={styles.row} style={{ marginTop: 30 }}>

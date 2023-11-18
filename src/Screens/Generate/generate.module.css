@@ -19,7 +19,7 @@
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	gap: 30px;
+	gap: 60px;
 }
 
 .row > span {

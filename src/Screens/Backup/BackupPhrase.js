@@ -25,9 +25,6 @@ export const BackupPhrase = () => {
 				<Par color='light'>
 					Write this 12 words carefully, or save them to a password manager.
 				</Par>
-				<Par mt={8} color='red'>
-					Never share recovery phrase with anyone, store it securely!
-				</Par>
 				{currentWalletData !== undefined && (
 					<PhraseBoxColumns
 						phrase={CryptoJS.AES.decrypt(
@@ -38,6 +35,10 @@ export const BackupPhrase = () => {
 				)}
 			</div>
 			<div className='body-bottom'>
+				<Par mb={16} center color='red'>
+					Never share recovery phrase with anyone,
+					<br /> store it securely!
+				</Par>
 				<Button variant='default' to='/settings/backup-finish'>
 					Next
 				</Button>

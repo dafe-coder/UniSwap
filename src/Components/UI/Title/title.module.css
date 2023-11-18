@@ -25,6 +25,12 @@
 	font-weight: 600;
 	line-height: normal;
 }
+.xxl {
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
 
 .light {
 	color: var(--light);

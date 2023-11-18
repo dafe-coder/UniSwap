@@ -4,11 +4,12 @@ import { CircleArrowButton, Title, StepProgress } from '../../Components/UI';
 
 export const Step1 = () => {
 	return (
-		<div className='screen black-bg'>
-			<div className='body' style={{ paddingTop: '10vh' }}>
+		<div className='screen white-bg'>
+			<div className='body content-center'>
 				<SvgIcon type='logo' />
-				<Title color='white' mt={30} size='m'>
-					The crypto wallet for everyone
+				<Title color='black' mt={30} size='m'>
+					The crypto wallet for
+					<br /> everyone
 				</Title>
 			</div>
 			<div className='body-bottom footer-step'>

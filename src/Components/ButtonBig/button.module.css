@@ -11,15 +11,9 @@
 	position: relative;
 	overflow: hidden;
 	text-align: left;
-}
-
-.bg1 {
-	background: url('../../assets/images/bigBtn1.png') center center / cover
-		no-repeat;
-}
-.bg2 {
-	background: url('../../assets/images/bigBtn2.png') center center / cover
-		no-repeat;
+	border-radius: 12px;
+	border: 1px solid #e2e2e2;
+	background: #f7f7f8;
 }
 
 .btn:hover::after {
@@ -31,18 +25,7 @@
 }
 .disabled {
 	pointer-events: none;
-}
-.disabled::after {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 22px;
-	z-index: 1000;
+	opacity: 0.4;
 }
 
 .arrow {
@@ -54,7 +37,7 @@
 }
 
 .title {
-	color: #fff;
+	color: var(--black-text);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;

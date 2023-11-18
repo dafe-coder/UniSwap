@@ -7,19 +7,83 @@ function SvgIcon(props) {
 		case 'logo':
 			return (
 				<svg
-					width={183}
-					height={183}
-					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
+					width={205}
+					height={162}
+					fill='none'
 					{...props}
 				>
-					<circle cx={91.5} cy={91.5} r={91.5} fill='#05C0A5' />
 					<path
-						fillRule='evenodd'
-						clipRule='evenodd'
-						d='M143.815 113.144a56.504 56.504 0 00-11.392-63.624 56.5 56.5 0 00-63.64-11.301l12.03 26.01A27.843 27.843 0 01120.121 86H81.5l61 27-.073-.495 1.388.639zM38.185 68.856a56.501 56.501 0 0075.032 74.925l-12.029-26.01a27.842 27.842 0 01-36.975-36.923L38.185 68.856z'
-						fill='#fff'
+						fill='#202B3D'
+						d='M161.171 94.141c-6.308-13.67-21.906-19.07-21.906-19.07s19.656-10.117 15.343-29.974c-2.779-12.953-14.491-25.975-36.295-26.3V0H98.895v18.797H84.762V0h-19.4v18.797H41v17.738h11.252a4.593 4.593 0 0 1 3.254 1.352 4.614 4.614 0 0 1 1.349 3.262v76.557c0 1.36-.54 2.664-1.498 3.625a5.106 5.106 0 0 1-3.617 1.502h-6.7L41 141.921h24.362V162h19.4v-20.079h14.133V162h19.4v-20.079h3.751c37.557 0 47.649-28.965 39.125-47.78Zm-56.65-57.606c9.871 0 19.025 6.375 19.281 16.15.256 9.774-7.825 18.216-18.548 18.352-9.871.12-20.458 0-20.458 0V36.535h19.725Zm5.796 86.247c-10.229.188-25.572 0-25.572 0V86.896s14.167.205 24.737 0c12.717-.206 22.077 5.741 22.162 16.969.085 11.227-7.535 18.694-21.327 18.951v-.034Z'
 					/>
+					<path
+						fill='#00E295'
+						d='M41 0h115v78H41z'
+						style={{
+							mixBlendMode: 'lighten',
+						}}
+					/>
+					<g filter='url(#a)'>
+						<path fill='url(#b)' fillOpacity={0.5} d='M12 20h181v57H12z' />
+					</g>
+					<g filter='url(#c)'>
+						<ellipse cx={102.5} cy={77.5} fill='#00E197' rx={90.5} ry={1.5} />
+					</g>
+					<ellipse cx={102.5} cy={77.5} fill='#00E197' rx={90.5} ry={1.5} />
+					<defs>
+						<filter
+							id='a'
+							width={204.2}
+							height={80.2}
+							x={0.4}
+							y={8.4}
+							colorInterpolationFilters='sRGB'
+							filterUnits='userSpaceOnUse'
+						>
+							<feFlood floodOpacity={0} result='BackgroundImageFix' />
+							<feBlend
+								in='SourceGraphic'
+								in2='BackgroundImageFix'
+								result='shape'
+							/>
+							<feGaussianBlur
+								result='effect1_foregroundBlur_604_3547'
+								stdDeviation={5.8}
+							/>
+						</filter>
+						<filter
+							id='c'
+							width={189}
+							height={11}
+							x={8}
+							y={72}
+							colorInterpolationFilters='sRGB'
+							filterUnits='userSpaceOnUse'
+						>
+							<feFlood floodOpacity={0} result='BackgroundImageFix' />
+							<feBlend
+								in='SourceGraphic'
+								in2='BackgroundImageFix'
+								result='shape'
+							/>
+							<feGaussianBlur
+								result='effect1_foregroundBlur_604_3547'
+								stdDeviation={2}
+							/>
+						</filter>
+						<linearGradient
+							id='b'
+							x1={102.824}
+							x2={101.602}
+							y1={24.008}
+							y2={72.978}
+							gradientUnits='userSpaceOnUse'
+						>
+							<stop stopColor='#00E196' stopOpacity={0} />
+							<stop offset={1} stopColor='#00E196' />
+						</linearGradient>
+					</defs>
 				</svg>
 			);
 		case 'arrow-right':
@@ -33,7 +97,7 @@ function SvgIcon(props) {
 				>
 					<path
 						d='M17.391 12.29l-12.569.018a.974.974 0 01-.716-.292.973.973 0 01-.291-.716c0-.283.097-.522.292-.716a.973.973 0 01.715-.292l12.57.018-5.375-5.374a.97.97 0 01-.301-.707c0-.271.1-.507.301-.707.2-.2.436-.3.707-.301.271 0 .507.1.707.3l7.072 7.072c.2.2.3.436.3.706 0 .272-.1.508-.3.708l-7.072 7.071c-.2.2-.436.3-.707.3a.965.965 0 01-.707-.3c-.2-.2-.3-.436-.3-.707 0-.271.1-.507.3-.707l5.374-5.374z'
-						fill={fill ? fill : '#fff'}
+						fill={fill ? fill : 'var(--success)'}
 					/>
 				</svg>
 			);
@@ -340,11 +404,11 @@ function SvgIcon(props) {
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
 				>
-					<circle cx={12} cy={9} r={3} stroke='#05C0A5' strokeWidth={1.5} />
+					<circle cx={12} cy={9} r={3} stroke='#202124' strokeWidth={1.5} />
 					<circle cx={12} cy={12} r={10} stroke='#202124' strokeWidth={1.5} />
 					<path
 						d='M17.97 20c-.16-2.892-1.045-5-5.97-5s-5.81 2.108-5.97 5'
-						stroke='#05C0A5'
+						stroke='#202124'
 						strokeWidth={1.5}
 						strokeLinecap='round'
 					/>
@@ -431,7 +495,7 @@ function SvgIcon(props) {
 						fillRule='evenodd'
 						clipRule='evenodd'
 						d='M11.5 2.75C6.66751 2.75 2.75 6.66751 2.75 11.5C2.75 16.3325 6.66751 20.25 11.5 20.25C16.3325 20.25 20.25 16.3325 20.25 11.5C20.25 6.66751 16.3325 2.75 11.5 2.75ZM1.25 11.5C1.25 5.83908 5.83908 1.25 11.5 1.25C17.1609 1.25 21.75 5.83908 21.75 11.5C21.75 14.0605 20.8111 16.4017 19.2589 18.1982L22.5303 21.4697C22.8232 21.7626 22.8232 22.2374 22.5303 22.5303C22.2374 22.8232 21.7626 22.8232 21.4697 22.5303L18.1982 19.2589C16.4017 20.8111 14.0605 21.75 11.5 21.75C5.83908 21.75 1.25 17.1609 1.25 11.5Z'
-						fill='var(--accent)'
+						fill='#6F7684'
 					/>
 				</svg>
 			);

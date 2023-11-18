@@ -14,7 +14,6 @@ export const ChooseInputSwap = ({
 }) => {
 	return (
 		<div className={styles.block}>
-			<SvgIcon className={styles.svgPol} type='swap-polygon' />
 			{chooseItemOne !== null ? (
 				<PriceInput
 					setValue={setValueOne}
@@ -46,7 +45,6 @@ export const ChooseInputSwap = ({
 			) : (
 				<ItemLoader px={80} />
 			)}
-			<div className={styles.boxBg}></div>
 		</div>
 	);
 };

@@ -4,10 +4,8 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	border: 1px solid var(--additional-blue);
 	padding: 6px 20px;
 	transition: all ease 0.2s;
-	border: 1px solid var(--gray-light);
 	width: 33.3%;
 }
 
@@ -35,35 +33,4 @@
 .center {
 	border-right: none;
 	border-left: none;
-}
-
-.left {
-	border-radius: 4px 0 0 4px;
-	border-right: none;
-	position: relative;
-}
-.left::after {
-	content: '';
-	position: absolute;
-	width: 1px;
-	height: 70%;
-	background: var(--gray-light);
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.right {
-	border-radius: 0 4px 4px 0;
-	border-left: none;
-	position: relative;
-}
-.right::after {
-	content: '';
-	position: absolute;
-	width: 1px;
-	height: 70%;
-	background: var(--gray-light);
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
 }
