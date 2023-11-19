@@ -5,6 +5,7 @@ import { ButtonBig } from '../../Components/';
 export const Start = () => {
 	return (
 		<div className='screen'>
+			<div className='bg-m-light'></div>
 			<div className='body'>
 				<Title size='m' mb={60} color='black'>
 					Let's get you started!

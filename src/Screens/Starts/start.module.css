@@ -16,11 +16,11 @@
 }
 
 .bgCoins {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100vw;
+	width: 100%;
+	border-radius: 24px;
+	background: #fff;
+	max-width: 300px;
+	z-index: -1;
 }
 .bgCoins img {
 	width: 100%;

@@ -7,83 +7,18 @@ function SvgIcon(props) {
 		case 'logo':
 			return (
 				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					width={205}
-					height={162}
+					width='236'
+					height='147'
+					viewBox='0 0 236 147'
 					fill='none'
-					{...props}
+					xmlns='http://www.w3.org/2000/svg'
 				>
 					<path
-						fill='#202B3D'
-						d='M161.171 94.141c-6.308-13.67-21.906-19.07-21.906-19.07s19.656-10.117 15.343-29.974c-2.779-12.953-14.491-25.975-36.295-26.3V0H98.895v18.797H84.762V0h-19.4v18.797H41v17.738h11.252a4.593 4.593 0 0 1 3.254 1.352 4.614 4.614 0 0 1 1.349 3.262v76.557c0 1.36-.54 2.664-1.498 3.625a5.106 5.106 0 0 1-3.617 1.502h-6.7L41 141.921h24.362V162h19.4v-20.079h14.133V162h19.4v-20.079h3.751c37.557 0 47.649-28.965 39.125-47.78Zm-56.65-57.606c9.871 0 19.025 6.375 19.281 16.15.256 9.774-7.825 18.216-18.548 18.352-9.871.12-20.458 0-20.458 0V36.535h19.725Zm5.796 86.247c-10.229.188-25.572 0-25.572 0V86.896s14.167.205 24.737 0c12.717-.206 22.077 5.741 22.162 16.969.085 11.227-7.535 18.694-21.327 18.951v-.034Z'
+						fillRule='evenodd'
+						clipRule='evenodd'
+						d='M15 138.612V19.6783L92.687 70.4291V138.612C92.687 142.754 96.0449 146.112 100.187 146.112C104.329 146.112 107.687 142.754 107.687 138.612V67.4525C107.687 64.2447 106.068 61.2535 103.383 59.4991L14.6957 1.56243C8.37699 -2.56538 0 1.96818 0 9.51573V138.612C0 142.754 3.35786 146.112 7.5 146.112C11.6421 146.112 15 142.754 15 138.612ZM220.132 138.612V19.6783L142.445 70.4291V138.612C142.445 142.754 139.087 146.112 134.945 146.112C130.803 146.112 127.445 142.754 127.445 138.612V67.4525C127.445 64.2447 129.063 61.2535 131.749 59.4991L220.436 1.56243C226.755 -2.56538 235.132 1.96818 235.132 9.51573V138.612C235.132 142.754 231.774 146.112 227.632 146.112C223.49 146.112 220.132 142.754 220.132 138.612Z'
+						fill='#00C992'
 					/>
-					<path
-						fill='#00E295'
-						d='M41 0h115v78H41z'
-						style={{
-							mixBlendMode: 'lighten',
-						}}
-					/>
-					<g filter='url(#a)'>
-						<path fill='url(#b)' fillOpacity={0.5} d='M12 20h181v57H12z' />
-					</g>
-					<g filter='url(#c)'>
-						<ellipse cx={102.5} cy={77.5} fill='#00E197' rx={90.5} ry={1.5} />
-					</g>
-					<ellipse cx={102.5} cy={77.5} fill='#00E197' rx={90.5} ry={1.5} />
-					<defs>
-						<filter
-							id='a'
-							width={204.2}
-							height={80.2}
-							x={0.4}
-							y={8.4}
-							colorInterpolationFilters='sRGB'
-							filterUnits='userSpaceOnUse'
-						>
-							<feFlood floodOpacity={0} result='BackgroundImageFix' />
-							<feBlend
-								in='SourceGraphic'
-								in2='BackgroundImageFix'
-								result='shape'
-							/>
-							<feGaussianBlur
-								result='effect1_foregroundBlur_604_3547'
-								stdDeviation={5.8}
-							/>
-						</filter>
-						<filter
-							id='c'
-							width={189}
-							height={11}
-							x={8}
-							y={72}
-							colorInterpolationFilters='sRGB'
-							filterUnits='userSpaceOnUse'
-						>
-							<feFlood floodOpacity={0} result='BackgroundImageFix' />
-							<feBlend
-								in='SourceGraphic'
-								in2='BackgroundImageFix'
-								result='shape'
-							/>
-							<feGaussianBlur
-								result='effect1_foregroundBlur_604_3547'
-								stdDeviation={2}
-							/>
-						</filter>
-						<linearGradient
-							id='b'
-							x1={102.824}
-							x2={101.602}
-							y1={24.008}
-							y2={72.978}
-							gradientUnits='userSpaceOnUse'
-						>
-							<stop stopColor='#00E196' stopOpacity={0} />
-							<stop offset={1} stopColor='#00E196' />
-						</linearGradient>
-					</defs>
 				</svg>
 			);
 		case 'arrow-right':

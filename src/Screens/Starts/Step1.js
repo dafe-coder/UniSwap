@@ -7,7 +7,7 @@ export const Step1 = () => {
 		<div className='screen white-bg'>
 			<div className='body content-center'>
 				<SvgIcon type='logo' />
-				<Title color='black' mt={30} size='m'>
+				<Title color='black' mt={60} size='m'>
 					The crypto wallet for
 					<br /> everyone
 				</Title>

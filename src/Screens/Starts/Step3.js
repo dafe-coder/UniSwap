@@ -6,12 +6,13 @@ import Coins from '../../assets/images/coins.png';
 export const Step3 = () => {
 	return (
 		<div className='screen white-bg' style={{ position: 'relative' }}>
-			<div className='body'>
+			<div className='bg-m'></div>
+			<div className='body' style={{ flexGrow: 0 }}>
 				<Title color='black' size='m'>
 					Access the world <br /> of crypto & DeFi
 				</Title>
 			</div>
-			<div className='body-bottom'>
+			<div className='body content-center'>
 				<div className={styles.bgCoins}>
 					<img src={Coins} alt='coins' />
 				</div>
