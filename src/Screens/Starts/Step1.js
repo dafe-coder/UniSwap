@@ -1,12 +1,16 @@
 import React from 'react';
 import { Title, Button } from '../../Components/UI';
-import { SvgIcon } from '../../Svgs';
+import LogoImg from '../../assets/logo.svg';
 
 export const Step1 = () => {
 	return (
 		<div className='screen blue-bg'>
-			<div className='body' style={{ paddingTop: 30 }}>
-				<SvgIcon type='logo' />
+			<div className='body' style={{ paddingTop: 0 }}>
+				<img
+					styles={{ maxWidth: 220, width: '100%' }}
+					src={LogoImg}
+					alt='logo'
+				/>
 				<Title color='white' mt={30} size='m'>
 					The crypto wallet
 					<br />
