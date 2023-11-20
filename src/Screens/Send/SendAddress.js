@@ -57,7 +57,7 @@ export const SendAddress = () => {
 						className={styles.copyButton}
 						onClick={(e) => pasteWords(e)}
 					>
-						<SvgIcon type='copy' />
+						<SvgIcon fill='var(--black-text)' type='copy' />
 						Paste from clipboard
 					</a>
 				</div>

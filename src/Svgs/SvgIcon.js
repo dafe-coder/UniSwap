@@ -12,6 +12,7 @@ function SvgIcon(props) {
 					viewBox='0 0 236 147'
 					fill='none'
 					xmlns='http://www.w3.org/2000/svg'
+					{...props}
 				>
 					<path
 						fillRule='evenodd'
@@ -171,7 +172,7 @@ function SvgIcon(props) {
 					/>
 					<path
 						d='M7.5 19C8.15503 20.7478 9.92246 22 12 22C14.0775 22 15.845 20.7478 16.5 19'
-						stroke='#05C0A5'
+						stroke='#202124'
 						strokeWidth='1.5'
 						strokeLinecap='round'
 					/>
@@ -408,7 +409,7 @@ function SvgIcon(props) {
 					xmlns='http://www.w3.org/2000/svg'
 				>
 					<circle cx='43' cy='43' r='43' fill='#05C0A5' fillOpacity='0.2' />
-					<circle cx='43' cy='43' r='33' fill='#05C0A5' />
+					<circle cx='43' cy='43' r='33' fill='#00C992' />
 					<path
 						d='M29 41.2045L37.963 51.1994C38.3508 51.6318 39.0243 51.644 39.4274 51.2258L57 33'
 						stroke='white'

@@ -188,16 +188,21 @@ export const Wallet = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bg-top' />
 			<div className='body'>
 				<div className='header' style={{ marginBottom: 25 }}>
 					<div style={{ cursor: 'pointer' }} className='header-item'>
 						<ItemExpand
 							items
-							caretFill='var(--light)'
+							caretFill='var(--black-text)'
 							title={
 								<div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-									<SvgIcon type='user' fill='var(--primary)' />
-									<Par style={{ marginRight: 2 }} color='light'>
+									<Par
+										fw={700}
+										size='m'
+										style={{ marginRight: 2 }}
+										color='black'
+									>
 										{currentWallet}
 									</Par>
 								</div>

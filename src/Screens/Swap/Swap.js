@@ -11,7 +11,6 @@ import { Menu } from '../../Components';
 import { Button, Par } from '../../Components/UI';
 import { ItemExpand } from '../../Components/ItemExpand/ItemExpand';
 import { ChooseInputSwap, TextRowsBlock } from '../../Components';
-import Circle from '../../assets/images/circle-light.png';
 
 export const Swap = () => {
 	const dispatch = useDispatch();

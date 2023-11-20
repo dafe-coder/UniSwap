@@ -20,6 +20,7 @@ export const BackupPhrase = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bg-m-light'></div>
 			<div className='body'>
 				<Header title='Save your phrase' />
 				<Par color='light'>

@@ -23,6 +23,7 @@ export const Buy = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bg-top'></div>
 			<Header title='Add Cash' back={false} />
 			<div className={styles.wrapInput}>
 				<div className={styles.wrapInp}>

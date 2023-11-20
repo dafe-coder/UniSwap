@@ -28,7 +28,7 @@ export const PinCreate = () => {
 	};
 	return (
 		<div className='screen'>
-			<div className='top-bg' />
+			<div className='bg-top' />
 			<div className='body'>
 				<Header title='Create PIN code' />
 				<PinCode name='create' styleWrap={{ marginTop: 90 }} />

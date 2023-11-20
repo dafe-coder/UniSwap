@@ -124,7 +124,7 @@ export const AssetInfo = () => {
 							/>
 							<path
 								d='M16.25 7.91666L15.658 5.74553C15.4297 4.90837 15.3156 4.48978 15.0815 4.17455C14.8483 3.8606 14.5315 3.61861 14.1673 3.47626C13.8016 3.33333 13.3677 3.33333 12.5 3.33333M3.75 7.91666L4.342 5.74553C4.57027 4.90837 4.6844 4.48978 4.91851 4.17455C5.15166 3.8606 5.46846 3.61861 5.83269 3.47626C6.1984 3.33333 6.63227 3.33333 7.5 3.33333'
-								stroke='#05C0A5'
+								stroke='#202124'
 								strokeWidth='1.5'
 							/>
 							<path
@@ -170,8 +170,8 @@ export const AssetInfo = () => {
 									width: 40,
 									height: 40,
 									padding: 0,
-									border: '1px solid var(--gray-light)',
-									borderRadius: 12,
+									borderRadius: 14,
+									boxShadow: '0px 0px 15.7px 0px rgba(162, 162, 162, 0.25)',
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
@@ -185,8 +185,8 @@ export const AssetInfo = () => {
 									width: 40,
 									height: 40,
 									padding: 0,
-									border: '1px solid var(--gray-light)',
-									borderRadius: 12,
+									borderRadius: 14,
+									boxShadow: '0px 0px 15.7px 0px rgba(162, 162, 162, 0.25)',
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
@@ -209,8 +209,8 @@ export const AssetInfo = () => {
 							>
 								<defs>
 									<linearGradient id='value' x1='0' y1='0' x2='0' y2='1'>
-										<stop offset='5%' stopColor='#FF8A00' stopOpacity={0.4} />
-										<stop offset='95%' stopColor='#FF8A00' stopOpacity={0} />
+										<stop offset='5%' stopColor='#0038FF' stopOpacity={0.4} />
+										<stop offset='95%' stopColor='#0038FF' stopOpacity={0} />
 									</linearGradient>
 								</defs>
 								<YAxis domain={['auto', 'dataMax']} hide={true} />
@@ -218,7 +218,7 @@ export const AssetInfo = () => {
 									type='linear'
 									strokeWidth={2}
 									dataKey='value'
-									stroke='#FF8A00'
+									stroke='#0038FF'
 									fillOpacity={1}
 									fill='url(#value)'
 								/>

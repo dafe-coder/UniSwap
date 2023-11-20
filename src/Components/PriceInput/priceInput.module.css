@@ -31,7 +31,7 @@
 	transition: all 0.2s;
 	z-index: 1;
 	border-radius: 16px;
-	border: 1px solid var(--Stroke, #e2e2e2);
+	background: rgba(225, 225, 225, 0.2);
 }
 
 .box:first-of-type {

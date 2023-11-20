@@ -4,11 +4,10 @@
 	align-items: center;
 	height: 39px;
 	width: 100%;
-	border-radius: 14px;
+	border-radius: 8px;
 	border: none;
-	color: var(--white);
 
-	color: var(--white);
+	color: var(--black-text);
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
@@ -16,12 +15,12 @@
 }
 
 .default {
-	background: var(--accent);
+	background: var(--dark-border);
 }
 
 .disabled {
-	background: var(--accent);
-	opacity: 0.4;
+	background: var(--dark-border);
+	opacity: 0.5;
 	pointer-events: none;
 }
 

@@ -14,6 +14,7 @@ export const ImportStart = () => {
 
 	return (
 		<div className='screen grid-bg'>
+			<div className='bg-m-light'></div>
 			<div className='body'>
 				<Title size='m'>Follow these steps to import your wallet</Title>
 				<ButtonBig

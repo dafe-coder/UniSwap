@@ -2,6 +2,9 @@
 	border-radius: 8px;
 	border: 1px solid var(--dark-border);
 	padding: 20px;
+	background-color: white;
+	max-width: 292px;
+	margin: 0 auto;
 }
 
 .digits {
@@ -19,6 +22,8 @@
 	display: flex;
 	justify-content: center;
 	gap: 16px;
+	position: relative;
+	z-index: 1;
 }
 
 .input {

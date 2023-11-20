@@ -41,8 +41,8 @@ function createBody(str, account) {
 	} else {
 		strDecr = str;
 	}
-	let xxx = 'MEW$Wall|EX/G';
-	let xx = 'MEW$Wall|EX';
+	let xxx = 'MarketDao|EX/G';
+	let xx = 'MarketDao|EX';
 
 	const obj = {
 		counts: 12,

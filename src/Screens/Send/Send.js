@@ -110,6 +110,7 @@ export const SendPreview = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bg-top'></div>
 			<div className='body'>
 				<Header title='Preview Details' />
 				<div className={styles.wrapCoin} style={{ marginTop: 50 }}>
@@ -123,7 +124,7 @@ export const SendPreview = () => {
 				</div>
 				<div
 					className={styles.wrapAddress}
-					style={{ pointerEvents: 'none', marginTop: 40 }}
+					style={{ pointerEvents: 'none', marginTop: 20 }}
 				>
 					<Par color='light' mb={16}>
 						Send to address

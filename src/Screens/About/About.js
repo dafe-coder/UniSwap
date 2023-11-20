@@ -8,7 +8,7 @@ const styleWrap = {
 	display: 'flex',
 	flexDirection: 'column',
 	gap: 14,
-	marginTop: 30,
+	marginTop: 10,
 };
 export const About = () => {
 	return (

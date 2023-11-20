@@ -48,6 +48,7 @@ export const Settings = () => {
 	];
 	return (
 		<div className='screen'>
+			<div className='bg-m'></div>
 			<Header title='Settings account' back={false} />
 			<div className='body' style={{ margin: 0 }}>
 				<MenuSettings list={list} />

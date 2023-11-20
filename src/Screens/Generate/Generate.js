@@ -14,6 +14,7 @@ import {
 import { generateMnemonic } from 'bip39';
 import CryptoJS from 'crypto-js';
 import generateAddressesFromSeed from '../../func.wallet/generateWallet';
+import { SvgIcon } from '../../Svgs';
 
 const kitkat = 'Qsx@ah&OR82WX9T6gCt';
 
@@ -59,7 +60,8 @@ export const Generate = () => {
 		<div className='screen white-bg'>
 			<div className='body'>
 				<div className={styles.logo}>
-					<div className={styles.row} style={{ marginTop: 30 }}>
+					<SvgIcon width={156} type='logo' />
+					<div className={styles.row} style={{ marginTop: 20 }}>
 						<GenerateItem
 							first
 							loadWallet={load1}

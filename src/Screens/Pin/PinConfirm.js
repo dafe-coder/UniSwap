@@ -64,6 +64,8 @@ export const PinConfirm = () => {
 
 	return (
 		<div className='screen'>
+			<div className='bg-top' />
+
 			<div className='body'>
 				<Header title='Confirm your PIN code' />
 				<PinCode name='confirm' styleWrap={{ marginTop: 90 }} />
